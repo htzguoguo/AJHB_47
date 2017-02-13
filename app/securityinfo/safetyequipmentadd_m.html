@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+  <!--  <script type="text/javascript" src="js/tjx.data.equipment.js"></script>-->
+    <script type="text/javascript" src="app/securityinfo/js/tjx.app.securityinfo.equipment.js"></script>
+    <script type="text/javascript">
+        // Start spa once DOM is ready
+        //
+        jQuery(document).ready(
+                function () {
+                    tjx.app.securityinfo.equipment.initModule( jQuery('.portlet'), true, true );
+                });
+    </script>
+</head>
+<body>
+<div class="modal-header">
+    <div class="portlet-title">
+        <div class="caption font-green-haze">
+            <i class="icon-check font-green-haze"></i>
+            <span class="caption-subject bold uppercase">添加安全设施（设备）明细</span>
+
+            <button type="button"  class="close " data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-body">
+
+    <div class="portlet-body   form ">
+        <form class="form-horizontal form-bordered form-row-stripped">
+            <div class="form-body">
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button>
+                    您所提交的内容不符合要求，请检查后重新提交.
+                </div>
+
+                <div class="form-group ">
+                    <label class="col-md-2 control-label">事故措施</label>
+                    <div class="col-md-10">
+                        <div class="md-radio-inline">
+                            <div class="md-radio">
+                                <input type="radio" id="radio60" name="radio3" tjx-data-field="Purpose-Never" class="md-radiobtn" checked="">
+                                <label for="radio60">
+                                    <span class="inc"></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span>
+                                    预防事故措施 </label>
+                            </div>
+                            <div class="md-radio ">
+                                <input type="radio" id="radio61" name="radio3" tjx-data-field="Purpose-Occasionally" class="md-radiobtn" >
+                                <label for="radio61">
+                                    <span class="inc"></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span>
+                                    控制事故措施 </label>
+                            </div>
+                            <div class="md-radio">
+                                <input type="radio" id="radio62" name="radio3" tjx-data-field="Purpose-Always" class="md-radiobtn">
+                                <label for="radio62">
+                                    <span class="inc"></span>
+                                    <span class="check"></span>
+                                    <span class="box"></span>
+                                    减少与消除事故影响设施 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">设施类别
+                    </label>
+                    <div class="col-md-10">
+
+                        <select class="form-control"  tjx-data-field="Specification">
+                            <option>一、检测、报警设施</option>
+                            <option>二、设备安全防护设施</option>
+                            <option>三、防爆设施</option>
+                            <option>四、作业场所防护设施</option>
+                            <option>五、安全警示标志</option>
+                            <option>六、泄压和止逆设施</option>
+                            <option>七、紧急处理设施</option>
+                            <option>八、防止火灾蔓延设施</option>
+                            <option>九、灭火设施</option>
+                            <option>十、应急处置设施</option>
+                            <option>十一、应急救援设施</option>
+                            <option>十二、逃生设施</option>
+                            <option>十三、劳动防护用品和装备</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group  ">
+                    <label class="col-md-2 control-label">安全设施名称
+                        <span class="required">* </span>
+                    </label>
+                    <div class="col-md-10">
+                        <input name="EquipmentName" type="text"  tjx-data-field="EquipmentName" class="form-control"  size="60"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">位置</label>
+                    <div class="col-md-10">
+                        <input name="textfield" type="text" tjx-data-field="Location" class="form-control"  size="60"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">规格、型号</label>
+                    <div class="col-md-10">
+                        <input name="textfield" type="text" tjx-data-field="EquipmentType" class="form-control"  size="60"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">数量</label>
+                    <div class="col-md-10">
+                        <input name="textfield" type="text" tjx-data-field="Amount" class="form-control"  size="60"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">备注</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" rows="3" tjx-data-field="Memo" ></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+            <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

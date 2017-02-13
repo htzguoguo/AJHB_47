@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="table-responsive " tjx-data-source="SecurityInfoService/certification/">
+    <br>
+    <table id="tb_basicinfo"   class="table table-bordered ">
+        <tr>
+            <td class="col-md-2"> 类别</td>
+            <td class="col-md-2"> <span tjx-data-field="DocumentCategory" > </span></td>
+            <td class="col-md-2"> 姓名</td>
+            <td class="col-md-2">  <span tjx-data-field="Holder"  ></span></td>
+            <td class="col-md-2">  证书名称</td>
+            <td class="col-md-2">  <span tjx-data-field="Name"  ></span> </td>
+        </tr>
+        <tr>
+            <td>  证号 </td>
+            <td> <span tjx-data-field="DocumentNumber"  > </span></td>
+            <td>  有效期 </td>
+            <td>  <span tjx-data-field="ExpirationDate"  ></span></td>
+            <td>   发证单位 </td>
+            <td>  <span tjx-data-field="AuthorizingDept"  ></span> </td>
+        </tr>
+        <tr>
+            <td>  照片 </td>
+            <td colspan="5">   <div class="filter-v1 margin-top-10">
+                <div id="mix-grid-1" class="row mix-grid thumbnails">
+                    <div   class="col-md-6 col-sm-6 mix category_1">
+                        <div class="mix-inner">
+                            <img class="img-responsive" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--<script type="text/javascript" src="js/tjx.data.safetysearch.js"></script>-->
+<script type="text/javascript" src="app/detail/js/tjx.data.detail.photo.js"></script>
+<script type="text/javascript" src="app/detail/js/tjx.app.detail.element.js"></script>
+<script type="text/javascript" src="app/detail/js/tjx.app.detail.photo.js"></script>
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.detail.element.initModule( jQuery('body') );
+                tjx.app.detail.photo.initModule( jQuery('body') );
+            });
+</script>
+
+</body>
+</html>

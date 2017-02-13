@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+</head>
+<body>
+<div  id="certifiation">
+    <div class="modal-header">
+        <div class="portlet-title">
+            <div class="caption font-green-haze">
+                <i class="icon-check font-green-haze"></i>
+                <span class="caption-subject bold uppercase"></span>
+
+                <button type="button"  class="close " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div  class="portlet-body   form ">
+            <form class="form-horizontal form-bordered form-row-stripped">
+
+                <div class="form-body">
+                    <div class="note note-danger">
+                        <p>
+                            <strong>当天如果没有新入库危化品,请填0；库存量为当前危化品实际存量;填写时请注意单位。</strong>
+                        </p>
+                    </div>
+
+                    <table id="batchreport" class="table table-bordered table-hover">
+                        <thead>
+                        <tr role="row" class="heading">
+                            <th width="30%">
+                               危化品名称
+                            </th>
+                            <th width="15%">
+                                入库量
+                            </th>
+                            <th width="15%">
+                               日使用量
+                            </th>
+                            <th width="15%">
+                                库存量
+                            </th>
+                            <th width="15%">
+                                单位
+                            </th>
+                         <!--   <th width="30%">
+                                最大存储量
+                            </th>
+                            <th width="10%">
+                               单位
+                            </th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div >
+
+<!--<script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>-->
+<!--<script type="text/javascript" src="js/tjx.util.ui.input.js"></script>-->
+<script type="text/javascript" src="app/onsitecheck/js/tjx.data.onsitecheck.chemicaldailyreport.js"></script>
+<script type="text/javascript" src="app/onsitecheck/js/tjx.app.onsitecheck.chemicaldailybatchreport.js"></script>
+<script type="text/javascript">
+    // Start tjx once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.onsitecheck.chemicaldailybatchreport.initModule( jQuery('body') );
+            });
+</script>
+</body>
+</html>

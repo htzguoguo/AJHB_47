@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="tjx-home">
+
+        <div class="col-lg-12">
+        <div class="row  border-bottom white-bg dashboard-header">
+
+                <div class="col-sm-3">
+                    <h4><a href='javascript:parent.tjx.index1.oepnMenu("tjx-shell-index1-menu-nav04")'>废水污染物</a></h4>
+                    <small></small>
+                    <small></small>
+                    <ul class="list-group clear-list m-t">
+                        <li class="list-group-item fist-item">
+                                <span class="pull-right">
+                                    35
+                                </span>
+                            <span class="label label-success">1</span>氨氮
+                        </li>
+                        <li class="list-group-item">
+                                <span class="pull-right">
+                                   3
+                                </span>
+                            <span class="label label-info">2</span> 总磷
+                        </li>
+                        <li class="list-group-item">
+                                <span class="pull-right">
+                                   400
+                                </span>
+                            <span class="label label-primary">3</span> 悬浮物
+                        </li>
+                        <li class="list-group-item">
+                                <span class="pull-right">
+                                   20
+                                </span>
+                            <span class="label label-default">4</span> 石油类
+                        </li>
+                        <li class="list-group-item">
+                                <span class="pull-right">
+                                   100
+                                </span>
+                            <span class="label label-primary">5</span> 动植物油
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <div class="flot-chart dashboard-chart">
+                        <div class="flot-chart-content" id="flot-dashboard-chart"></div>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-xs-4">
+                            <div class=" m-l-md">
+                                <span class="h4 font-bold m-t block">废水</span>
+                                <small class="text-muted m-b block">平均排放量</small>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <span class="h4 font-bold m-t block">废气</span>
+                            <small class="text-muted m-b block">平均排放量</small>
+                        </div>
+                        <div class="col-xs-4">
+                            <span class="h4 font-bold m-t block"></span>
+                            <small class="text-muted m-b block"></small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                <h4>废气污染物</h4>
+                    <small></small>
+                    <small></small>
+                <ul class="list-group clear-list m-t">
+                    <li class="list-group-item fist-item">
+                                <span class="pull-right">
+                                 300mg/m³
+                                </span>
+                        <span class="label label-danger">1</span>氮氧化物
+                    </li>
+                    <li class="list-group-item">
+                                <span class="pull-right">
+                                  50mg/m³
+                                </span>
+                        <span class="label label-info">2</span>二氧化硫
+                    </li>
+                    <li class="list-group-item">
+                                <span class="pull-right">
+                                  20mg/m³
+                                </span>
+                        <span class="label label-warning">3</span> 烟尘
+                    </li>
+                    <li class="list-group-item">
+                                <span class="pull-right">
+                                   120mg/m3
+                                </span>
+                        <span class="label label-default">4</span> 非甲烷总烃
+                    </li>
+                    <li class="list-group-item">
+                                <span class="pull-right">
+                                   70mg/m3
+                                </span>
+                        <span class="label label-primary">5</span> 二甲苯
+                    </li>
+                </ul>
+            </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wrapper wrapper-content">
+                    <div class="row">
+                       <!-- <div class="col-lg-4">
+
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>放射装置</h5>
+                                </div>
+                                <div class="ibox-content no-padding">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <p><a class="text-info" href="#">测量仪 HZHD型</a> 天津冶金集团天材科技发展有限公司.</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p><a class="text-info" href="#">伽玛测量仪	HZHD型</a> 天津冶金集团天材科技发展有限公司 </p>
+                                            <div class="text-center m">
+                                                <span id="sparkline8"></span>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p><a class="text-info" href="#">测量仪	CMI-900</a> 天津普林电路股份有限公司 </p>
+
+                                        </li>
+                                        <li class="list-group-item ">
+                                            <p><a class="text-info" href="#">X-RAY钻孔机 MMX-888</a> 天津普林电路股份有限公司</p>
+
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p><a class="text-info" href="#">医用X射线机摄影装置 XG520-9</a>中远散货运输有限公司门诊部</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p><a class="text-info" href="#">GE Vamana Svrad Tube5331186</a> 通用电气医疗系统（天津）有限公司 </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p><a class="text-info" href="#">X射线实时成像系统	MU2000-Dstand-ard160kv</a> 汉特曼轻金属铸造（天津）有限公司 </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="col-md-12">
+                            <!-- Begin: life time stats -->
+                            <div class="portlet light">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="icon-bar-chart font-green-sharp"></i>
+                                        <span class="caption-subject font-green-sharp bold uppercase">建设项目</span>
+                                        <span class="caption-helper"></span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="tabbable-line">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a href="#overview_1" data-toggle="tab">
+                                                   未验收项目 </a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="overview_1">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover table-bordered">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>
+                                                               企业名称
+                                                            </th>
+                                                            <th>
+                                                                项目名称
+                                                            </th>
+                                                            <th>
+                                                                环评日期
+                                                            </th>
+                                                            <th>
+                                                                批复日期
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:;">
+                                                                    天津太钢天管不锈钢有限公司 </a>
+                                                            </td>
+                                                            <td>
+                                                                天津太钢天管不锈钢有限公司废水生化深度处理
+                                                            </td>
+                                                            <td>
+
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                                    2015.10.10</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:;">
+                                                                    古德里奇航空技术（天津）有限公司 </a>
+                                                            </td>
+                                                            <td>
+                                                                古德里奇航空 （天津）有限公司零部件制造项目
+                                                            </td>
+                                                            <td>
+                                                                2013-1
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                                    2013.3.11</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:;">
+                                                                    古德里奇航空机构服务（天津）有限公司 </a>
+                                                            </td>
+                                                            <td>
+                                                                古德里奇航空结构服务（中国）有限公司工业废水再循环利用处理系统项目
+                                                            </td>
+                                                            <td>
+                                                                2014-5
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                                    2014.5.8 </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:;">
+                                                                    和泽生物科技有限公司 </a>
+                                                            </td>
+                                                            <td>
+                                                                和泽生物科技有限公司空港干细胞产业化基地项目
+                                                            </td>
+                                                            <td>
+
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                                    2012.2.20 </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:;">
+                                                                    嘉里粮油（天津）有限公司 </a>
+                                                            </td>
+                                                            <td>
+                                                                嘉里粮油（天津）有限公司精炼厂脱臭真空系统冰冷改造项目
+                                                            </td>
+                                                            <td>
+                                                                2013-11
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                                    2013.11.26</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:;">
+                                                                    嘉里粮油（天津）有限公司</a>
+                                                            </td>
+                                                            <td>
+                                                                嘉里粮油（天津）有限公司污水处理站扩建项目
+                                                            </td>
+                                                            <td>
+                                                                2013-2
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                                    20141210 </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:;">
+                                                                    天津南洋电缆有限公司 </a>
+                                                            </td>
+                                                            <td>
+                                                                南洋电缆（天津）有限公司新能源、船用与变频节能特种电缆项目110KV局放及屏蔽实验室
+                                                            </td>
+                                                            <td>
+                                                                2009-12
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                                    2010.1.10 </a>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End: life time stats -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<script src="css/glb/flot/jquery.flot.js" type="text/javascript"></script>
+<script src="css/glb/flot/jquery.flot.tooltip.min.js" type="text/javascript"></script>
+<script src="css/glb/flot/jquery.flot.spline.js" type="text/javascript"></script>
+<script src="css/glb/flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="css/glb/flot/jquery.flot.symbol.js" type="text/javascript"></script>
+<script src="css/glb/flot/jquery.flot.time.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+
+        var data1 = [
+            [1,8],[2,5],[3,10],[4,4],[5,16],[6,5],[7,11],[8,6],[9,11],[10,30],[11,10],[12,13]
+        ];
+        var data2 = [
+            [1,0],[2,2],[3,0],[4,1],[5,3],[6,1],[7,5],[8,2],[9,3],[10,2],[11,1],[12,0]
+        ];
+        $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+                    data1, data2
+                ],
+                {
+                    series: {
+                        lines: {
+                            show: false,
+                            fill: true
+                        },
+                        splines: {
+                            show: true,
+                            tension: 0.4,
+                            lineWidth: 1,
+                            fill: 0.4
+                        },
+                        points: {
+                            radius: 0,
+                            show: true
+                        },
+                        shadowSize: 2
+                    },
+                    grid: {
+                        hoverable: true,
+                        clickable: true,
+                        tickColor: "#d5d5d5",
+                        borderWidth: 1,
+                        color: '#d5d5d5'
+                    },
+                    colors: ["#1ab394", "#1C84C6"],
+                    xaxis:{
+                    },
+                    yaxis: {
+                        ticks: 4
+                    },
+                    tooltip: false
+                }
+        );
+
+        var doughnutData = [
+            {
+                value: 300,
+                color: "#a3e1d4",
+                highlight: "#1ab394",
+                label: "App"
+            },
+            {
+                value: 50,
+                color: "#dedede",
+                highlight: "#1ab394",
+                label: "Software"
+            },
+            {
+                value: 100,
+                color: "#A4CEE8",
+                highlight: "#1ab394",
+                label: "Laptop"
+            }
+        ];
+
+        var doughnutOptions = {
+            segmentShowStroke: true,
+            segmentStrokeColor: "#fff",
+            segmentStrokeWidth: 2,
+            percentageInnerCutout: 45, // This is 0 for Pie charts
+            animationSteps: 100,
+            animationEasing: "easeOutBounce",
+            animateRotate: true,
+            animateScale: false
+        };
+
+        var polarData = [
+            {
+                value: 300,
+                color: "#a3e1d4",
+                highlight: "#1ab394",
+                label: "App"
+            },
+            {
+                value: 140,
+                color: "#dedede",
+                highlight: "#1ab394",
+                label: "Software"
+            },
+            {
+                value: 200,
+                color: "#A4CEE8",
+                highlight: "#1ab394",
+                label: "Laptop"
+            }
+        ];
+
+        var polarOptions = {
+            scaleShowLabelBackdrop: true,
+            scaleBackdropColor: "rgba(255,255,255,0.75)",
+            scaleBeginAtZero: true,
+            scaleBackdropPaddingY: 1,
+            scaleBackdropPaddingX: 1,
+            scaleShowLine: true,
+            segmentShowStroke: true,
+            segmentStrokeColor: "#fff",
+            segmentStrokeWidth: 2,
+            animationSteps: 100,
+            animationEasing: "easeOutBounce",
+            animateRotate: true,
+            animateScale: false
+        };
+
+    });
+</script>
+
+</body>
+</html>

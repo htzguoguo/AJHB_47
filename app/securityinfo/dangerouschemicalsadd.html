@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<div class="portlet box blue-madison">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-gift"></i>
+        </div>
+        <div class="tools">
+        </div>
+    </div>
+    <div class="portlet-body   form ">
+        <form class="horizontal-form">
+            <div class="form-body">
+              <!--  <h3 class="form-section">一．危险化学品</h3>-->
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">化学品大类
+                            </label>
+                            <div class="col-md-8">
+                                <select name="Danger-ChemicalCategory" id="Danger-ChemicalCategory" type="text" tjx-data-field="Danger-ChemicalCategory" class="form-control"  >
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">化学品小类
+                            </label>
+                            <div class="col-md-8">
+                                <select name="Danger-ChemicalSubCategory" id="Danger-ChemicalSubCategory" type="text" tjx-data-field="Danger-ChemicalSubCategory" class="form-control"  >
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">CAS编号
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" id="Danger-ChemicalNum" type="text" tjx-data-field="Danger-ChemicalNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">中文名称
+                            </label>
+                            <div class="col-md-8">
+                                <input name="Danger-ChemicalName" id="Danger-ChemicalName" type="text" tjx-data-field="Danger-ChemicalName" class="form-control"  >
+                                </input>
+                               <!-- <input name="EnterpriseName" type="text" tjx-data-field="Danger-ChemicalName" class="form-control"  size="60"/>-->
+                            </div>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">危化品运输编号(IMDG)
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" id="Danger-ChemicalIMDGNum" type="text" tjx-data-field="Danger-ChemicalIMDGNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">危化品目录编号
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" id="Danger-ChemicalCatalogNum" type="text" tjx-data-field="Danger-ChemicalCatalogNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">用途
+                            </label>
+                            <div class="col-md-8">
+                                <div class="md-radio-inline">
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio53" name="radio2" tjx-data-field="Danger-Usage-Never" class="md-radiobtn" checked="">
+                                        <label for="radio53">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            原料 </label>
+                                    </div>
+                                    <div class="md-radio ">
+                                        <input type="radio" id="radio54" name="radio2" tjx-data-field="Danger-Usage-Occasionally" class="md-radiobtn" >
+                                        <label for="radio54">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            产品 </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio55" name="radio2" tjx-data-field="Danger-Usage-Always" class="md-radiobtn">
+                                        <label for="radio55">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            其它 </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">日常用量(月)
+                            </label>
+                            <div class="col-md-8">
+                               <!-- <input name="EnterpriseName" type="text" tjx-data-field="Danger-DailyDosage" class="form-control"  size="60"/>-->
+                                <div class="input-icon col-md-9">
+                                    <input name="EnterpriseName" type="number" tjx-data-field="Danger-DailyDosageAmount" class="form-control number-only"  size="60"/>
+                                </div>
+                                <div class="input-icon col-md-3">
+                                   <!-- <input name="EnterpriseName" id="Danger-ChemicalUnit" tjx-data-field="Danger-DailyDosageUnit" type="text"  class="form-control "  size="60"/>-->
+                                    <select name="Danger-ChemicalUnit" id="Danger-ChemicalUnit" type="text" tjx-data-field="Danger-DailyDosageUnit" class="form-control"  >
+                                    <option  selected>吨</option>
+                                    <option>公斤</option>
+                                    <option>升</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">最大储存量
+                            </label>
+                            <div class="col-md-8">
+                                <!--<input name="EnterpriseName" type="text" tjx-data-field="Danger-MaximumStockingCapacity" class="form-control"  size="60"/>-->
+
+                                <div class="input-icon col-md-9">
+                                    <input name="EnterpriseName" type="number" tjx-data-field="Danger-MaximumStockingCapacityAmount" class="form-control number-only"  size="60"/>
+                                </div>
+                                <div class="input-icon col-md-3">
+                                    <select name="EnterpriseName" id="Danger-MaximumStockingUnit" tjx-data-field="Danger-MaximumStockingCapacityUnit" type="text"  class="form-control"  >
+                                        <option  selected>吨</option>
+                                        <option>公斤</option>
+                                        <option>升</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">储存位置
+                            </label>
+                            <div class="col-md-8">
+                                <input name="Danger-StorageSite" id="Danger-StorageSite" type="text" tjx-data-field="Danger-StorageSite" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+             <!--   <h3 class="form-section">二．其中剧毒化学品</h3>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">化学品大类
+
+                            </label>
+                            <div class="col-md-8">
+                                <select name="Poison-ChemicalCategory" id="Poison-ChemicalCategory" tjx-data-field="Poison-ChemicalCategory" type="text"  class="form-control"  >
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">化学品小类
+                            </label>
+                            <div class="col-md-8">
+                                <select name="Danger-ChemicalSubCategory" id="Poison-ChemicalSubCategory" type="text" tjx-data-field="Poison-ChemicalSubCategory" class="form-control"  >
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">CAS编号
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" id="Poison-ChemicalNum" type="text" tjx-data-field="Poison-ChemicalNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">中文名称
+
+                            </label>
+                            <div class="col-md-8">
+                                <input name="Poison-ChemicalName" id="Poison-ChemicalName" type="text" tjx-data-field="Poison-ChemicalName" class="form-control"  >
+                                </input>
+                               &lt;!&ndash; <input name="EnterpriseName" type="text" tjx-data-field="Poison-ChemicalName" class="form-control"  size="60"/>&ndash;&gt;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">危化品运输编号(IMDG)
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" id="Poison-ChemicalIMDGNum" type="text" tjx-data-field="Poison-ChemicalIMDGNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">危化品目录编号
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" id="Poison-ChemicalCatalogNum" type="text" tjx-data-field="Poison-ChemicalCatalogNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">用途
+                            </label>
+                            <div class="col-md-8">
+                                <div class="md-radio-inline">
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio56" name="radio3" tjx-data-field="Poison-Usage-Never" class="md-radiobtn" checked="">
+                                        <label for="radio56">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            原料 </label>
+                                    </div>
+                                    <div class="md-radio ">
+                                        <input type="radio" id="radio57" name="radio3" tjx-data-field="Poison-Usage-Occasionally" class="md-radiobtn" >
+                                        <label for="radio57">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            产品 </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio58" name="radio3" tjx-data-field="Poison-Usage-Always" class="md-radiobtn">
+                                        <label for="radio58">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            其它 </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">日常用量(月)
+                            </label>
+                            <div class="col-md-8">
+                                <div class="input-icon col-md-9">
+                                    <input name="EnterpriseName" type="number" tjx-data-field="Poison-DailyDosageAmount" class="form-control number-only"  size="60"/>
+                                </div>
+                                <div class="input-icon col-md-3">
+                                    <select name="EnterpriseName" id="Poison-ChemicalUnit" tjx-data-field="Poison-DailyDosageUnit" type="text"  class="form-control"  >
+                                        <option  selected>吨</option>
+                                        <option>公斤</option>
+                                        <option>升</option>
+                                    </select>
+                                </div>
+                              &lt;!&ndash;  <input name="EnterpriseName" type="text" tjx-data-field="Poison-DailyDosage" class="form-control"  size="60"/>&ndash;&gt;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">最大储存量
+                            </label>
+                            <div class="col-md-8">
+                              &lt;!&ndash;  <input name="EnterpriseName" type="text" tjx-data-field="Poison-MaximumStockingCapacity" class="form-control"  size="60"/>&ndash;&gt;
+                                <div class="input-icon col-md-9">
+                                    <input name="EnterpriseName" type="number" tjx-data-field="Poison-MaximumStockingCapacityAmount" class="form-control number-only"  size="60"/>
+                                </div>
+                                <div class="input-icon col-md-3">
+                                    <select name="EnterpriseName" id="Poison-MaximumStockingUnit" tjx-data-field="Poison-MaximumStockingCapacityUnit" type="text"  class="form-control"  >
+                                        <option  selected>吨</option>
+                                        <option>公斤</option>
+                                        <option>升</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">储存位置
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" type="text" tjx-data-field="Poison-StorageSite" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="form-section">三．其中易制毒化学品</h3>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">化学品大类
+
+                            </label>
+                            <div class="col-md-8">
+                                <select name="Drug-ChemicalCategory" id="Drug-ChemicalCategory" tjx-data-field="Drug-ChemicalCategory" type="text"  class="form-control"  >
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">化学品小类
+                            </label>
+                            <div class="col-md-8">
+                                <select name="Drug-ChemicalSubCategory" id="Drug-ChemicalSubCategory" type="text" tjx-data-field="Drug-ChemicalSubCategory" class="form-control"  >
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">CAS编号
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" id="Drug-ChemicalNum" type="text" tjx-data-field="Drug-ChemicalNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">中文名称
+
+                            </label>
+                            <div class="col-md-8">
+                                <input name="Drug-ChemicalName" id="Drug-ChemicalName" type="text" tjx-data-field="Drug-ChemicalName" class="form-control"  >
+                                </input>
+                               &lt;!&ndash; <input name="EnterpriseName" type="text" tjx-data-field="Drug-ChemicalName" class="form-control"  size="60"/>&ndash;&gt;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">危化品运输编号(IMDG)
+                            </label>
+                            <div class="col-md-8">
+                                <input  id="Drug-ChemicalIMDGNum" type="text" tjx-data-field="Drug-ChemicalIMDGNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">危化品目录编号
+                            </label>
+                            <div class="col-md-8">
+                                <input  id="Drug-ChemicalCatalogNum" type="text" tjx-data-field="Drug-ChemicalCatalogNum" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">用途
+                            </label>
+                            <div class="col-md-8">
+                                <div class="md-radio-inline">
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio59" name="radio4" tjx-data-field="Drug-Usage-Never" class="md-radiobtn" checked="">
+                                        <label for="radio59">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            原料 </label>
+                                    </div>
+                                    <div class="md-radio ">
+                                        <input type="radio" id="radio60" name="radio4" tjx-data-field="Drug-Usage-Occasionally" class="md-radiobtn" >
+                                        <label for="radio60">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            产品 </label>
+                                    </div>
+                                    <div class="md-radio">
+                                        <input type="radio" id="radio61" name="radio4" tjx-data-field="Drug-Usage-Always" class="md-radiobtn">
+                                        <label for="radio61">
+                                            <span class="inc"></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                            其它 </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">日常用量(月)
+                            </label>
+                            <div class="col-md-8">
+                                <div class="input-icon col-md-9">
+                                    <input name="EnterpriseName" type="number" tjx-data-field="Drug-DailyDosageAmount" class="form-control number-only"  size="60"/>
+                                </div>
+                                <div class="input-icon col-md-3">
+                                    <select name="EnterpriseName" id="Drug-ChemicalUnit" type="text"  tjx-data-field="Drug-DailyDosageUnit" class="form-control"  >
+                                        <option  selected>吨</option>
+                                        <option>公斤</option>
+                                        <option>升</option>
+                                    </select>
+                                </div>
+                               &lt;!&ndash; <input name="EnterpriseName" type="text" tjx-data-field="Drug-DailyDosage" class="form-control"  size="60"/>&ndash;&gt;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">最大储存量
+                            </label>
+                            <div class="col-md-8">
+                              &lt;!&ndash;  <input name="EnterpriseName" type="text" tjx-data-field="Drug-MaximumStockingCapacity" class="form-control"  size="60"/>&ndash;&gt;
+
+                                <div class="input-icon col-md-9">
+                                    <input name="EnterpriseName" type="number" tjx-data-field="Drug-MaximumStockingCapacityAmount" class="form-control number-only"  size="60"/>
+                                </div>
+                                <div class="input-icon col-md-3">
+                                    <select name="EnterpriseName" id="Drug-MaximumStockingUnit" tjx-data-field="Drug-MaximumStockingCapacityUnit" type="text"  class="form-control"  >
+                                        <option  selected>吨</option>
+                                        <option>公斤</option>
+                                        <option>升</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">储存位置
+                            </label>
+                            <div class="col-md-8">
+                                <input name="EnterpriseName" type="text" tjx-data-field="Drug-StorageSite" class="form-control"  size="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
+
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button id="ok" type="button" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                        <button id="cancel" type="reset" class="btn">取消</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--<script type="text/javascript" src="js/tjx.util.ui.input.js"></script>
+<script type="text/javascript" src="js/tjx.data.chemical.js"></script>-->
+<script type="text/javascript" src="app/securityinfo/js/tjx.app.securityinfo.chemical.js"></script>
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.securityinfo.chemical.initModule( jQuery('.portlet'), true , false);
+            });
+</script>
+
+
+</body>
+</html>

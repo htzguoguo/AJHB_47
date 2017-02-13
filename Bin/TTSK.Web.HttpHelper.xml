@@ -1,0 +1,105 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TTSK.Web.HttpHelper
+</name>
+</assembly>
+<members>
+<member name="P:TTSK.Web.HttpHelper.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:TTSK.Web.HttpHelper.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:TTSK.Web.HttpHelper.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:TTSK.Web.HttpHelper.CookieExtension.GetString(System.Web.HttpCookie)">
+	<summary>
+ 从一个Cookie中读取字符串值
+ </summary>
+	<param name="cookie"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.CookieExtension.ToInt(System.Web.HttpCookie,System.Int32)">
+	<summary>
+ 从一个Cookie中读取 Int 值
+ </summary>
+	<param name="cookie"></param>
+	<param name="defaultValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.CookieExtension.FromJson``1(System.Web.HttpCookie)">
+	<summary>
+ 从一个Cookie中读取【JSON字符串】值并反序列化成一个对象，用于读取复杂对象
+ </summary>
+	<typeparam name="T"></typeparam>
+	<param name="cookie"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.CookieExtension.WriteCookie(System.Object,System.String,System.Nullable{System.DateTime})">
+	<summary>
+ 将一个对象写入到Cookie
+ </summary>
+	<param name="obj"></param>
+	<param name="name"></param>
+	<param name="expires"></param>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.CookieExtension.DeleteCookie(System.String)">
+	<summary>
+ 删除指定的Cookie
+ </summary>
+	<param name="name"></param>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.MyExtension.TryToInt(System.String,System.Int32)">
+	<summary>
+ 将一个字符串转成为一个整数，可指定默认值
+ </summary>
+	<param name="str"></param>
+	<param name="defaultVal"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.MyExtension.ToJson(System.Object)">
+	<summary>
+ 将一个对象序列化成 JSON 格式字符串
+ </summary>
+	<param name="obj"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.MyExtension.FromJson``1(System.String)">
+	<summary>
+ 从JSON字符串中反序列化对象
+ </summary>
+	<typeparam name="T"></typeparam>
+	<param name="cookie"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.MyFormsPrincipal`1.SignIn(System.String,`0,System.Int32)">
+	<summary>
+ 执行用户登录操作
+ </summary>
+	<param name="loginName">登录名</param>
+	<param name="userData">与登录名相关的用户信息</param>
+	<param name="expiration">登录Cookie的过期时间，单位：分钟</param>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.MyFormsPrincipal`1.TryParsePrinicipal(System.Web.HttpRequest)">
+	<summary>
+ 尝试从HttpRequest.Cookies中构造一个MyFormsPrincipal对象
+ </summary>
+	<param name="request"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.HttpHelper.MyFormsPrincipal`1.TrySetUserInfo(System.Web.HttpContext)">
+	<summary>
+ 根据HttpContext对象设置用户标识对象
+ </summary>
+	<param name="context"></param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root Text="环保局系统">
+  <Group Text="环保信息" NavigateUrl="index3.html?FID=e2e15de7-a689-478a-9f77-98111723dcbb" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav03" ParentText="环保局系统" Level="2">
+    <Group Text="环保排污企业信息" NavigateUrl="index3.html?FID=96b1892c-4334-44a5-8fb9-633295b63e1e" Target="frmright" Num="0" PicPath="tit3" ParentText="环保信息" Level="3">
+      <Command Text="排污企业产品信息" NavigateUrl="table.html?FID=0ea0bfe6-4e11-42e1-bbc4-a40d6382219e" Target="frmright" ID="7265" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="排污企业基本信息" NavigateUrl="table.html?FID=7974e115-76b3-44ac-bbd2-96768574fd23" Target="frmright" ID="7319" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="废水排放口" NavigateUrl="table.html?FID=0c9975d7-3c34-473f-a869-78a5e9b5d0e5" Target="frmright" ID="7273" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="废水污染物信息" NavigateUrl="table.html?FID=cfc76ec5-e856-43fe-8fb1-eea976fb6e62" Target="frmright" ID="7274" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="废气排放口" NavigateUrl="table.html?FID=811d4f0f-4953-4509-8a2d-583c68826d8d" Target="frmright" ID="7275" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="废气污染物信息" NavigateUrl="table.html?FID=d7e7e8d2-2875-480f-abb3-ab1854694d30" Target="frmright" ID="7276" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="边界噪声基本情况" NavigateUrl="table.html?FID=20546f1c-9824-4306-b9aa-b5f8930ca516" Target="frmright" ID="7277" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="固体废物基本情况" NavigateUrl="table.html?FID=f4855c65-f7cb-42de-a3b6-119efb9a2b71" Target="frmright" ID="7278" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="污染物治理设施" NavigateUrl="table.html?FID=2d706fa6-b126-48ba-937c-7cfcd5238bfa" Target="frmright" ID="7279" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="生产装置基本情况" NavigateUrl="table.html?FID=1b5d05ab-af42-4301-9523-4873c1954417" Target="frmright" ID="7280" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="生产装置污染物信息" NavigateUrl="table.html?FID=6aba9072-8855-4a5b-809b-a03e0738d197" Target="frmright" ID="7281" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+    </Group>
+    <Group Text="射线装置调查表" NavigateUrl="index3.html?FID=051ce4cb-2a17-4a38-a2d9-91104f14f721" Target="frmright" Num="0" PicPath="tit3" ParentText="环保信息" Level="3">
+      <Command Text="射线源基本信息" NavigateUrl="table.html?FID=45b8cb30-9468-4748-b18d-308ffaa14938" Target="frmright" ID="7294" PicPath="caseover" ParentText="射线装置调查表" Level="4" />
+      <Command Text="放射装置信息" NavigateUrl="table.html?FID=c548ef2c-e967-4711-8e57-bd28e4b12681" Target="frmright" ID="7295" PicPath="" ParentText="射线装置调查表" Level="4" />
+      <Command Text="放射检查项目" NavigateUrl="table.html?FID=1f483d42-11b8-47ab-a74d-c13c3548aff0" Target="frmright" ID="7296" PicPath="" ParentText="射线装置调查表" Level="4" />
+      <Command Text="存在问题" NavigateUrl="table.html?FID=89f004da-385b-491e-ae72-34f97876fe6e" Target="frmright" ID="7297" PicPath="" ParentText="射线装置调查表" Level="4" />
+    </Group>
+    <Group Text="固定式放射源" NavigateUrl="index3.html?FID=cd7e7933-a707-42fd-88d6-795e011ca96d" Target="frmright" Num="0" PicPath="tit3" ParentText="环保信息" Level="3">
+      <Command Text="射线源基本信息" NavigateUrl="table.html?FID=497d4d24-a953-40d2-9ff3-750afe9a1e47" Target="frmright" ID="7298" PicPath="caseover" ParentText="固定式放射源" Level="4" />
+      <Command Text="放射装置信息" NavigateUrl="table.html?FID=9d975aa0-0487-4db6-aa8d-d977049b9dc2" Target="frmright" ID="7299" PicPath="" ParentText="固定式放射源" Level="4" />
+      <Command Text="放射检查项目" NavigateUrl="table.html?FID=7e8186a8-18ce-42cc-b83a-04d84842872f" Target="frmright" ID="7300" PicPath="" ParentText="固定式放射源" Level="4" />
+      <Command Text="存在问题" NavigateUrl="table.html?FID=da8d3599-1807-4204-bf00-ab614736bba5" Target="frmright" ID="7301" PicPath="" ParentText="固定式放射源" Level="4" />
+    </Group>
+    <Group Text="建设项目环评和竣工验收" NavigateUrl="index3.html?FID=50a2738e-7921-4e0c-abef-c267a15f5ed9" Target="frmright" Num="0" PicPath="tit3" ParentText="环保信息" Level="3">
+      <Command Text="建设项目环评和竣工验收" NavigateUrl="table.html?FID=3bd17e3d-163d-4a91-976f-ce78f0db79ba" Target="frmright" ID="7303" PicPath="caseover" ParentText="建设项目环评和竣工验收" Level="4" />
+    </Group>
+  </Group>
+  <Group Text="地理信息" NavigateUrl="wwm/onemappage/index.html?FID=97004f8a-0f22-46a0-a9f7-1ebcea7c6af6" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav04" ParentText="环保局系统" Level="2" />
+  <Group Text="法律法规" NavigateUrl="laws.html?FID=d3a7fd01-ed79-43a1-b57a-ab38ee0ddcee" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav09" ParentText="环保局系统" Level="2" />
+  <Group Text="文档管理" NavigateUrl="app/documents/files.html?FID=d1d9ad16-08d9-4f4b-8ed5-fe39881423f9" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav014" ParentText="环保局系统" Level="2" />
+</Root>

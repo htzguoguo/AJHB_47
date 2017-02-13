@@ -1,0 +1,90 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TTSK.Web.AuthorityEntry
+</name>
+</assembly>
+<members>
+<member name="M:TTSK.Web.AuthorityEntry.FMParser_1.SetSelectCommand(System.Web.UI.WebControls.SqlDataSource,TTSK.Web.AuthorityEntry.clsFMCatalogTab,SupSystem.Web.GenericsDALC.IDALCHelper)">
+	<summary>
+ 设置选择数据选择参数
+ </summary>
+	<param name="sqlSource"></param>
+	<param name="fm"></param>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.AuthorityEntry.FMParser_1.SetDataConnection(System.Web.UI.WebControls.SqlDataSource,TTSK.Web.AuthorityEntry.clsFMCatalogTab,SupSystem.Web.GenericsDALC.IDALCHelper)">
+	<summary>
+ 设置数据库连接字符串
+ </summary>
+	<param name="sqlSource"></param>
+	<param name="fm"></param>
+	<remarks></remarks>
+</member><member name="P:TTSK.Web.AuthorityEntry.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:TTSK.Web.AuthorityEntry.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:TTSK.Web.AuthorityEntry.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:TTSK.Web.AuthorityEntry.FMParser_2.SetSelectCommand(System.Web.UI.WebControls.SqlDataSource,TTSK.Web.AuthorityEntry.clsFMCatalogTab,SupSystem.Web.GenericsDALC.IDALCHelper)">
+	<summary>
+ 设置选择数据选择参数
+ </summary>
+	<param name="sqlSource"></param>
+	<param name="fm"></param>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.AuthorityEntry.FMParser_2.SetDataConnection(System.Web.UI.WebControls.SqlDataSource,TTSK.Web.AuthorityEntry.clsFMCatalogTab,SupSystem.Web.GenericsDALC.IDALCHelper)">
+	<summary>
+ 设置数据库连接字符串
+ </summary>
+	<param name="sqlSource"></param>
+	<param name="fm"></param>
+	<remarks></remarks>
+</member><member name="T:TTSK.Web.AuthorityEntry.FMFilterManagement">
+	<summary>
+ 用户管理系统查询
+ </summary>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.AuthorityEntry.FMParser.SetSelectCommand(System.Web.UI.WebControls.SqlDataSource,TTSK.Web.AuthorityEntry.clsFMCatalogTab,SupSystem.Web.GenericsDALC.IDALCHelper)">
+	<summary>
+ 设置选择数据选择参数
+ </summary>
+	<param name="sqlSource"></param>
+	<param name="fm"></param>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.AuthorityEntry.FMParser.SetDataConnection(System.Web.UI.WebControls.SqlDataSource,TTSK.Web.AuthorityEntry.clsFMCatalogTab,SupSystem.Web.GenericsDALC.IDALCHelper)">
+	<summary>
+ 设置数据库连接字符串
+ </summary>
+	<param name="sqlSource"></param>
+	<param name="fm"></param>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.AuthorityEntry.EntryPoint.InitiateData">
+	<summary>
+ 用于初始化系统数据缓存
+ </summary>
+	<remarks></remarks>
+</member><member name="T:TTSK.Web.AuthorityEntry.FMSummaryManagement">
+	<summary>
+ 用于管理系统统计汇总
+ </summary>
+	<remarks></remarks>
+</member><member name="M:TTSK.Web.AuthorityEntry.ContextParameterParser.GetParameters_(System.String@,System.String@,System.String)">
+	<summary>
+ 带缓存的模式不适合应用
+ </summary>
+	<param name="pParas"></param>
+	<param name="p_Where"></param>
+	<param name="pFMID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

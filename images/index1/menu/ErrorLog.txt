@@ -1,0 +1,13 @@
+<-----System.Exception: System.Data.SqlClient.SqlException (0x80131904): 对象名 'CassAssocitateUserInfo' 无效。
+   at SupSystem.Web.GenericsDALC.DBClient.ExeSelectSql(DBParameter p_Sql, Object p_Command) in E:\程序代码\SupSystem.Web.GenericsDALC_V2\DBClient.vb:line 434
+   at SupSystem.Web.GenericsDALC.DBClient.ExeSql(String p_ServerName, DBParameter[] p_SqlParameters) in E:\程序代码\SupSystem.Web.GenericsDALC_V2\DBClient.vb:line 74
+ClientConnectionId:1667e2aa-ad40-415a-9b7f-c8cba5f5604f
+Error Number:208,State:1,Class:16
+   at SupSystem.Web.GenericsDALC.DBClient.ExeSql(String p_ServerName, DBParameter[] p_SqlParameters) in E:\程序代码\SupSystem.Web.GenericsDALC_V2\DBClient.vb:line 118
+   at SupSystem.Web.GenericsDALC.clsGenericsDALCHelper`1.ExcuteDataOperation(DBParameter pSQL) in E:\程序代码\SupSystem.Web.GenericsDALC_V2\clsGenericsDALCHelper.vb:line 771
+   at SupSystem.Web.GenericsDALC.clsGenericsDALCHelper`1.GetMultiResult(DBParameter pSQL) in E:\程序代码\SupSystem.Web.GenericsDALC_V2\clsGenericsDALCHelper.vb:line 701
+   at SupSystem.Web.GenericsDALC.clsGenericsDALCHelper`1.GetEntireEntity(String[] selectedFields) in E:\程序代码\SupSystem.Web.GenericsDALC_V2\clsGenericsDALCHelper.vb:line 101
+   at SupSystem.Web.GenericsDALC.clsGenericsDALCHelper`1.GetEntireEntity() in E:\程序代码\SupSystem.Web.GenericsDALC_V2\clsGenericsDALCHelper.vb:line 88
+   at TTSK.Web.AuthorityEntry.UserLogin.GetWholeTable() in E:\程序代码\TTSK.Web.AuthorityEntry_V2\TTSK.Web.AuthorityEntry\Login Module\UserLogin.vb:line 58
+   at TTSK.Web.AuthorityEntry.UserLogin.InitiateCache() in E:\程序代码\TTSK.Web.AuthorityEntry_V2\TTSK.Web.AuthorityEntry\Login Module\UserLogin.vb:line 21
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in E:\项目资料(8_1_2011)\40. 安全生产和环境保护地理信息系统项目\3. src\TJX.AJHB\AppWebSite_47\global.asax:line 17----->

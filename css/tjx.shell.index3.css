@@ -1,0 +1,118 @@
+/*
+ * ajhb.shell.index3.css
+ * left is  menu, and right is div for content style
+*/
+
+/** Begin reset **/
+/** End reset **/
+
+/** Begin standard selectors **/
+
+
+
+/** End standard selectors **/
+
+/** Begin utility selectors **/
+
+* {
+
+}
+
+.index3-content{
+    width:100%;
+    height:100% !important;
+    margin:0 auto;
+
+}
+
+.index3-left-menu{
+    width:230px;
+   /* float:left;*/
+    position: fixed;
+    left: 0px;
+    background:url(../images/index3/mainLbg.jpg) repeat-y;
+    border-right:#B7D5DF 1px solid;
+    height:100%;
+    margin:0;
+    padding:0;
+   /* -webkit-box-sizing: content-box ;*/
+}
+.index3-left-menu p,ol,ul{
+    margin: 0px;
+}
+
+/*.index3-left-menu li{
+    width:229px;
+}*/
+.index3-left-menu p.tit1{
+    width:229px;
+    height:40px;
+    border-top:#5AB8EF 1px solid;
+    border-bottom:#5AB8EF 1px solid;
+    line-height:40px;
+    color:#FFF;
+    background:#4399CB url(../images/index3/fig.jpg) no-repeat 15px center;
+   /*  background:#4399CB;*/
+    padding-left:40px;
+    font-weight:bold;
+    font-size:14px;
+}
+.index3-left-menu p.tit2{
+    width:229px;
+    height:36px;
+    border-top:#F5FBFE 1px solid;
+    border-bottom:#B9CAD3 1px solid;
+    line-height:36px;
+    color:#3B3B3B;
+    background:#D4E7F0 url(../images/index3/fig1.jpg) no-repeat 25px center;
+    padding-left:50px;
+    font-weight:bold;
+    font-size:14px;
+}
+.index3-left-menu p.tit3{
+    width:229px;
+    height:36px;
+    border-bottom:#B9CAD3 1px solid;
+    line-height:36px;
+    color:#3B3B3B;
+    background:#D4E7F0 url(../images/index3/fig1-.jpg) no-repeat 25px center;
+    padding-left:50px;
+    font-weight:bold;
+    font-size:14px;
+    cursor: pointer;
+}
+.index3-left-menu p.tit4{
+    width:229px;
+    height:36px;
+    border-bottom:#B9CAD3 1px solid;
+    line-height:36px;
+    color:#3B3B3B;
+    background:#D4E7F0 url(../images/index3/fig3.jpg) no-repeat 25px center;
+    padding-left:50px;
+    font-weight:bold;
+    font-size:14px;
+}
+.index3-left-menu ul, .index3-left-menu li{ padding:0;display:inline; }
+.index3-left-menu a{
+    background:url(../images/index3/fig2.png) no-repeat 50px center;
+    color:#3B3B3B;display:block;
+    width:229px;
+    height:31px;
+    padding-left:60px; line-height:31px; text-decoration:none}
+.index3-left-menu a:hover{
+    background:url(../images/index3/col_bg1.jpg) no-repeat;
+    color:#FFF;display:block;
+    width:229px;
+    height:31px; padding-left:60px; line-height:31px;}
+.index3-left-menu li.active a{
+    background:url(../images/index3/col_bg1.jpg) no-repeat;
+    color:#FFF;display:block;
+    width:229px; height:31px; padding-left:60px; line-height:31px;}
+
+.index3-right-content{
+    margin-top: 0px;
+    margin-left:230px;
+    padding:0px;
+}
+
+/** End utility selectors **/

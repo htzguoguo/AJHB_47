@@ -1,0 +1,56 @@
+/*
+ * ajhb.login.css
+ * login style
+*/
+
+/** Begin reset **/
+
+/** End reset **/
+
+/** Begin standard selectors **/
+
+html,body {
+	background:#1d78ad;
+}
+
+/** End standard selectors **/
+
+/** Begin utility selectors **/
+
+.tjx-login-title { margin:0 auto;
+         background:#16577c;
+         height:47px;
+         padding-left:14px;
+         color:#a5becd;
+         line-height:47px;
+	     font-size: 14px;
+         }
+
+.tjx-login-container {
+	 margin:0 auto; background: url(../images/login/login.jpg) top center no-repeat; height:648px;
+}
+.tjx-login-theme { width:1000px; margin:0 auto; overflow:hidden;}
+.tjx-login-loginForm {position:relative;padding-top:160px; width:380px; float:right; padding-right:40px; }
+.tjx-login-loginFuncNormal { padding-left:125px; background: url(../images/fog01.jpg) no-repeat 65px 0; color:#7C7C7C; font-size:24px; line-height:36px; margin-bottom:20px;}
+.tjx-login-loginFormIpt {position:relative;width:240px;height:44px;line-height:44px;margin:0 0 20px 60px;padding-right:5px;clear:both; background: url(../images/login/inpbg.jpg) no-repeat ;ime-mode:disabled; }
+.tjx-login-loginFormIpt .tjx-login-ico {position:absolute;left:15px;top:13px;z-index:1;
+
+}
+.tjx-login-ico-uid {width:20px;height:23px; background:url(../images/login/fog02.jpg) no-repeat;}
+.tjx-login-ico-pid {width:20px;height:23px; background:url(../images/login/fog03.jpg) no-repeat;}
+.tjx-login-formIpt {width:220px;height:38px;top:1px;left:10px;color:#B6B6B6;font-size:14px;font-weight:700;border:none;line-height:38px;background:transparent!important; padding-left:40px; padding-top:4px;}
+/*.ajhb-login-formIpt:focus{outline:0;}*/
+.tjx-login-showPlaceholder .tjx-login-placeholder {visibility:visible;cursor:text;}
+.tjx-login-placeholder {color:#B6B6B6;font-size:14px;position:absolute;left:45px;top:14px;line-height:14px;visibility:hidden;background:none;}
+.tjx-login-lbpid {
+	margin-left:62px;
+	margin-bottom:0px;
+	width:300px;
+	height:23px;
+}
+.tjx-login-loginFormBtn {width:150px;height:50px; border:0; padding:0; margin-top:20px;text-align:center}
+.tjx-login-btn-login { background:url(../images/login/login_btn.jpg) no-repeat; padding:0; width:144px; height:50px; color:#FFF; font-size:18px; font-weight:bold; border:0;}
+
+.tjx-login-copyriht {margin:0 auto; height:160px;color: #FFF; font-size: 14px; text-align:center; vertical-align:bottom; padding-top:140px; line-height:20px;}
+
+/** End utility selectors **/

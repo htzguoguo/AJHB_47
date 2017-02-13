@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="app/detail/js/tjx.data.detail.photo.js"></script>
+    <script type="text/javascript" src="app/detail/js/tjx.app.detail.photo.js"></script>
+    <script type="text/javascript">
+        // Start spa once DOM is ready
+        //
+        jQuery(document).ready(
+                function () {
+                    tjx.app.detail.photo.initModule( jQuery('body') );
+                });
+    </script>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="tabbable tabbable-custom tabbable-noborder">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#tab_1" data-toggle="tab">
+                        照片 </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1">
+                    <!-- BEGIN FILTER -->
+                    <div class="filter-v1 margin-top-10">
+                        <div id="mix-grid-1" class="row mix-grid thumbnails">
+                            <div   class="col-md-6 col-sm-6 mix category_1">
+                                <div class="mix-inner">
+                                    <img class="img-responsive" src="" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END FILTER -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

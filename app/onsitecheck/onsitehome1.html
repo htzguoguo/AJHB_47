@@ -1,0 +1,984 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<div class="tjx-home">
+    <div class="p-w-md m-t-sm">
+
+        <div class="col-sm-4">
+            <div class="row m-t-xs">
+                <div class="col-xs-6">
+                    <h3 class="m-t-lg m-b-md">易燃气体</h3>
+                    <div class="font-bold text-navy">22% <i class="fa fa-bolt"></i></div>
+                </div>
+                <div class="col-xs-6">
+                    <h3 class="m-t-lg m-b-md">有毒气体</h3>
+                    <div class="font-bold text-navy">15% <i class="fa fa-bolt"></i></div>
+                </div>
+            </div>
+
+
+            <table class="table small m-t-sm">
+                <tbody>
+                <tr>
+                    <td>
+                        <strong></strong> 甲烷
+
+                    </td>
+                    <td>
+                        <strong></strong> 磷化氢
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <strong></strong> 正丁烷
+                    </td>
+                    <td>
+                        <strong></strong> 二氟化氧
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong></strong> 环丁烷
+                    </td>
+                    <td>
+                        <strong></strong> 氯化氰
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+        <div class="col-sm-4">
+
+            <div class="row m-t-xs">
+                <div class="col-xs-6">
+
+                    <h3 class="m-t-lg m-b-md">易燃液体</h3>
+                    <div class="font-bold text-navy">23% <i class="fa fa-bolt"></i></div>
+                </div>
+                <div class="col-xs-6">
+
+                    <h3 class="m-t-lg m-b-md">易燃固体</h3>
+                    <div class="font-bold text-navy">16% <i class="fa fa-bolt"></i></div>
+                </div>
+            </div>
+
+
+            <table class="table small m-t-sm">
+                <tbody>
+                <tr>
+                    <td>
+                        <strong></strong> 环己烷
+
+                    </td>
+                    <td>
+                        <strong></strong> 铝粉
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <strong></strong> 己烯
+                    </td>
+                    <td>
+                        <strong></strong> 硫磺
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong></strong> 乙醛
+                    </td>
+                    <td>
+                        <strong></strong> 聚乙醛
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+            <div class="col-sm-4">
+
+                <div class="row m-t-xs">
+                    <div class="col-xs-6">
+                        <h3 class="m-t-lg m-b-md">毒害品</h3>
+                        <div class="font-bold text-navy">22% <i class="fa fa-bolt"></i></div>
+                    </div>
+                    <div class="col-xs-6">
+
+                        <h3 class="m-t-lg m-b-md">易爆品</h3>
+                        <div class="font-bold text-navy">25% <i class="fa fa-bolt"></i></div>
+                    </div>
+                </div>
+
+
+                <table class="table small m-t-sm">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <strong></strong> 氰化钡
+
+                        </td>
+                        <td>
+                            <strong></strong> 三硝基萘
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong></strong> 氰化亚铜
+                        </td>
+                        <td>
+                            <strong></strong> 六硝基二苯胺
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong></strong> 亚砷酸钾
+                        </td>
+                        <td>
+                            <strong></strong> 高氯酸铵
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="small pull-left col-md-3 m-l-lg m-t-md">
+                    <strong> 危化品存储/使用</strong>
+                </div>
+                <div class="small pull-right col-md-3 m-t-md text-right">
+
+                </div>
+                <div class="flot-chart m-b-xl">
+                    <div class="flot-chart-content" id="flot-dashboard5-chart"></div>
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12">
+            <!-- BEGIN PORTLET-->
+            <div class="portlet light">
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font-color hide"></i>
+                        <span class="caption-subject theme-font-color bold uppercase">企业直报</span>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#tab_1_2" data-toggle="tab">
+                                易燃危化品 </a>
+                        </li>
+                        <li>
+                            <a href="#tab_1_1" data-toggle="tab">
+                                易爆危化品</a>
+                        </li>
+                        <li>
+                            <a href="#tab_1_3" data-toggle="tab">
+                                有毒危化品 </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="portlet-body">
+                    <!--BEGIN TABS-->
+                    <div class="tab-content">
+                        <div class="tab-pane" id="tab_1_1">
+                            <div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                <ul class="feeds">
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-success">
+                                                        <i class="fa fa-bell-o"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        中纺油脂（天津）有限公司.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="label label-danger arrowed">
+                                                最新
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津伊利乳业有限责任公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="label label-danger arrowed">
+                                                    20 分钟前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-danger">
+                                                        <i class="fa fa-bolt"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        天津大无缝铜材有限公司.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                24 分钟前
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-info">
+                                                        <i class="fa fa-bullhorn"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        九三集团天津大豆科技有限公司
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="time">
+                                                <i class="ace-icon fa fa-clock-o"></i>
+                                                <span class="green">6 分钟前</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-success">
+                                                        <i class="fa fa-bullhorn"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        亚实履带（天津）有限公司
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                40 分钟前
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-warning">
+                                                        <i class="fa fa-plus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        伊势半（天津）化妆品有限公司
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                1.5 小时前
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-success">
+                                                        <i class="fa fa-bell-o"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        利拉伐（天津）有限公司
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                2 小时前
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-default">
+                                                        <i class="fa fa-bullhorn"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        南洋电缆（天津）有限公司
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                3 小时前
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-warning">
+                                                        <i class="fa fa-bullhorn"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        和泽生物科技有限公司
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                5 小时前
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-info">
+                                                        <i class="fa fa-bullhorn"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        天津万峰环保科技有限公司
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                18 小时前
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane  active" id="tab_1_2">
+                            <div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                <ul class="feeds">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            中储粮油脂（天津）有限公司
+                                                                   <span class="label uk-badge label-sm label-info">
+																石油醚	4kg<i class="fa fa-share"></i>
+																</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="label label-danger arrowed">
+                                                    最新
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            中储粮油脂（天津）有限公司
+                                                                     <span class="label uk-badge label-sm label-info">
+																异辛烷 2kg<i class="fa fa-share"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    10 分钟前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-danger">
+                                                        <i class="fa fa-bolt"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        中储粮油脂（天津）有限公司 <span class="label label-sm label-danger ">
+																异丙醇 35kg<i class="fa fa-share"></i>
+																</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                24 分钟前
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            中储粮油脂（天津）有限公司
+                                                            环己烷  0.2kg
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    1 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            中储粮油脂（天津）有限公司
+                                                            甲醇 0.4kg
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    2 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津伊利乳业有限责任公司
+                                                            丙酮 1.97kg
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    5 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津市山海关饮料有限公司	乙醚
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    8 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津市汇源印刷有限公司 异丙醇	 300千克
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    10 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            雪佛龙（天津）润滑油有限公司	异辛烷 0.002吨
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    15 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            柯顿（天津）电子医疗器械有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    20 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_3">
+                            <div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                <ul class="feeds">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            中纺油脂（天津）有限公司
+                                                                    <span class="label uk-badge label-sm label-info">
+																液氨 1.2t<i class="fa fa-share"></i>
+																</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="label label-danger arrowed">
+                                                    最新
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津伊利乳业有限责任公司
+                                                            三氯甲烷	0.75kg/月
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    10 分钟前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-danger">
+                                                        <i class="fa fa-bolt"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        中纺油脂（天津）有限公司
+                                                              <span class="label label-success arrowed-in arrowed-in-right">
+																氯化钡  1kg </span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date">
+                                                24 分钟前
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津万峰环保科技有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    1 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津中生乳胶有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    2 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津伊利乳业有限责任公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    5 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津普林电路股份有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    8 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天管元通管材制品有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    10 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            扎努西电气机械天津压缩机有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    15 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            柯顿（天津）电子医疗器械有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    20 小时前
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END TABS-->
+                </div>
+            </div>
+            <!-- END PORTLET-->
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+<!-- Flot -->
+<script src="css/glb/flot/jquery.flot.js"></script>
+<script src="css/glb/flot/jquery.flot.tooltip.min.js"></script>
+<script src="css/glb/flot/jquery.flot.spline.js"></script>
+<script src="css/glb/flot/jquery.flot.resize.js"></script>
+<script src="css/glb/flot/jquery.flot.pie.js"></script>
+<script src="css/glb/flot/jquery.flot.symbol.js"></script>
+<script src="css/glb/flot/jquery.flot.time.js"></script>
+
+<!-- Custom and plugin javascript -->
+
+<!--<script src="css/glb/pace/pace.min.js"></script>-->
+
+<!-- Sparkline -->
+<script src="js/jq/jquery.sparkline.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        var data1 = [
+           [1,8],[2,7],[3,10],[4,15],[5,16],[6,5],[7,11],[8,11],[9,11],[10,20],[11,10],[12,13]
+        ];
+        var data2 = [
+           [1,2],[2,5],[3,4],[4,11],[5,4],[6,2],[7,5],[8,6],[9,5],[10,4],[11,1],[12,5]
+        ];
+        $("#flot-dashboard5-chart").length && $.plot($("#flot-dashboard5-chart"), [
+                    data1,  data2
+                ],
+                {
+                    series: {
+                        lines: {
+                            show: false,
+                            fill: true
+                        },
+                        splines: {
+                            show: true,
+                            tension: 0.4,
+                            lineWidth: 1,
+                            fill: 0.4
+                        },
+                        points: {
+                            radius: 0,
+                            show: true
+                        },
+                        shadowSize: 2
+                    },
+                    grid: {
+                        hoverable: true,
+                        clickable: true,
+
+                        borderWidth: 2,
+                        color: 'transparent'
+                    },
+                    colors: ["#1ab394", "#1C84C6"],
+                    xaxis:{
+                    },
+                    yaxis: {
+                    },
+                    tooltip: false
+                }
+        );
+
+    });
+</script>
+
+</body>
+</html>

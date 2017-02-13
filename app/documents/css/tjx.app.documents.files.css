@@ -1,0 +1,28 @@
+.tjx-app-documents-files-container{
+    width:100%;
+    height:100% !important;
+    margin:0 auto;
+
+}
+
+.tjx-app-documents-files-index {
+    width:250px;
+    /* float:left;*/
+    position: fixed;
+    left: 0px;
+    border-right:#B7D5DF 1px solid;
+    height:100%;
+    margin:0;
+    padding:0;
+    overflow: auto;
+}
+
+.tjx-app-documents-files-list {
+    margin-top: 0px;
+    margin-left:250px;
+    padding:0px;
+}
+
+.dataTables_filter {
+    display: none;
+}

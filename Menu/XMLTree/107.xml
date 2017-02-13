@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root Text="安监环保监管系统">
+  <Group Text="首页" NavigateUrl="home.html?FID=e9ae757c-f17f-4a4a-a7fb-a7f4c591967c" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav01" ParentText="安监环保监管系统" Level="2" />
+  <Group Text="安监信息" NavigateUrl="index3.html?FID=468f652c-55bf-46b3-8e4b-00aa0e36d33e" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav02" ParentText="安监环保监管系统" Level="2">
+    <Group Text="企业综合管理统计" NavigateUrl="app/securityinfo/safetytotal.html?FID=c945ed85-7800-4845-9fa4-795f4dca20ad" Target="frmright" Num="0" PicPath="tit3" ParentText="安监信息" Level="3">
+      <Command Text="安监首页" NavigateUrl="app/securityinfo/safetyhome.html?FID=cecaac8d-40b1-4b51-a9c9-0ade333c6300" Target="frmright" ID="7323" PicPath="caseover" ParentText="企业综合管理统计" Level="4" />
+      <Command Text="综合查询" NavigateUrl="app/securityinfo/safetysearch.html?FID=fd774ddf-4bb3-4866-b5b2-117c72df78f0" Target="frmright" ID="7324" PicPath="caseover" ParentText="企业综合管理统计" Level="4" />
+      <Command Text="考核评分" NavigateUrl="app/rating/enterpriserating.html?FID=80e5e299-dbe7-453a-ba93-ed3c836e837b" Target="frmright" ID="7079" PicPath="caseover" ParentText="企业综合管理统计" Level="4" />
+    </Group>
+    <Group Text="企业管理情况明细" NavigateUrl="PageError.html?FID=6a20f876-48d9-412e-88bf-016e59490d03" Target="frmright" Num="0" PicPath="tit2" ParentText="安监信息" Level="3">
+      <Command Text="企业管理基本信息" NavigateUrl="table.html?FID=41683309-3661-4c41-a01b-ad3b2e087967" Target="frmright" ID="7002" PicPath="caseover" ParentText="企业管理情况明细" Level="4" />
+      <Command Text="企业危险化学品信息" NavigateUrl="table.html?FID=f8aa0ddb-8dac-4b1a-893a-c85d75b03ceb" Target="frmright" ID="7005" PicPath="caseover" ParentText="企业管理情况明细" Level="4" />
+      <Command Text="企业安全设施（设备）信息" NavigateUrl="table.html?FID=caa06990-b1cd-44e2-9e5e-170674baeca5" Target="frmright" ID="7008" PicPath="caseover" ParentText="企业管理情况明细" Level="4" />
+      <Command Text="企业安全设施（设备）检测" NavigateUrl="table.html?FID=28a87eeb-6f21-496e-be3e-54bfeffe1be2" Target="frmright" ID="7017" PicPath="caseover" ParentText="企业管理情况明细" Level="4" />
+      <Command Text="企业特种设备信息" NavigateUrl="table.html?FID=1f10650f-4253-4306-a4b4-f2e99ea2c39e" Target="frmright" ID="7011" PicPath="caseover" ParentText="企业管理情况明细" Level="4" />
+      <Command Text="企业从业人员持证信息" NavigateUrl="table.html?FID=a42057db-13e8-4267-9ed8-776460851a96" Target="frmright" ID="7229" PicPath="caseover" ParentText="企业管理情况明细" Level="4" />
+      <Command Text="企业危险辨识及控制措施" NavigateUrl="table.html?FID=24983a40-9df7-4508-9306-ee855e6ca386" Target="frmright" ID="7014" PicPath="caseover" ParentText="企业管理情况明细" Level="4" />
+    </Group>
+  </Group>
+  <Group Text="环保信息" NavigateUrl="index3.html?FID=d2cd8cf4-1607-4604-9de8-ef28cbabcec9" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav03" ParentText="安监环保监管系统" Level="2">
+    <Group Text="环保排污企业信息" NavigateUrl="index3.html?FID=1e122cbf-5299-4a2d-9fc8-d695e1471580" Target="frmright" Num="0" PicPath="tit3" ParentText="环保信息" Level="3">
+      <Command Text="企业信息" NavigateUrl="app/securityinfo/environmentalhome.html?FID=5cb3337b-3505-4f5e-8c9f-8178985a7810" Target="frmright" ID="7322" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="信息查询" NavigateUrl="app/securityinfo/environmentalsearch.html?FID=1fc2d7d9-8033-416d-970e-c99ddf3f7298" Target="frmright" ID="7325" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="排污企业基本信息" NavigateUrl="table.html?FID=71316d01-aa33-4beb-bfaf-4f6db5302091" Target="frmright" ID="7239" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="排污企业产品信息" NavigateUrl="table.html?FID=e6d7648e-9c80-4315-b66c-e8d4e55b8336" Target="frmright" ID="7022" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="废水排放口" NavigateUrl="table.html?FID=8b0ba412-7081-4c30-a93d-08f73f7b39b2" Target="frmright" ID="7032" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="废水污染物信息" NavigateUrl="table.html?FID=4837baa2-1e23-45ca-8dde-88addb36d6c7" Target="frmright" ID="7033" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="废气排放口" NavigateUrl="table.html?FID=88c975f2-111c-4a0a-ad8f-49285222a1dd" Target="frmright" ID="7035" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="废气污染物信息" NavigateUrl="table.html?FID=58d4be76-32fe-4ec1-8ee5-13f4f54360c9" Target="frmright" ID="7036" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="边界噪声基本情况" NavigateUrl="table.html?FID=b5a33cc7-2aa1-4f53-aa7b-93b2318a1f6a" Target="frmright" ID="7037" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="固体废物基本情况" NavigateUrl="table.html?FID=71aaf345-c28c-4894-877d-747cf2667261" Target="frmright" ID="7038" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="污染物治理设施" NavigateUrl="table.html?FID=fe7dafda-5663-4cca-bb9a-8c5597b27fe7" Target="frmright" ID="7039" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="生产装置基本情况" NavigateUrl="table.html?FID=45f906f8-07d6-47fb-a2eb-80aae62cd88f" Target="frmright" ID="7040" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+      <Command Text="生产装置污染物信息" NavigateUrl="table.html?FID=9ba7ff8c-94aa-4859-9a2e-2d5c991a4c29" Target="frmright" ID="7041" PicPath="caseover" ParentText="环保排污企业信息" Level="4" />
+    </Group>
+    <Group Text="射线装置调查表" NavigateUrl="index3.html?FID=e3913d0a-86e5-411a-99a8-dadfedc21695" Target="frmright" Num="0" PicPath="tit3" ParentText="环保信息" Level="3">
+      <Command Text="射线源基本信息" NavigateUrl="table.html?FID=185bb0af-7171-4ac1-b47c-8d87cfb31599" Target="frmright" ID="7059" PicPath="caseover" ParentText="射线装置调查表" Level="4" />
+      <Command Text="放射装置信息" NavigateUrl="table.html?FID=b1ef43c8-56c8-474f-af1a-993da7f8c908" Target="frmright" ID="7060" PicPath="" ParentText="射线装置调查表" Level="4" />
+      <Command Text="放射检查项目" NavigateUrl="table.html?FID=6c125ba0-c066-469b-9020-8be70fb96851" Target="frmright" ID="7061" PicPath="" ParentText="射线装置调查表" Level="4" />
+      <Command Text="存在问题" NavigateUrl="table.html?FID=9577c841-2d13-494b-866e-73195c3924e8" Target="frmright" ID="7062" PicPath="" ParentText="射线装置调查表" Level="4" />
+    </Group>
+    <Group Text="固定式放射源" NavigateUrl="index3.html?FID=cee69cf3-5b82-4b86-8a12-1d31df6f6671" Target="frmright" Num="0" PicPath="tit3" ParentText="环保信息" Level="3">
+      <Command Text="射线源基本信息" NavigateUrl="table.html?FID=b6511b25-156b-42a1-8a54-45d2c783fa1a" Target="frmright" ID="7063" PicPath="caseover" ParentText="固定式放射源" Level="4" />
+      <Command Text="放射装置信息" NavigateUrl="table.html?FID=176245f2-e6e4-473e-a17e-cab227ad5e38" Target="frmright" ID="7064" PicPath="" ParentText="固定式放射源" Level="4" />
+      <Command Text="放射检查项目" NavigateUrl="table.html?FID=d8f14f42-6c36-41df-bb66-85c619a57b2b" Target="frmright" ID="7065" PicPath="" ParentText="固定式放射源" Level="4" />
+      <Command Text="存在问题" NavigateUrl="table.html?FID=3478a88d-4cd3-40e5-80a6-79ba11473f48" Target="frmright" ID="7066" PicPath="" ParentText="固定式放射源" Level="4" />
+    </Group>
+    <Group Text="建设项目环评和竣工验收" NavigateUrl="index3.html?FID=81043974-e61c-414a-928d-a6a96ee1639c" Target="frmright" Num="0" PicPath="tit3" ParentText="环保信息" Level="3">
+      <Command Text="建设项目环评和竣工验收" NavigateUrl="table.html?FID=82456908-78f2-4e1e-b89a-681347da6341" Target="frmright" ID="7068" PicPath="caseover" ParentText="建设项目环评和竣工验收" Level="4" />
+    </Group>
+  </Group>
+  <Group Text="地理信息" NavigateUrl="wwm/onemappage/index.html?FID=1682e5b3-933a-4151-b488-9017c71200d9" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav04" ParentText="安监环保监管系统" Level="2">
+    <Group Text="地理信息信息" NavigateUrl="index3.html?FID=2e25a343-eefe-4a15-a902-9d88fa36f6b4" Target="frmright" Num="0" PicPath="tit3" ParentText="地理信息" Level="3">
+      <Command Text="数据展示" NavigateUrl="wwm/onemappage/index.html?FID=ea9240df-d06c-493a-b582-dc295593ff98" Target="frmright" ID="7027" PicPath="caseover" ParentText="地理信息信息" Level="4" />
+      <Command Text="热点查询" NavigateUrl="wwm/onemappage/index.html?FID=60c8507d-2a5d-427e-a1a7-0fa01bffce54" Target="frmright" ID="7028" PicPath="caseover" ParentText="地理信息信息" Level="4" />
+      <Command Text="智能分类分析" NavigateUrl="wwm/onemappage/index.html?FID=00929e65-383f-4075-a3a9-745c4a9fe095" Target="frmright" ID="7029" PicPath="caseover" ParentText="地理信息信息" Level="4" />
+      <Command Text="智能应急分析" NavigateUrl="wwm/onemappage/index.html?FID=4d67560d-1dc0-4de4-8650-78a243197122" Target="frmright" ID="7030" PicPath="caseover" ParentText="地理信息信息" Level="4" />
+      <Command Text="预警功能" NavigateUrl="wwm/onemappage/index.html?FID=f8e36817-f1d1-421d-a7df-d7fc29061f15" Target="frmright" ID="7031" PicPath="caseover" ParentText="地理信息信息" Level="4" />
+    </Group>
+  </Group>
+  <Group Text="企业直报" NavigateUrl="index3.html?FID=21d7b1c3-d10d-430c-9a54-05bf9e8fbc0a" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav05" ParentText="安监环保监管系统" Level="2">
+    <Group Text="危化品管理" NavigateUrl="index3.html?FID=930ea5f3-650f-4983-bd92-9f120e0e6393" Target="frmright" Num="0" PicPath="tit3" ParentText="企业直报" Level="3">
+      <Command Text="危化品重点监测" NavigateUrl="app/onsitecheck/onsitehome.html?FID=f138e63b-3239-4e92-bf61-dc618cc86003" Target="frmright" ID="7326" PicPath="caseover" ParentText="危化品管理" Level="4" />
+      <Command Text="危化品直报数据监测" NavigateUrl="app/securityinfo/chemicalhome.html?FID=834a38b4-7c9f-48df-953f-f53cf963173c" Target="frmright" ID="7081" PicPath="caseover" ParentText="危化品管理" Level="4" />
+    </Group>
+  </Group>
+  <Group Text="安监交互" NavigateUrl="index3.html?FID=bfe9c1b9-48c0-4f8b-abf2-5de876087545" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav06" ParentText="安监环保监管系统" Level="2">
+    <Group Text="现场检查管理" NavigateUrl="index3.html?FID=799706a7-0e9f-44c3-926c-38850833c000" Target="frmright" Num="0" PicPath="tit3" ParentText="安监交互" Level="3">
+      <Command Text="安全检查" NavigateUrl="app/onsitecheck/onsitecheckhome_b.html?FID=75af25b8-09be-409f-afef-0bebc3844861" Target="frmright" ID="7327" PicPath="caseover" ParentText="现场检查管理" Level="4" />
+      <Command Text="现场检查" NavigateUrl="app/onsitecheck/onsitecheckhome.html?FID=d01d91d2-1743-4233-8fb0-e17a88f82855" Target="frmright" ID="7082" PicPath="caseover" ParentText="现场检查管理" Level="4" />
+      <Command Text="自查整改" NavigateUrl="table.html?FID=d5755989-3d95-4ea0-8a0a-71317871dc48" Target="frmright" ID="7045" PicPath="caseover" ParentText="现场检查管理" Level="4" />
+      <Command Text="企业挂起" NavigateUrl="table.html?FID=cb26d74b-d19a-47f7-96bf-574d1b070a14" Target="frmright" ID="7225" PicPath="caseover" ParentText="现场检查管理" Level="4" />
+      <Command Text="历史档案" NavigateUrl="table.html?FID=511ad2ca-f912-4ba2-ba78-2714228569cb" Target="frmright" ID="7046" PicPath="caseover" ParentText="现场检查管理" Level="4" />
+    </Group>
+  </Group>
+  <Group Text="交互预警" NavigateUrl="index3.html?FID=6c79414a-cf5f-4612-8c6b-dcab813a837e" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav07" ParentText="安监环保监管系统" Level="2">
+    <Group Text="预警信息" NavigateUrl="index3.html?FID=ecb50cfc-f3c9-4466-89e9-658e37bdcd5d" Target="frmright" Num="0" PicPath="tit3" ParentText="交互预警" Level="3">
+      <Command Text="预警信息首页" NavigateUrl="app/rating/ratinghome.html?FID=1d4352ef-040c-40c8-a987-39643d81e12a" Target="frmright" ID="7083" PicPath="caseover" ParentText="预警信息" Level="4" />
+      <Command Text="企业整改超期预警" NavigateUrl="table.html?FID=8e7744a1-86ec-4bf1-8897-2358f050b3a9" Target="frmright" ID="7053" PicPath="caseover" ParentText="预警信息" Level="4" />
+      <Command Text="从业人员持证超期预警" NavigateUrl="table.html?FID=dfe0782b-659f-4392-a7b1-1d897563372f" Target="frmright" ID="7054" PicPath="caseover" ParentText="预警信息" Level="4" />
+      <Command Text="特种设备超期预警" NavigateUrl="table.html?FID=262f9434-b2f6-42b1-8326-fcf55cf53195" Target="frmright" ID="7055" PicPath="caseover" ParentText="预警信息" Level="4" />
+      <Command Text="安全设施检测超期预警" NavigateUrl="table.html?FID=a78a7c55-bd34-48c9-b136-7ae527bf3493" Target="frmright" ID="7056" PicPath="caseover" ParentText="预警信息" Level="4" />
+    </Group>
+  </Group>
+  <Group Text="视频监控" NavigateUrl="app/monitor/monitoring.html?FID=02a7e76a-d087-4a67-8cb3-c65857c7249b" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav013" ParentText="安监环保监管系统" Level="2" />
+  <Group Text="法律法规" NavigateUrl="laws.html?FID=f8956369-8ef1-4ebd-8e23-baa2919a5109" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav09" ParentText="安监环保监管系统" Level="2" />
+  <Group Text="文档管理" NavigateUrl="app/documents/files.html?FID=681ea129-ddda-4aff-8c3c-d65e6a372bf5" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav014" ParentText="安监环保监管系统" Level="2" />
+  <Group Text="利用现状" NavigateUrl="index3.html?FID=a1017882-600c-4c58-a29f-d6d83b4968a8" Target="frmright" Num="0" PicPath="tjx-shell-index1-menu-nav012" ParentText="安监环保监管系统" Level="2">
+    <Group Text="工业厂房" NavigateUrl="index3.html?FID=e198b0b9-266c-4244-8f5c-dc17a3fba94b" Target="frmright" Num="0" PicPath="tit3" ParentText="利用现状" Level="3">
+      <Command Text="基本信息" NavigateUrl="app/currentsituation/currentsituationhome.html?FID=7d636de1-ee0f-4698-83d5-37224cdfd571" Target="frmright" ID="7233" PicPath="caseover" ParentText="工业厂房" Level="4" />
+      <Command Text="厂房查询" NavigateUrl="app/currentsituation/currentsituationdetail.html?FID=3b1c3d16-d253-4336-9920-4babbd8509bb" Target="frmright" ID="7234" PicPath="caseover" ParentText="工业厂房" Level="4" />
+      <Command Text="办公室查询" NavigateUrl="app/currentsituation/currentsituationbangong.html?FID=9839246e-6e7a-4271-8b0c-853d3c542700" Target="frmright" ID="7242" PicPath="caseover" ParentText="工业厂房" Level="4" />
+      <Command Text="综合查询" NavigateUrl="app/currentsituation/currentsituationsearch.html?FID=6d1b1ed7-15c1-400c-86b0-83b931e31a1e" Target="frmright" ID="7238" PicPath="caseover" ParentText="工业厂房" Level="4" />
+    </Group>
+    <Group Text="办公楼宇" NavigateUrl="index3.html?FID=4b2d0e6d-652a-431b-8256-fef1cf7577a7" Target="frmright" Num="0" PicPath="tit3" ParentText="利用现状" Level="3">
+      <Command Text="基本信息" NavigateUrl="app/currentsituation/currentsituationhomeoffice.html?FID=433757fa-13bf-4cd7-8229-86770a5add04" Target="frmright" ID="7236" PicPath="caseover" ParentText="办公楼宇" Level="4" />
+    </Group>
+  </Group>
+</Root>

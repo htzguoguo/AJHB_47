@@ -1,0 +1,63 @@
+
+/* CSS Document */
+
+*{
+	font-size:12px;
+}
+
+body {
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	background-color:#FFFFFF;
+}
+.font12bai{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FFF;
+	font-weight:bold;
+}
+.tblist{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	background:#f7faff;
+	border:1px solid #adc9ef;	/* 表格边框 */
+	border-collapse:collapse;	/* 边框重叠 */	/* 表格背景色 */
+	font-size:14px;
+}
+.tblist th{
+	border:1px solid #A3C0E8;	/* 行名称边框 */
+	background-color:#DBEBFF;	/* 行名称背景色 */			/* 行名称颜色 */
+	font-weight:bold;
+	text-align:center;
+
+}
+.tblist td{
+	border:1px solid #adc9ef;	/* 单元格边框 */
+	padding-right:10px;
+}
+.tblist tr:hover, .tblist tr.altrow{
+	background-color:#fff;	/* 动态变色 */
+}
+
+.pdleft{
+	padding:5px;
+	}
+.input{
+	width:120px;
+	height:19px;
+	border-left:#AFC6E7 solid 1px;
+	border-top:#AFC6E7 solid 1px;
+	border-right:#AFC6E7 solid 1px;
+	border-bottom:#AFC6E7 solid 1px;
+	background:#FFFFFF;
+	}
+.tdline
+{
+	border-bottom:#c7e5ff solid 1px;
+}
+.datatd{
+		border:#c7e5ff solid 1px;
+		background:#FFF;
+		padding:8px;
+}

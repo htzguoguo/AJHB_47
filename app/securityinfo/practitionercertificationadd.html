@@ -1,0 +1,131 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<!--    <script type="text/javascript" src="js/tjx.data.certification.js"></script>-->
+    <script type="text/javascript" src="app/securityinfo/js/tjx.app.securityinfo.certification.js"></script>
+    <script type="text/javascript">
+        // Start spa once DOM is ready
+        //
+        jQuery(document).ready(
+                function () {
+                    tjx.app.securityinfo.certification.initModule( jQuery('#certifiation'), true );
+                });
+    </script>
+</head>
+<body>
+
+<div  id="certifiation">
+    <div class="modal-header">
+        <div class="portlet-title">
+            <div class="caption font-green-haze">
+                <i class="icon-check font-green-haze"></i>
+                <span class="caption-subject bold uppercase">添加从业人员持证情况</span>
+
+                <button type="button"  class="close " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-body">
+    <div  class="portlet-body   form ">
+        <form class="form-horizontal form-bordered form-row-stripped">
+
+
+                <div class="form-body">
+                    <div class="alert alert-danger display-hide" >
+                        <button class="close" data-close="alert"></button>
+                        您所提交的内容不符合要求，请检查后重新提交.
+                    </div>
+                    <div class="form-group  ">
+                        <label class="col-md-2 control-label">类别
+                            <span class="required">* </span>
+                        </label>
+                        <div class="col-md-6">
+                            <select class="form-control"  name="DocumentCategory" tjx-data-field="DocumentCategory">
+                                <option value="主要负责人">主要负责人</option>
+                                <option value="分管安全负责人">分管安全负责人</option>
+                                <option value="安全管理人员">安全管理人员</option>
+                                <option value="特种作业人员">特种作业人员</option>
+                                <option value="特种设备作业人员">特种设备作业人员</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">姓名
+                            <span class="required">* </span>
+                        </label>
+                        <div class="col-md-6">
+                            <input name="textfield" type="text" name="Holder" tjx-data-field="Holder" class="form-control"  size="60"/>
+                            	<span class="help-block help-block-error display-hide">
+											Please correct the error </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">证书名称
+
+                        </label>
+                        <div class="col-md-6">
+                            <input name="textfield" type="text" name="Name" tjx-data-field="Name" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">证号
+
+                        </label>
+                        <div class="col-md-6">
+                            <input name="textfield" type="text"  name="DocumentNumber"  tjx-data-field="DocumentNumber" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">有效期</label>
+                        <div class="col-md-6">
+                            <div class="input-group input-large date date-picker"  data-date-format="yyyy-mm" data-date-viewmode="years" data-date-minviewmode="months">
+                                <input type="text" name="ExpirationDate"  tjx-data-field="ExpirationDate" class="form-control input-large" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">发证单位</label>
+                        <div class="col-md-6">
+                            <input name="textfield" type="text" tjx-data-field="AuthorizingDept" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">证书照片</label>
+                        <div id="photocontainer" class="col-md-10">
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+        </form>
+    </div>
+</div>
+
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div >
+</body>
+
+
+
+

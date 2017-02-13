@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+   <!-- <link rel="stylesheet" type="text/css" href="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>-->
+</head>
+<body>
+<div id="safetydetail" class="row">
+    <div class="col-md-12">
+        <div class="tabbable tabbable-custom tabbable-noborder">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#tab_1" data-toggle="tab">
+                        基础信息 </a>
+                </li>
+                <li>
+                    <a href="#overview_1" data-toggle="tab">
+                        产品信息 </a>
+                </li>
+                <li>
+                    <a href="#overview_2" data-toggle="tab">
+                        废水排放口 </a>
+                </li>
+                <li>
+                    <a href="#overview_3" data-toggle="tab">
+                        废水污染物 </a>
+                </li>
+                <li>
+                    <a href="#overview_4" data-toggle="tab">
+                        废气排放口 </a>
+                </li>
+                <li>
+                    <a href="#overview_5" data-toggle="tab">
+                        废气污染物 </a>
+                </li>
+                <li>
+                    <a href="#overview_6" data-toggle="tab">
+                        边界噪声 </a>
+                </li>
+                <li>
+                    <a href="#overview_7" data-toggle="tab">
+                        固体废物 </a>
+                </li>
+                <li>
+                    <a href="#overview_8" data-toggle="tab">
+                        治理设施 </a>
+                </li>
+                <li>
+                    <a href="#overview_9" data-toggle="tab">
+                        生产装置 </a>
+                </li>
+                <li>
+                    <a href="#overview_10" data-toggle="tab">
+                        生产装置污染物 </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1">
+                    <!-- BEGIN FILTER -->
+                    <div class="col-md-12">
+                        <!-- Begin: life time stats -->
+                        <div class="portlet light">
+                            <div id="basicinfo" class="portlet-body ">
+                                <div class="note note-info">
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            企业名称:
+                                        </div>
+                                        <div tjx-data-field="unitName" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            单位地址:
+                                        </div>
+                                        <div tjx-data-field="unitAddr" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                   <span class="label label-danger">
+									  <i class="icon-user"> </i> 联系人: </span>
+
+
+                                        </div>
+                                        <div tjx-data-field="contacts" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-phone-square"> </i> 联系方式:
+
+                                        </div>
+                                        <div tjx-data-field="telephone" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            单位类别:
+                                        </div>
+                                        <div tjx-data-field="unitType" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            行业类别:
+                                        </div>
+                                        <div tjx-data-field="category" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+
+                                            企业规模:
+                                        </div>
+                                        <div tjx-data-field="EnterpriseScale" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            员工人数:
+                                        </div>
+                                        <div tjx-data-field="yuangongCount" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            企业法人:
+
+                                        </div>
+                                        <div tjx-data-field="qiyeFaren" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            建筑面积:
+                                        </div>
+                                        <div tjx-data-field="jianzhuArea" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="note note-info">
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            绿化面积:
+                                        </div>
+                                        <div tjx-data-field="lvhuaArea" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            占地面积:
+                                        </div>
+                                        <div tjx-data-field="zhandiArea" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            废水排放口数量:
+
+                                        </div>
+                                        <div tjx-data-field="feishuiPaifangkouCount" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+
+                                            废气排放口数量:
+                                        </div>
+                                        <div tjx-data-field="feiqiPaifangkouCount" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            30万千瓦以上电力企业:
+                                        </div>
+                                        <div   class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            燃气电厂:
+                                        </div>
+                                        <div   class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="note note-info">
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            化学需氧量
+                                        </div>
+                                        <div tjx-data-field="huaxueXyl" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            氨氮
+                                        </div>
+                                        <div tjx-data-field="andan" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            悬浮物
+                                        </div>
+                                        <div tjx-data-field="xuanfuwu" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            二氧化硫
+                                        </div>
+                                        <div tjx-data-field="eryanghualiu" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            氮氧化物
+                                        </div>
+                                        <div tjx-data-field="danyanghuawu" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            烟尘
+                                        </div>
+                                        <div tjx-data-field="yanchen" class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            其他
+                                        </div>
+                                        <div tjx-data-field="other" class="col-md-4 value">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+
+                                        </div>
+                                        <div class="col-md-4 value">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End: life time stats -->
+                    </div>
+                    <!-- END FILTER -->
+                </div>
+                <div class="tab-pane" id="overview_1">
+                    <div class="table-responsive">
+                        <table id="tb_overview_1"  tjx-data-source="FMService/environmental/product" tjx-data-field="unitName,prodectName,jiliangUnit,shejiNianchanliang,yuanfucailiao,cailiaojiliangdanwei,shejiyonghaoliang" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_2">
+                    <div class="table-responsive">
+                        <table id="tb_overview_2" tjx-data-source="FMService/environmental/wastewaterdischarge" tjx-data-field="unitName,paifangkouNum,paifangkouName,paifangkouPosition,paifangquxiang,shuitimingcheng,paifangguilv,gongnengleibei" tjx-data-order="unitID"  class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_3">
+                    <div class="table-responsive">
+                        <table id="tb_overview_3" tjx-data-source="FMService/environmental/wastewaterpollutant" tjx-data-field="unitName,feishuiPaifangkouNum,wuranwuName,zhixingbiaozhun,biaozhunzhi,jinkongshebei" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_4">
+                    <div class="table-responsive">
+                        <table id="tb_overview_4" tjx-data-source="FMService/environmental/exhaustport" tjx-data-field="unitName,feiqiPaifangkouNum,paifangkouName,paifangkouPosition,paifangguilv,gongnengquleibie,paifangfangshi,paifangkouType" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_5">
+                    <div class="table-responsive">
+                        <table id="tb_overview_5" tjx-data-source="FMService/environmental/exhaustpollutant" tjx-data-field="unitName,feiqiPaifangkouNum,wuranwuName,zhixingbiaozhun,biaozhunzhi,jiankongshebei" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_6">
+                    <div class="table-responsive">
+                        <table id="tb_overview_6" tjx-data-source="FMService/environmental/noise" tjx-data-field="unitName,cedianName,cedianPosition,zaoshengName,zaoshengXingzhi,gongnengType" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_7">
+                    <div class="table-responsive">
+                        <table id="tb_overview_7" tjx-data-source="FMService/environmental/solidwaste" tjx-data-field="unitName,gutifeiwuName,ifWeixian" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_8">
+                    <div class="table-responsive">
+                        <table id="tb_overview_8" tjx-data-source="FMService/environmental/wastesite" tjx-data-field="unitName,zhilisheshiName,zhiliType,dealWith,chuliNengli,useDate,paifangkouNum" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_9">
+                    <div class="table-responsive">
+                        <table id="tb_overview_9" tjx-data-source="FMService/environmental/productionunit" tjx-data-field="unitName,zhuangzhiNum,zhuangzhiName,zhuangzhiType,paifangfangshi,paifangkouNum,xinghao" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_10">
+                    <div class="table-responsive">
+                        <table id="tb_overview_10" tjx-data-source="FMService/environmental/productionplantpollutants" tjx-data-field="unitName,zhuangzhiNum,wuranwuName,zhilisheshiName" tjx-data-order="unitID" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>-->
+<!--<script type="text/javascript" src="js/tjx.data.environmentalsearch.js"></script>-->
+<script type="text/javascript" src="app/detail/js/tjx.app.detail.environmental.js"></script>
+
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.detail.environmental.initModule( jQuery('body') );
+            });
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<div xmlns:display="http://www.w3.org/1999/xhtml">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#modal5a" aria-controls="modal5a" role="tab" data-toggle="tab">疏散分析</a>
+        </li>
+        <li role="presentation">
+            <a href="#modal5b" aria-controls="modal5b" role="tab" data-toggle="tab">路径分析</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active tab1" id="modal5a" style="padding:5px">
+            <form class="form-inline text-center" style="margin-top: 20px;">
+                <div class="form-group" style="padding: 5px;">
+                    <input type="text" class="form-control" id="m5t1t1" placeholder="Jane Doe" value="2"
+                           v-model="tab1.t1">
+                    <label for="m5t1t1">分钟</label>
+                </div>
+                <div class="form-group" style="padding: 5px;">
+                    <input type="text" class="form-control" id="m5t1t2" placeholder="Jane Doe" value="5"
+                           v-model="tab1.t2">
+                    <label for="m5t1t2">分钟</label>
+                </div>
+                <div class="form-group" style="padding: 5px;">
+                    <input type="text" class="form-control" id="m5t1t3" placeholder="Jane Doe" value="20"
+                           v-model="tab1.t3">
+                    <label for="m5t1t3">分钟</label>
+                </div>
+            </form>
+
+            <div style="padding: 40px;margin-left: -10px;" class="text-center">
+                <button class="btn btn-lg btn-warning" @click="areaService">
+                    疏散分析
+                </button>
+                <button class="btn btn-lg btn-warning" @click="clearAreaGraphics">
+                    清除
+                </button>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane tab2" id="modal5b" style="padding-top:30px">
+            <form class="form-inline">
+                <div class="form-group" style="padding: 5px;">
+                    <label>设置站点</label>
+                    <button type="button" class="btn btn-primary" @click="addStops">增加站点</button>
+                    <button type="button" class="btn btn-primary" @click="clearStops">删除站点</button>
+                </div>
+                <div class="form-group" style="padding: 5px;">
+                    <label>设置路障</label>
+                    <button type="button" class="btn btn-success" value="point" @click="addBarriers">点路障</button>
+                    <button type="button" class="btn btn-success" value="freehandpolygon" @click="addBarriers">线路障
+                    </button>
+                    <button type="button" class="btn btn-success" value="freehandpolyline" @click="addBarriers">面路障
+                    </button>
+                    <button type="button" class="btn btn-success" @click="clearBarriers">删除路障</button>
+                </div>
+            </form>
+
+            <div style="padding-top: 90px;" class="text-center">
+                <button class="btn btn-lg btn-warning" @click="solveRoute">
+                    路径分析
+                </button>
+                <button class="btn btn-lg btn-warning" @click="clearRoutes">
+                    清除路径
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

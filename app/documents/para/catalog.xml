@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<DkInterface Version="5.3.4.0">
+    <Folder Name="">
+        <FileItems Count="0"/>
+        <SubFolders Count="9">
+            <Item Id="978">BS-HB021</Item>
+            <Item Id="1024">BS-HB040</Item>
+            <Item Id="1137">BS-HB061</Item>
+            <Item Id="1126">BS-HB068</Item>
+            <Item Id="1136">BS—HB061</Item>
+            <Item Id="789">共享内容</Item>
+            <Item Id="774">环保科</Item>
+            <Item Id="776">环境监察支队</Item>
+            <Item Id="771">环境监测站</Item>
+        </SubFolders>
+    </Folder>
+</DkInterface>

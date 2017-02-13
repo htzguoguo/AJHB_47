@@ -1,0 +1,26 @@
+﻿   .jcgl-btn 
+     {
+  font-size: 12px;
+ font-family: Arial, "宋体";
+    float:right;
+    width:60px;
+    height:20px;
+    border:0px solid #fff;
+    background: #3f89ec;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0px 5px 5px 5px;
+    text-align: center;
+      
+         vertical-align: middle;
+        margin-right:25px ;
+        margin-top:5px;
+        padding:10px 5px 5px 5px ;
+}
+.jcgl-btn   a:link {
+     color: #fff;
+}
+
+.jcgl-btn  a:visited {
+     color: #fff;
+}

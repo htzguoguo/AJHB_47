@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style >
+        .mtable>tbody>tr>td {
+            border-top: 0px;
+            text-align: center;
+        }
+    </style>
+
+    <style >
+        .ibox-title {
+            border-style: hidden;
+        }
+    </style>
+    <style >
+        .input-large {
+            width:200px !important ;
+        }
+    </style>
+    <style >
+        .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+            background-color:#dbe9f5;
+        }
+    </style>
+    <style >
+        .btn-xs{
+            padding: 1px 0px;
+        }
+        .mtable>tbody>tr>td{
+            text-align: left;
+        }
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+            padding-left: 0px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tjx-home">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="portlet light">
+                    <div class="portlet-body">
+                        <div>
+                            <h4 class="font-bold no-margins">
+                                <span class="glyphicon glyphicon-stop" style="color: #62B5CD;"></span> 问题上报　
+                                <span class="glyphicon glyphicon-stop" style="color: #008000;"></span> 已归档
+                                <span class="glyphicon glyphicon-stop" style="color: #DFBA49;"></span> 即将超期　
+                                <span class="glyphicon glyphicon-stop" style="color: #FF5858;"></span> 超期
+                            </h4>
+                        </div>
+                        <div>
+                            <canvas id="lineChart" height="120"></canvas>
+                        </div>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="portlet light">
+                    <div class="portlet-body">
+                        <div>
+                            <h4 class="font-bold no-margins">
+                                <span class="glyphicon glyphicon-stop" style="color: #62B5CD;"></span> 问题上报　
+                                <span class="glyphicon glyphicon-stop" style="color: #008000;"></span> 已归档
+                                <span class="glyphicon glyphicon-stop" style="color: #DFBA49;"></span> 即将超期　
+                                <span class="glyphicon glyphicon-stop" style="color: #FF5858;"></span> 超期
+                            </h4>
+                        </div>
+
+                        <div>
+                            <canvas id="lineChart2" height="120"></canvas>
+                        </div>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6"  >
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light" style="height: 495px;">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font-color hide"></i>
+                            <label id="btnreport" class="btn caption-subject theme-font-color bold uppercase">问题上报</label>
+                        </div>
+                        <!--  <ul class="nav nav-tabs">
+                              <li class="active">
+                                  <a href="#tab_1_21" data-toggle="tab">
+                                      企业自查 </a>
+                              </li>
+                          </ul>-->
+                        <div class="actions">
+                            <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm active" tjx-data-type="d" tjx-data-value="未处理">
+                                    <input type="radio" name="options" class="toggle" id="option1">天</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="w" tjx-data-value="未处理">
+                                    <input type="radio" name="options" class="toggle" id="option2">周</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="m" tjx-data-value="未处理">
+                                    <input type="radio" name="options" class="toggle" id="option3">月</label>
+                              <!--  <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="a" tjx-data-value="未处理">
+                                    <input type="radio" name="options" class="toggle"  >全部</label>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-striped     dataTable" >
+                                <thead>
+                                <tr>
+                                    <td><h5 class="font-grey-sharp bold text-muted">企业名称</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">隐患和问题</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">整改情况</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">检查日期</h5></td></tr>
+                                </thead>
+                                <tbody id="checkreport" tjx-page-index="0">
+                                <tr><td></td></tr>
+                                <tr class="display-none">
+                                    <td>
+                                        <button type="button" class="btn btn-link btn-xs" title="详细"
+                                                data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
+                                                data-content='<p>企业名称：<span tjx-data-field="EnterpriseName" > </span></p><p>检查日期：<span tjx-data-field="ReportTime" ></span></p><p>隐患和问题：<span tjx-data-field="Problem" ></span></p>
+                                                    <p>整改情况：<span tjx-data-field="Recommendation" ></span></p><p>区域负责人：<span tjx-data-field="Expr1" ></span></p><p>检查人：<span tjx-data-field="Inspector" ></span></p>'>
+                                            <div><h5 class="font-grey-sharp text-muted" tjx-data-field="EnterpriseName">鑫宝丰国际化工贸易有限公司</h5></div>
+                                        </button>
+                                    </td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Problem">q</h5></div></td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Recommendation">q</h5></div></td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="ReportTime">2016-6-29 11:29:53</h5></div></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div    style="bottom:30px;right: 40px;   position: absolute;">
+                        <label id="checkpageup" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa  fa-angle-left"></i>&nbsp;&nbsp;&nbsp;</label>
+                        <label id="checknum" class="btn">12</label>
+                        <label id="checkpagedown" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa blue fa-angle-right"></i>&nbsp;&nbsp;&nbsp;</label>
+                    </div>
+                </div>
+                <!-- END PORTLET-->
+            </div>
+            <div class="col-md-6 col-sm-6" >
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light" style="height: 495px;">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font-color hide"></i>
+                            <label id="btnoverdone" class="btn caption-subject theme-font-color bold uppercase">已归档</label>
+                        </div>
+                        <!--  <ul class="nav nav-tabs">
+                              <li class="active">
+                                  <a href="#tab_1_21" data-toggle="tab">
+                                      企业自查 </a>
+                              </li>
+                          </ul>-->
+                        <div class="actions">
+                            <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm active" tjx-data-type="d" tjx-data-value="已处理">
+                                    <input type="radio" name="options" class="toggle" id="option4">天</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="w" tjx-data-value="已处理">
+                                    <input type="radio" name="options" class="toggle" id="option5">周</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="m" tjx-data-value="已处理">
+                                    <input type="radio" name="options" class="toggle" id="option6">月</label>
+                              <!--  <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="a" tjx-data-value="已处理">
+                                    <input type="radio" name="options" class="toggle"  >全部</label>-->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-striped     dataTable"   >
+                                <thead>
+                                <tr>
+                                    <td><h5 class="font-grey-sharp bold text-muted">企业名称</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">隐患和问题</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">整改情况</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">检查日期</h5></td></tr>
+                                </thead>
+                                <tbody id="checkreply" tjx-page-index="0">
+
+                                <tr><td></td></tr>
+                                <tr class="display-none">
+                                    <td>
+                                        <button type="button" class="btn btn-link btn-xs" title="详细"
+                                                data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
+                                                data-content='<p>企业名称：<span tjx-data-field="EnterpriseName" > </span></p><p>检查日期：<span tjx-data-field="ReportTime" ></span></p><p>隐患和问题：<span tjx-data-field="Problem" ></span></p>
+                                                    <p>整改情况：<span tjx-data-field="Recommendation" ></span></p><p>区域负责人：<span tjx-data-field="Expr1" ></span></p><p>检查人：<span tjx-data-field="Inspector" ></span></p>'>
+                                            <div><h5 class="font-grey-sharp text-muted" tjx-data-field="EnterpriseName">鑫宝丰国际化工贸易有限公司</h5></div>
+                                        </button>
+                                    </td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Problem">q</h5></div></td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Recommendation">q</h5></div></td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="ReportTime">2016-6-29 11:29:53</h5></div></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div    style="bottom:30px;right: 40px;   position: absolute;">
+                        <label id="replypageup" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa  fa-angle-left"></i>&nbsp;&nbsp;&nbsp;</label>
+                        <label id="replynum" class="btn">12</label>
+                        <label id="replypagedown" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa blue fa-angle-right"></i>&nbsp;&nbsp;&nbsp;</label>
+                    </div>
+                </div>
+                <!-- END PORTLET-->
+            </div>
+           <!-- <div class="col-md-6 col-sm-6">
+                &lt;!&ndash; BEGIN PORTLET&ndash;&gt;
+                <div class="portlet light">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font-color hide"></i>
+                            <span class="caption-subject theme-font-color bold uppercase">即将超期</span>
+                        </div>
+                        &lt;!&ndash;  <ul class="nav nav-tabs">
+                              <li class="active">
+                                  <a href="#tab_1_21" data-toggle="tab">
+                                      企业自查 </a>
+                              </li>
+                          </ul>&ndash;&gt;
+                        <div class="actions">
+                            <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm active" tjx-data-type="d" tjx-data-value="即将超期">
+                                    <input type="radio" name="options" class="toggle" id="option7">天</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="w" tjx-data-value="即将超期">
+                                    <input type="radio" name="options" class="toggle" id="option8">周</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="m" tjx-data-value="即将超期">
+                                    <input type="radio" name="options" class="toggle" id="option9">月</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="a" tjx-data-value="即将超期">
+                                    <input type="radio" name="options" class="toggle"  >全部</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table mtable" >
+                                <thead>
+                                <tr>
+                                    <td><h5 class="font-grey-sharp bold text-muted">企业名称</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">隐患和问题</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">整改情况</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">检查日期</h5></td></tr>
+                                </thead>
+                                <tbody id="checksoondue">
+
+                                <tr><td></td></tr>
+                                <tr class="display-none">
+                                    <td>
+                                        <button type="button" class="btn btn-link btn-xs" title="详细"
+                                                data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
+                                                data-content='<p>企业名称：<span tjx-data-field="EnterpriseName" > </span></p><p>检查日期：<span tjx-data-field="ReportTime" ></span></p><p>隐患和问题：<span tjx-data-field="Problem" ></span></p>
+                                                    <p>整改情况：<span tjx-data-field="Recommendation" ></span></p><p>区域负责人：<span tjx-data-field="Expr1" ></span></p><p>检查人：<span tjx-data-field="Inspector" ></span></p>'>
+                                            <div><h5 class="font-grey-sharp text-muted" tjx-data-field="EnterpriseName">鑫宝丰国际化工贸易有限公司</h5></div>
+                                        </button>
+                                    </td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Problem">q</h5></div></td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Recommendation">q</h5></div></td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="ReportTime">2016-6-29 11:29:53</h5></div></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                &lt;!&ndash; END PORTLET&ndash;&gt;
+            </div>
+            <div class="col-md-6 col-sm-6">
+                &lt;!&ndash; BEGIN PORTLET&ndash;&gt;
+                <div class="portlet light">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font-color hide"></i>
+                            <span class="caption-subject theme-font-color bold uppercase">整改超期</span>
+                        </div>
+                        &lt;!&ndash;  <ul class="nav nav-tabs">
+                              <li class="active">
+                                  <a href="#tab_1_21" data-toggle="tab">
+                                      企业自查 </a>
+                              </li>
+                          </ul>&ndash;&gt;
+                        <div class="actions">
+                            <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm active" tjx-data-type="d" tjx-data-value="整改超期">
+                                    <input type="radio" name="options" class="toggle" id="option10">天</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="w" tjx-data-value="整改超期">
+                                    <input type="radio" name="options" class="toggle" id="option11">周</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="m" tjx-data-value="整改超期">
+                                    <input type="radio" name="options" class="toggle" id="option12">月</label>
+                                <label class="btn btn-transparent grey-salsa btn-circle btn-sm" tjx-data-type="a" tjx-data-value="整改超期">
+                                    <input type="radio" name="options" class="toggle"  >全部</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table mtable" >
+                                <thead>
+                                <tr>
+                                    <td><h5 class="font-grey-sharp bold text-muted">企业名称</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">隐患和问题</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">整改情况</h5></td>
+                                    <td><h5 class="font-grey-sharp bold text-muted">检查日期</h5></td></tr>
+                                </thead>
+                                <tbody id="checkontime">
+
+                                <tr><td></td></tr>
+                                <tr class="display-none">
+                                    <td>
+                                        <button type="button" class="btn btn-link btn-xs" title="详细"
+                                                data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
+                                                data-content='<p>企业名称：<span tjx-data-field="EnterpriseName" > </span></p><p>检查日期：<span tjx-data-field="ReportTime" ></span></p><p>隐患和问题：<span tjx-data-field="Problem" ></span></p>
+                                                    <p>整改情况：<span tjx-data-field="Recommendation" ></span></p><p>区域负责人：<span tjx-data-field="Expr1" ></span></p><p>检查人：<span tjx-data-field="Inspector" ></span></p>'>
+                                            <div><h5 class="font-grey-sharp text-muted" tjx-data-field="EnterpriseName">鑫宝丰国际化工贸易有限公司</h5></div>
+                                        </button>
+                                    </td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Problem">q</h5></div></td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Recommendation">q</h5></div></td>
+                                    <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="ReportTime">2016-6-29 11:29:53</h5></div></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                &lt;!&ndash; END PORTLET&ndash;&gt;
+            </div>-->
+        </div>
+
+    </div>
+</div>
+
+<!-- Flot -->
+<!--<script src="css/glb/flot/jquery.flot.js"></script>
+<script src="css/glb/flot/jquery.flot.tooltip.min.js"></script>
+<script src="css/glb/flot/jquery.flot.spline.js"></script>
+<script src="css/glb/flot/jquery.flot.resize.js"></script>
+<script src="css/glb/flot/jquery.flot.pie.js"></script>
+<script src="css/glb/flot/jquery.flot.symbol.js"></script>
+<script src="css/glb/flot/curvedLines.js"></script>-->
+<!-- ChartJS-->
+<script src="css/glb/chartJs/Chart.min.js"></script>
+
+<script type="text/javascript" src="app/onsitecheck/js/tjx.data.onsitecheck.onsitecheck.js"></script>
+<script type="text/javascript" src="app/onsitecheck/js/tjx.app.onsitecheck.onsitecheckhome.js"></script>
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+               /* initPlot1();
+                initPlot2();*/
+                tjx.app.onsitecheck.onsitecheckhome.initModule( jQuery('body') );
+            });
+</script>
+
+</body>
+</html>

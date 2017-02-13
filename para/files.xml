@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Org>
+    <GroupItem Id="0" Name="天津港保税区管委会">
+        <Members Count="1">
+            <Item Id="1000001" Name="admin" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+        </Members>
+        <Childs Count="12">
+            <GroupItem Id="102" Name="安全生产监督管理局" FatherId="0">
+            <Members Count="13">
+                <Item Id="1000027" Name="azsy(于浩)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000026" Name="chenyongsheng(陈永生)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000028" Name="hunan(胡楠)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000031" Name="liuzc(刘志成)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000032" Name="lizh(李智)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000034" Name="mxb(孟学斌)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000038" Name="wyq(王砚清)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000039" Name="xinhz(辛惠志)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000040" Name="yangjunling(杨俊岺)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000041" Name="yangwei(杨威)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000044" Name="zhanggf(张贵发)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000045" Name="zhangtl(张太林)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                <Item Id="1000047" Name="zhaohongwei(赵洪伟)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+            </Members>
+        </GroupItem>
+            <GroupItem Id="101" Name="办公室" FatherId="0">
+                <Members Count="20">
+                    <Item Id="1000010" Name="bgs(部门管理员)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000014" Name="chenlj(陈丽静)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000015" Name="chijiandong(迟建东)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000004" Name="dl(董梁)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId="3"/>
+                    <Item Id="1000013" Name="dongwz(董维忠)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000016" Name="gaoshang(高尚)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000007" Name="hewei" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000005" Name="hou(侯俊生)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId="2"/>
+                    <Item Id="1000131" Name="hws(侯俊生)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000017" Name="jiafan(贾帆)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000023" Name="linnan(林楠)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000018" Name="liting(李婷)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000003" Name="liuqs(刘青松)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000011" Name="rends(任东生)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000019" Name="suny(孙瑛)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000012" Name="wanghong(王洪)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000006" Name="wen" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000132" Name="wjj(王建杰)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000020" Name="yumiao(于淼)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000021" Name="zhangli(张丽)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                </Members>
+            </GroupItem>
+            <GroupItem Id="106" Name="发展与改革局" FatherId="0">
+                <Members Count="13">
+                    <Item Id="1000168" Name="caochangyu(曹长宇)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000157" Name="daifengshan(戴凤山)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000160" Name="duanxin(段鑫)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000072" Name="fenglu(冯璐)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000161" Name="guomolin(郭墨林)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000164" Name="jiangmin(江敏)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000156" Name="jilin" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000158" Name="liuxuefei" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000165" Name="songjialiang(宋家良)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000163" Name="xuguosheng(徐国胜)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000071" Name="zhaohongwei" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000162" Name="zhaoxiaofei(赵晓飞)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000166" Name="zjq(祖佳琪)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                </Members>
+            </GroupItem>
+            <GroupItem Id="111" Name="工会" FatherId="0">
+                <Members Count="1">
+                    <Item Id="1000136" Name="tjgbsqgh" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                </Members>
+            </GroupItem>
+            <GroupItem Id="110" Name="工商局" FatherId="0">
+                <Members Count="1">
+                    <Item Id="1000135" Name="gsj" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                </Members>
+            </GroupItem>
+            <GroupItem Id="109" Name="环保局" FatherId="0">
+                <Members Count="34">
+                    <Item Id="1000133" Name="chenjuanjuan(陈娟娟)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000124" Name="fanchengcheng(范成成)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000112" Name="fanzaiyi(樊在义)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000122" Name="gaohaokai(高浩凯)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000169" Name="gaolu(高璐)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000121" Name="heshishen(何士申)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000127" Name="huyue(胡月)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000117" Name="jcz(监测站管理员)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000123" Name="jiajunqian(贾俊乾)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000119" Name="kangxin(康鑫)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000128" Name="lilu(李璐)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000103" Name="liqiang(李强)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000120" Name="liudai(刘岱)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000118" Name="liuhongwu(刘红武)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000107" Name="lizhe(李喆)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000106" Name="luenzhou(陆恩舟)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000115" Name="luqing(卢清)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000126" Name="majian(马健)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000114" Name="mengjichuan(孟冀川)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000108" Name="niudong(牛东)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000170" Name="shangying(商颖)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000113" Name="suntangxu(孙堂旭)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000173" Name="sunzhenhong(孙振红)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000125" Name="wanghongshuai(王洪帅)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000116" Name="wangjian(王剑)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000129" Name="wangli(王莉)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000130" Name="wujunqing(吴俊清)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000171" Name="yangbin(杨斌)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000172" Name="yangziwei(杨子纬)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000109" Name="yaobingchen(姚秉琛)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000102" Name="yinxiaoge(殷小鸽)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000104" Name="zhangfengmei(张凤美)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000110" Name="zhangshuai(张帅)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                    <Item Id="1000105" Name="zhangwenchao(张文超)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                </Members>
+            </GroupItem>
+            <GroupItem Id="107" Name="科技发展公司" FatherId="0">
+                <Members Count="12">
+                    <Item Id="1000073" Name="junzhao(赵军)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000075" Name="kongxinran(孔欣然)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000083" Name="libaolin(李宝林)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000080" Name="lizhengmei(李正梅)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000077" Name="luantian(栾天)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000074" Name="mengyu(孟宇)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000081" Name="subo(苏博)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000100" Name="sunzhibin" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000082" Name="wangziyu(王子郁)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000079" Name="xuyun(徐芸)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000076" Name="zhengtao(郑韬)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000078" Name="zhouxiaoxue(周晓雪)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+                </Members>
+            </GroupItem>
+            <GroupItem Id="105" Name="空港国际物流区管理局（航空产业支持中心）" FatherId="0"><Members Count="15"><Item Id="1000067" Name="caixu(蔡旭)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000068" Name="fanhelong(樊和龙)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000062" Name="jackgao(高天贤)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000061" Name="kevin(陈鸣)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000066" Name="limeng(李萌)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000063" Name="liuxuze(刘旭泽)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000060" Name="wangsm(王思明)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000065" Name="wangyang(王杨)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000058" Name="wyh(王永和)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000069" Name="xulj(许来军)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000059" Name="yanglin(杨林)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000064" Name="zhanglq(张连强)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000056" Name="zhaoxuesen(赵学森)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000070" Name="zhulanping(朱兰萍)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000057" Name="zj(郑建)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+            </Members>
+            </GroupItem>
+            <GroupItem Id="108" Name="贸易发展公司" FatherId="0"><Members Count="12"><Item Id="1000095" Name="白冰" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000093" Name="陈光宇" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000089" Name="高业辉" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000090" Name="李艳阳" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000097" Name="梁爽" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000099" Name="缪乔" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000092" Name="申强" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000094" Name="王捷" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000096" Name="王筱俞" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000084" Name="许刚" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000091" Name="姚炳烨" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000098" Name="于晓然" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+            </Members>
+            </GroupItem>
+            <GroupItem Id="112" Name="审批局" FatherId="0"><Members Count="22"><Item Id="1000150" Name="cuiyf(崔宇非)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000138" Name="cuizg(崔志国)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000151" Name="huxg(胡芯歌)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000139" Name="kangh(康皓)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000111" Name="lichanghong(李长洪)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000146" Name="liuang(刘昂)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000154" Name="liurong(刘荣)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000137" Name="liutz(刘同泽)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000148" Name="lu(陆润丰)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000153" Name="mayy(马媛媛)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000143" Name="miaocj(苗长健)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000147" Name="niehao(聂浩)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000155" Name="qinjing(秦婧)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000035" Name="songdan(宋丹)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000142" Name="stephanie(高虹)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000145" Name="swu(吴春凌)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000152" Name="wangty(王天耀)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000149" Name="yaozy(姚志远)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000144" Name="zhangfan(张凡)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000022" Name="zl(张璐)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000140" Name="zyk(朱云凯)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000141" Name="zzl(甄增龙)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+            </Members>
+            </GroupItem>
+            <GroupItem Id="103" Name="物流局" FatherId="0"><Members Count="7"><Item Id="1000049" Name="angela(李戎)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000050" Name="hans(戴凤山)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000051" Name="maxin(马欣)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000052" Name="sunliang(孙亮)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000053" Name="xueming(薛铭)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000054" Name="xuhui(徐晖)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/><Item Id="1000055" Name="yuanwenhao(苑文浩)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+            </Members>
+            </GroupItem>
+            <GroupItem Id="1" Name="知识管理" FatherId="0"><Members Count="1"><Item Id="-1" Name="全部(All)" LasterLoginTm="1899-12-30 00:00:00" Email="" CoreId=""/>
+            </Members>
+            </GroupItem>
+        </Childs>
+    </GroupItem>
+</Org>

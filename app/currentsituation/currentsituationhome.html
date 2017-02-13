@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="app/currentsituation/css/tjx.app.currentsituation.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="tjx-home">
+
+
+    <!-- BEGIN PAGE HEAD -->
+    <div class="page-head">
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1>厂房利用现状 <small>统计</small>
+              <!--  <span class="font-green-sharp">54<small class="font-green-sharp">家</small> <small>厂房闲置企业</small></span>
+                <span class="font-red-haze">244<small class="font-red-haze">家</small>  <small>其它企业</small></span>-->
+            </h1>
+        </div>
+        <!-- END PAGE TITLE -->
+        <!-- BEGIN PAGE TOOLBAR -->
+
+        <!-- END PAGE TOOLBAR -->
+    </div>
+    <!-- END PAGE HEAD -->
+    <!-- BEGIN PAGE BREADCRUMB -->
+    <ul class="page-breadcrumb breadcrumb hide">
+        <li>
+            <a href="javascript:;">Home</a><i class="fa fa-circle"></i>
+        </li>
+        <li class="active">
+            Dashboard
+        </li>
+    </ul>
+    <!-- END PAGE BREADCRUMB -->
+    <!-- BEGIN PAGE CONTENT INNER -->
+    <div class="row margin-top-10">
+
+        <!--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="number">
+                <h3 class="font-green-sharp">54<small class="font-green-sharp">家</small> <small>厂房闲置企业</small></h3>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="number">
+                <h3 class="font-red-haze">244<small class="font-red-haze">家</small>  <small>其它企业</small></h3>
+            </div>
+
+        </div>-->
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="dashboard-stat2">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-sharp">83<small class="font-green-sharp">家</small></h3>
+                        <small>涉租企业</small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+								<span style="width: 28%;" class="progress-bar progress-bar-success green-sharp">
+								<span class="sr-only">28% 比例</span>
+								</span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title">
+                            比例
+                        </div>
+                        <div class="status-number">
+                            28%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="dashboard-stat2">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-red-haze">221<small class="font-red-haze">家</small></h3>
+                        <small>非涉租企业</small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-briefcase"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+								<span style="width: 72%;" class="progress-bar progress-bar-success red-haze">
+								<span class="sr-only">72% 比例</span>
+								</span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title">
+                            比例
+                        </div>
+                        <div class="status-number">
+                            72%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="dashboard-stat2">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-blue-sharp">629067.3 <small class="font-blue-sharp">平方米</small></h3>
+                        <small>闲置面积</small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+								<span style="width: 10%;" class="progress-bar progress-bar-success blue-sharp">
+								<span class="sr-only">10% 比例</span>
+								</span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title">
+                            比例
+                        </div>
+                        <div class="status-number">
+                            10%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Begin: life time stats -->
+            <div class="portlet light">
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font-color hide"></i>
+                        <span class="caption-subject theme-font-color bold uppercase">企业信息</span>
+                    </div>
+
+                    <div class="inputs pull-left "  style="margin-left: 20px;">
+                        <div class="portlet-input input-inline input-medium">
+                            <div class="input-group">
+                                <input id="searchvalue" type="text" class="form-control input-circle-left" placeholder="企业名称...">
+										<span class="input-group-btn">
+										<button id="search" class="btn btn-circle-right btn-default" >查询</button>
+										</span>
+                            </div>
+                        </div>
+                    </div>
+
+                   <!-- <div class="inputs pull-left  " style="margin-left: 20px;">
+                        <div class="portlet-input input-inline input-large ">
+                            <div class="input-icon right">
+                                <i class="icon-magnifier"></i>
+                                <input type="text" class="form-control form-control-solid" placeholder="企业名称...">
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a id="unused" href="#overview_1" data-toggle="tab">
+                                涉租企业 </a>
+                        </li>
+                        <li>
+                            <a id="normal" href="#overview_2" data-toggle="tab">
+                                自用企业 </a>
+                        </li>
+                        <li>
+                            <a id="closed" href="#overview_3" data-toggle="tab">
+                                其它企业 </a>
+                        </li>
+                       <!-- <li >
+                            <a id="hostile" href="#overview_4" data-toggle="tab">
+                                不配合企业  </i>
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="portlet-body">
+                    <!--BEGIN TABS-->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="overview_1">
+                            <div class="table-responsive">
+                                <table id="unusedtable" class="table table-hover p-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="col-md-3">企业名称</th>
+                                        <th class="col-md-1">调查时间</th>
+
+                                        <th>建筑面积(平方米)</th>
+                                        <th>闲置面积(平方米)</th>
+                                        <th>闲置比例</th>
+                                        <th>其它</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>2016.4.10</small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">7295.3</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-warning">7000</span>
+                                        </td>
+                                        <td class="p-progress">
+                                            <div class="progress progress-xs">
+                                                <div style="width: 95%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <small>95% 闲置率 </small>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+
+                                            <small> 2016.4.11
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            赛瑞丹先进材料（天津）有限公司
+
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">20257
+</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-warning">200
+</span>
+                                        </td>
+                                        <td class="p-progress">
+                                            <div class="progress progress-xs">
+                                                <div style="width: 0.9%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <small>0.9% 闲置率 </small>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 查看 </a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+
+                                            <small> 2016.4.12
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津天保建设发展有限公司
+
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">22857.02
+</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-warning">8572
+</span>
+                                        </td>
+                                        <td class="p-progress">
+                                            <div class="progress progress-xs">
+                                                <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <small>55% 闲置率 </small>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 查看 </a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small> 2016.4.13
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津航空机电有限公司
+
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">100155.28
+</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-warning">14100
+</span>
+                                        </td>
+                                        <td class="p-progress">
+                                            <div class="progress progress-xs">
+                                                <div style="width: 14%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <small>14% 闲置率 </small>
+                                        </td>
+
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+
+                                            <small> 2016.4.14
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津今明仪器有限公司
+
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">9357.67
+</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-warning">1566.72
+</span>
+                                        </td>
+                                        <td class="p-progress">
+                                            <div class="progress progress-xs">
+                                                <div style="width: 17%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <small>17% 闲置率 </small>
+                                        </td>
+
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>2016.4.15
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津市中天电气有限公司
+
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">33187
+</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-warning">5300.1
+</span>
+                                        </td>
+                                        <td class="p-progress">
+                                            <div class="progress progress-xs">
+                                                <div style="width: 15%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <small>15% 闲置率 </small>
+                                        </td>
+
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small> 2016.4.16
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            万寿家（天津）食品有限公司
+
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">9000
+</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-warning">800
+</span>
+                                        </td>
+                                        <td class="p-progress">
+                                            <div class="progress progress-xs">
+                                                <div style="width: 8%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <small>8% 闲置率 </small>
+                                        </td>
+
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 查看 </a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+
+                                            <small> 2016.4.17
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津百若克医药生物技术有限责任公司
+
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">31101.58
+</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-warning">10506.46
+</span>
+                                        </td>
+                                        <td class="p-progress">
+                                            <div class="progress progress-xs">
+                                                <div style="width: 33%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <small>33% 闲置率 </small>
+                                        </td>
+
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="overview_2">
+                            <div class="table-responsive">
+                                <table id="normaltable" class="table table-hover p-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="col-md-3">企业名称</th>
+                                        <th class="col-md-1">调查时间</th>
+
+                                        <th>建筑面积(平方米)</th>
+                                        <th>闲置面积(平方米)</th>
+                                        <th>闲置比例</th>
+                                        <th>其它</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                   <!-- <tr>
+                                        <td class="p-name">
+                                            <small>天津东南钢结构有限公司
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            郭丁鑫
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            西十四道31号
+
+                                        </td>
+                                        <td class="p-team">
+                                            133000
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>中储粮油脂（天津）有限公司
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            贾树根
+                                        </td>
+                                        <td class="p-team">
+                                            18903250668
+                                        </td>
+                                        <td class="p-team">
+                                            天津港保税区海滨七路28号
+
+                                        </td>
+                                        <td class="p-team">
+                                            33070.7
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>中央储备粮天津保税区直属库</small>
+                                        </td>
+                                        <td class="p-team">
+                                            朱启斌
+                                        </td>
+                                        <td class="p-team">
+                                            13801281470
+                                        </td>
+                                        <td class="p-team">
+                                            保税区海滨六路二十九号
+
+                                        </td>
+                                        <td class="p-team">
+                                            33390.3
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>欧诺（天津)印刷包装有限公司
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            代树庆
+                                        </td>
+                                        <td class="p-team">
+                                            13802118383
+                                        </td>
+                                        <td class="p-team">
+                                            天津空港物流区瑞航路6号
+
+                                        </td>
+                                        <td class="p-team">
+                                            19566.2
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>天津市瑞灵自动化工程有限公司
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            侯强
+                                        </td>
+                                        <td class="p-team">
+
+                                        </td>
+                                        <td class="p-team">
+                                            航空路268号
+
+                                        </td>
+                                        <td class="p-team">
+                                            24483.9
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>天津港保税区国际贸易有限公司
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            蒋蕾
+                                        </td>
+                                        <td class="p-team">
+                                            25767070
+                                        </td>
+                                        <td class="p-team">
+                                            天津空港经济区综合保税区远航路38号
+
+                                        </td>
+                                        <td class="p-team">
+                                            20641
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>天保科技发展有限公司
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            刘孝友
+                                        </td>
+                                        <td class="p-team">
+                                            25767070
+                                        </td>
+                                        <td class="p-team">
+                                            海滨九路131号
+
+                                        </td>
+                                        <td class="p-team">
+                                            49960
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>天津天保国际物流集团有限公司
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            孙百军
+                                        </td>
+                                        <td class="p-team">
+                                            25767070
+                                        </td>
+                                        <td class="p-team">
+                                            天津港保税区海滨七路23号
+
+                                        </td>
+                                        <td class="p-team">
+                                            19036.5
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>天津天保宏信物流中心有限公司
+                                            </small>
+                                        </td>
+                                        <td class="p-team">
+                                            顾炜欣
+                                        </td>
+                                        <td class="p-team">
+                                            25761738
+                                        </td>
+                                        <td class="p-team">
+                                            津滨大道185号
+                                        </td>
+                                        <td class="p-team">
+                                            32000
+
+                                        </td>
+                                    </tr>-->
+                                 <!--   <tr>
+                                        <td class="p-name">
+                                            <small>2016.4.10</small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>2016.4.10</small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                    </tr><tr>
+                                        <td class="p-name">
+                                            <small>2016.4.10</small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>2016.4.10</small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>2016.4.10</small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>2016.4.10</small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-name">
+                                            <small>2016.4.10</small>
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                        <td class="p-team">
+                                            天津恒康机械设备有限公司
+                                        </td>
+                                    </tr>
+-->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="overview_3">
+                            <div class="table-responsive">
+                                <table id="closetable" class="table table-hover p-table">
+                                    <thead>
+                                    <tr>
+                                        <th>企业名称</th>
+                                        <th>地址</th>
+                                        <th>联系电话</th>
+                                        <th>土地面积(平方米)</th>
+                                        <th>建筑面积(平方米)</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      <!--  <div class="tab-pane" id="overview_4">
+                            <div class="table-responsive">
+                                <table id="hostiletable" class="table table-hover p-table">
+                                    <thead>
+                                    <tr>
+                                        <th>企业名称</th>
+                                        <th>地址</th>
+                                        <th>联系电话</th>
+                                        <th>土地面积(平方米)</th>
+                                        <th>建筑面积(平方米)</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>-->
+                    </div>
+                    <!--END TABS-->
+                </div>
+            </div>
+
+
+
+        <!--    <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="icon-bar-chart font-green-sharp"></i>
+                        <span class="caption-subject font-green-sharp bold uppercase"></span>
+                        <span class="caption-helper"> ...</span>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#overview_1" data-toggle="tab">
+                                闲置厂房 </a>
+                        </li>
+                        <li>
+                            <a href="#overview_2" data-toggle="tab">
+                                正常企业 </a>
+                        </li>
+                        <li>
+                            <a href="#overview_3" data-toggle="tab">
+                                倒闭 </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:;" data-toggle="tab">
+                                不配合企业  </i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="portlet-body">
+                    <div class="tabbable-line">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="overview_1">
+                                <div class="table-responsive">
+                                    <table class="table table-hover p-table">
+                                        <thead>
+                                        <tr>
+                                            <th>调查事件</th>
+                                            <th>企业名称</th>
+                                            <th>闲置比例</th>
+                                            <th>企业状态</th>
+                                            <th>其它</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">New Dashboard BS3</a>
+                                                <br>
+                                                <small>Created 27.11.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>87% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">Creative Portfolio</a>
+                                                <br>
+                                                <small>Created 21.10.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>65% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">Directory &amp; listing</a>
+                                                <br>
+                                                <small>Created 2.09.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-2.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>55% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">New Dashboard BS3</a>
+                                                <br>
+                                                <small>Created 27.11.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>87% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">Creative Portfolio</a>
+                                                <br>
+                                                <small>Created 21.10.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>65% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">Directory &amp; listing</a>
+                                                <br>
+                                                <small>Created 2.09.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-2.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>55% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-default">Inactive</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">New Dashboard BS3</a>
+                                                <br>
+                                                <small>Created 27.11.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>87% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">Creative Portfolio</a>
+                                                <br>
+                                                <small>Created 21.10.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>65% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-default">Inactive</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">Directory &amp; listing</a>
+                                                <br>
+                                                <small>Created 2.09.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-2.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>55% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">New Dashboard BS3</a>
+                                                <br>
+                                                <small>Created 27.11.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>87% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">Creative Portfolio</a>
+                                                <br>
+                                                <small>Created 21.10.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>65% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-name">
+                                                <a href="project_details.html">Directory &amp; listing</a>
+                                                <br>
+                                                <small>Created 2.09.2014</small>
+                                            </td>
+                                            <td class="p-team">
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-1.png"></a>
+                                                <a href="#"><img alt="image" class="" src="img/pro-ac-2.png"></a>
+                                            </td>
+                                            <td class="p-progress">
+                                                <div class="progress progress-xs">
+                                                    <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                                <small>55% Complete </small>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">Active</span>
+                                            </td>
+                                            <td>
+                                                <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="overview_2">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Product Name
+                                            </th>
+                                            <th>
+                                                Price
+                                            </th>
+                                            <th>
+                                                Views
+                                            </th>
+                                            <th>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Metronic - Responsive Admin + Frontend Theme </a>
+                                            </td>
+                                            <td>
+                                                $20.00
+                                            </td>
+                                            <td>
+                                                11190
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Regatta Luca 3 in 1 Jacket </a>
+                                            </td>
+                                            <td>
+                                                $25.50
+                                            </td>
+                                            <td>
+                                                1245
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Apple iPhone 4s - 16GB - Black </a>
+                                            </td>
+                                            <td>
+                                                $625.50
+                                            </td>
+                                            <td>
+                                                809
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Samsung Galaxy S III SGH-I747 - 16GB </a>
+                                            </td>
+                                            <td>
+                                                $915.50
+                                            </td>
+                                            <td>
+                                                6709
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Motorola Droid 4 XT894 - 16GB - Black </a>
+                                            </td>
+                                            <td>
+                                                $878.50
+                                            </td>
+                                            <td>
+                                                784
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Samsung Galaxy Note 3 </a>
+                                            </td>
+                                            <td>
+                                                $925.50
+                                            </td>
+                                            <td>
+                                                21245
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Inoval Digital Pen </a>
+                                            </td>
+                                            <td>
+                                                $125.50
+                                            </td>
+                                            <td>
+                                                1245
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="overview_3">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Customer Name
+                                            </th>
+                                            <th>
+                                                Total Orders
+                                            </th>
+                                            <th>
+                                                Total Amount
+                                            </th>
+                                            <th>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    David Wilson </a>
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                $625.50
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Amanda Nilson </a>
+                                            </td>
+                                            <td>
+                                                4
+                                            </td>
+                                            <td>
+                                                $12625.50
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Jhon Doe </a>
+                                            </td>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>
+                                                $125.00
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Bill Chang </a>
+                                            </td>
+                                            <td>
+                                                45
+                                            </td>
+                                            <td>
+                                                $12,125.70
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Paul Strong </a>
+                                            </td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                $890.85
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Jane Hilson </a>
+                                            </td>
+                                            <td>
+                                                5
+                                            </td>
+                                            <td>
+                                                $239.85
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Patrick Walker </a>
+                                            </td>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>
+                                                $1239.85
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="overview_4">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Customer Name
+                                            </th>
+                                            <th>
+                                                Date
+                                            </th>
+                                            <th>
+                                                Amount
+                                            </th>
+                                            <th>
+                                                Status
+                                            </th>
+                                            <th>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    David Wilson </a>
+                                            </td>
+                                            <td>
+                                                3 Jan, 2013
+                                            </td>
+                                            <td>
+                                                $625.50
+                                            </td>
+                                            <td>
+													<span class="label label-sm label-warning">
+													Pending </span>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Amanda Nilson </a>
+                                            </td>
+                                            <td>
+                                                13 Feb, 2013
+                                            </td>
+                                            <td>
+                                                $12625.50
+                                            </td>
+                                            <td>
+													<span class="label label-sm label-warning">
+													Pending </span>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Jhon Doe </a>
+                                            </td>
+                                            <td>
+                                                20 Mar, 2013
+                                            </td>
+                                            <td>
+                                                $125.00
+                                            </td>
+                                            <td>
+													<span class="label label-sm label-success">
+													Success </span>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Bill Chang </a>
+                                            </td>
+                                            <td>
+                                                29 May, 2013
+                                            </td>
+                                            <td>
+                                                $12,125.70
+                                            </td>
+                                            <td>
+													<span class="label label-sm label-info">
+													In Process </span>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Paul Strong </a>
+                                            </td>
+                                            <td>
+                                                1 Jun, 2013
+                                            </td>
+                                            <td>
+                                                $890.85
+                                            </td>
+                                            <td>
+													<span class="label label-sm label-success">
+													Success </span>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Jane Hilson </a>
+                                            </td>
+                                            <td>
+                                                5 Aug, 2013
+                                            </td>
+                                            <td>
+                                                $239.85
+                                            </td>
+                                            <td>
+													<span class="label label-sm label-danger">
+													Canceled </span>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    Patrick Walker </a>
+                                            </td>
+                                            <td>
+                                                6 Aug, 2013
+                                            </td>
+                                            <td>
+                                                $1239.85
+                                            </td>
+                                            <td>
+													<span class="label label-sm label-success">
+													Success </span>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="btn default btn-xs green-stripe">
+                                                    View </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!-- End: life time stats -->
+        </div>
+
+    </div>
+
+    <!-- END PAGE CONTENT INNER -->
+
+</div>
+<!-- END CONTENT -->
+
+<div class="modal fade" id="factorydetail" tabindex="-1" role="dialog" aria-hidden="true" style="display: block;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title"><span aria-hidden="true" class="icon-check"></span>利用现状基础信息</h4>
+
+    </div>
+    <div class="modal-body">
+                <div class="tabbable-line">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#factorydetail_basicinfo" data-toggle="tab">
+                                基本信息 </a>
+                        </li>
+                        <li >
+                            <a href="#factorydetail_building" data-toggle="tab">
+                                厂房空置利用情况 </a>
+                        </li>
+                        <li>
+                            <a href="#factorydetail_rent" data-toggle="tab">
+                                现有租赁情况 </a>
+                        </li>
+                        <li>
+                            <a href="#factorydetail_office" data-toggle="tab">
+                                办公室空置利用情况 </a>
+                        </li>
+                        <li>
+                            <a href="#factorydetail_others" data-toggle="tab">
+                                照片 </a>
+                        </li>
+                        <li>
+                            <a href="#factorydetail_layers" data-toggle="tab">
+                                分层平面图 </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="factorydetail_basicinfo">
+                            <div class="table-responsive">
+                                <table id="tb_basicinfo"   class="table    table-bordered">
+                                    <tr>
+                                        <td class="tjx-current-info-table-category" colspan="7">
+                                            基本情况
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3" style='vertical-align: middle;'>  项目基本情况</td>
+                                        <td> 土地使用权人</td>
+                                        <td> <span tjx-data-field="土地使用权人" > </span></td>
+                                        <td> 土地使用权人组织机构代码</td>
+                                        <td>  <span tjx-data-field="土地使用权人组织机构代码"  ></span></td>
+                                        <td>  企业法人及联系电话</td>
+                                        <td>  <span tjx-data-field="企业法人及联系电话"  ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>  实际使用权人 </td>
+                                        <td> <span tjx-data-field="实际使用权人"  > </span></td>
+                                        <td>  实际使用权人组织机构代码 </td>
+                                        <td>  <span tjx-data-field="实际使用权人组织机构代码"  ></span></td>
+                                        <td>   企业法人及联系电话 </td>
+                                        <td>  <span tjx-data-field="实际使用权人组织机构代码"  ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>  企业运营状态 </td>
+                                        <td> <span tjx-data-field="企业运营状态"  > </span></td>
+                                        <td>  宗地位置（区位） </td>
+                                        <td>  <span tjx-data-field="宗地位置"  ></span></td>
+                                        <td>  地址（门牌号码） </td>
+                                        <td>  <span tjx-data-field="地址"  ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td >  宗地情况</td>
+                                        <td> 土地面积（平方米）</td>
+                                        <td> <span tjx-data-field="土地面积" > </span></td>
+                                        <td> 土地性质</td>
+                                        <td>  <span tjx-data-field="土地性质" ></span></td>
+                                        <td>  未利用土地面积（平方米）</td>
+                                        <td>  <span tjx-data-field="未利用土地面积" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">  规划及建设情况
+                                        </td>
+                                        <td> 规划建设面积（平方米）</td>
+                                        <td> <span tjx-data-field="规划建设面积" > </span></td>
+                                        <td> 规划建设栋数（栋）</td>
+                                        <td>  <span tjx-data-field="规划建设栋数" ></span></td>
+                                        <td>  已建栋数（栋）</td>
+                                        <td>  <span tjx-data-field="已建栋数" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 已建成房屋建筑面积（平方米）</td>
+                                        <td> <span tjx-data-field="已建成房屋建筑面积" > </span></td>
+                                        <td> 建成时间</td>
+                                        <td>  <span tjx-data-field="建成时间" ></span></td>
+                                        <td>  建成房屋验收情况</td>
+                                        <td>  <span tjx-data-field="建成房屋验收情况" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td >  堆场利用情况</td>
+                                        <td> 堆场总面积（平方米）</td>
+                                        <td> <span tjx-data-field="堆场总面积" > </span></td>
+                                        <td> 实际利用面积（平方米）</td>
+                                        <td>  <span tjx-data-field="实际利用面积" ></span></td>
+                                        <td>  闲置面积（平方米） </td>
+                                        <td>  <span tjx-data-field="闲置面积" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" class="tjx-current-info-table-category">
+                                            基本设施设备
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td >  最大电容量（千伏安）</td>
+                                        <td colspan="2"> <span  tjx-data-field="最大电容量"></span></td>
+                                        <td> 最大热负荷（吨/时或兆瓦）</td>
+                                        <td colspan="3">  <span tjx-data-field="最大热负荷"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td >  最大供气量（立方米/时）</td>
+                                        <td colspan="2"> <span  tjx-data-field="最大供气量"></span></td>
+                                        <td> 最大供水量(吨/日)</td>
+                                        <td colspan="3">  <span tjx-data-field="最大供水量"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" class="tjx-current-info-table-category">
+                                            公共服务设施情况（一公里内）
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td > 公共食堂</td>
+                                        <td> <span tjx-data-field="公共食堂" > </span></td>
+                                        <td> 银行</td>
+                                        <td> <span tjx-data-field="银行" > </span></td>
+                                        <td> 商务中心</td>
+                                        <td colspan="2">  <span tjx-data-field="商务中心" ></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td > 办公室</td>
+                                        <td> <span tjx-data-field="办公室" > </span></td>
+                                        <td> 公交</td>
+                                        <td> <span tjx-data-field="公交" > </span></td>
+                                        <td> 员工宿舍</td>
+                                        <td colspan="2">  <span tjx-data-field="员工宿舍" ></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" class="tjx-current-info-table-category">
+                                            现有租赁情况
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td >  </td>
+                                        <td> 空置房屋预计租金（元/平方米）</td>
+                                        <td> <span tjx-data-field="空置房屋预计租金" > </span></td>
+                                        <td> 现有租客平均租金（元/平方米）</td>
+                                        <td>  <span tjx-data-field="现有租客平均租金" ></span></td>
+                                        <td> 租金内含物业费 </td>
+                                        <td>  <span tjx-data-field="租金内含物业费" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" class="tjx-current-info-table-category">
+                                            空置房屋预期适用情况
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td > 预租企业产业方向</td>
+                                        <td> <span tjx-data-field="预租企业产业方向" > </span></td>
+                                        <td> 最小租赁面积（平方米）
+                                        </td>
+                                        <td> <span tjx-data-field="最小租赁面积" > </span></td>
+                                        <td> 预租企业租赁期限</td>
+                                        <td colspan="2">  <span tjx-data-field="预租企业租赁期限" ></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td > 对潜在客户的特殊要求：</td>
+                                        <td colspan="6"> <span tjx-data-field="对潜在客户的特殊要求" > </span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="factorydetail_building">
+                            <div id="cn_building" class="table-responsive">
+                                <table id="tb_building"    class="table  table-hover table-bordered display-none">
+                                    <tr>
+                                        <td rowspan="7"  class="col-md-1" style='vertical-align: middle;'>  <span tjx-data-field="厂房名称" > </span>
+                                        </td>
+                                        <td class="col-md-2"> 厂房现状</td>
+                                        <td class="col-md-2"> <span tjx-data-field="厂房现状" > </span></td>
+                                        <td class="tjx-table-md-3"> 房屋结构</td>
+                                        <td class="col-md-1">  <span tjx-data-field="房屋结构" ></span></td>
+                                        <td class="tjx-table-md-3">  空置房屋名称及面积（平方米）</td>
+                                        <td>  <span tjx-data-field="空置房屋名称及面积" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 房屋状况
+                                        </td>
+                                        <td><span tjx-data-field="房屋状况" ></span>  </td>
+                                        <td> </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 自用面积（平方米）</td>
+                                        <td> <span tjx-data-field="自用面积" > </span></td>
+                                        <td> 已出租面积（平方米）</td>
+                                        <td>  <span tjx-data-field="已出租面积" ></span></td>
+                                        <td>  柱间距（米）</td>
+                                        <td>  <span tjx-data-field="柱间距" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 房屋层数</td>
+                                        <td> <span tjx-data-field="房屋层数" > </span></td>
+                                        <td> 房屋进深（米）</td>
+                                        <td>  <span tjx-data-field="房屋进深" ></span></td>
+                                        <td>  房屋跨度（米）</td>
+                                        <td>  <span tjx-data-field="房屋跨度" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>房屋一层层高（米）</td>
+                                        <td> <span tjx-data-field="房屋一层层高" > </span></td>
+                                        <td> 房屋二层及以上层高（米）</td>
+                                        <td>  <span tjx-data-field="房屋二层及以上层高" ></span></td>
+                                        <td>  二层及以上房屋承重（千克/平方米）</td>
+                                        <td>  <span tjx-data-field="二层及以上房屋承重" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 空置房屋设施设备</td>
+                                        <td> <span tjx-data-field="空置房屋设施设备" > </span></td>
+                                        <td> 货梯数量（部）</td>
+                                        <td>  <span tjx-data-field="货梯数量" ></span></td>
+                                        <td>  货梯承重（吨）</td>
+                                        <td>  <span tjx-data-field="货梯承重" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 厂房主门宽度（米）</td>
+                                        <td> <span tjx-data-field="厂房主门宽度" > </span></td>
+                                        <td> 厂房主门高度（米）</td>
+                                        <td>  <span tjx-data-field="厂房主门高度" ></span></td>
+                                        <td>  空置房屋装修情况</td>
+                                        <td>  <span tjx-data-field="空置房屋装修情况" ></span> </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="factorydetail_rent">
+                            <div  id="cn_rent" class="table-responsive">
+                                  <table   id="tb_rent"  class="table  table-hover table-bordered display-none">
+                                      <tr>
+                                          <td rowspan="7" class="col-md-1" style='vertical-align: middle;'>  现有租赁情况
+                                          </td>
+                                          <td class="col-md-2"> 已出租房屋面积（平方米）</td>
+                                          <td class="col-md-2"> <span tjx-data-field="已出租房屋面积" > </span></td>
+                                          <td class="col-md-2"> 租赁位置
+                                          </td>
+                                          <td class="col-md-2">  <span tjx-data-field="租赁位置" ></span></td>
+                                          <td class="col-md-2">  承租方人数</td>
+                                          <td>  <span tjx-data-field="承租方人数" ></span> </td>
+                                      </tr>
+                                      <tr>
+                                          <td> 承租方企业名称</td>
+                                          <td> <span tjx-data-field="承租方企业名称" > </span></td>
+                                          <td> 承租方企业组织机构代码</td>
+                                          <td>  <span tjx-data-field="承租方企业组织机构代码" ></span></td>
+                                          <td>  承租方负责人及联系电话</td>
+                                          <td>  <span tjx-data-field="承租方负责人及联系电话" ></span> </td>
+                                      </tr>
+                                      <tr>
+                                          <td> 租期（起止时间）</td>
+                                          <td> <span tjx-data-field="租期" > </span></td>
+                                          <td> 是否续租</td>
+                                          <td>  <span tjx-data-field="是否续租" ></span></td>
+                                          <td>  房屋情况说明：</td>
+                                          <td>  <span tjx-data-field="房屋情况说明" ></span> </td>
+                                      </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="factorydetail_office">
+                            <div  id="cn_office" class="table-responsive">
+                                <table   id="tb_office"  class="table  table-hover table-bordered display-none">
+                                    <tr>
+                                        <td rowspan="7" class="col-md-1" style='vertical-align: middle;'>
+                                            <span tjx-data-field="办公楼名称" > </span>
+                                        </td>
+                                        <td class="col-md-2"> 办公楼层数</td>
+                                        <td class="col-md-2"> <span tjx-data-field="办公楼层数" > </span></td>
+                                        <td class="col-md-2"> 办公楼面积（平方米）
+                                        </td>
+                                        <td class="col-md-2">  <span tjx-data-field="办公楼面积" ></span></td>
+                                        <td class="col-md-2">  办公楼可容纳工位数（个）</td>
+                                        <td>  <span tjx-data-field="办公楼可容纳工位数" ></span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td > 房屋状况</td>
+                                        <td colspan="5"> <span tjx-data-field="房屋状况" > </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td> 空置房屋所在层数</td>
+                                        <td> <span tjx-data-field="空置房屋所在层数" > </span></td>
+                                        <td> 房屋空置面积(平方米）</td>
+                                        <td>  <span tjx-data-field="房屋空置面积" ></span></td>
+                                        <td>  空置房屋可容纳工位数（个）：</td>
+                                        <td>  <span tjx-data-field="空置房屋可容纳工位数" ></span> </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="factorydetail_others">
+                            <div class="filter-v1 margin-top-10">
+                                <div id="mix-grid-1" class="row mix-grid thumbnails">
+                                    <div  id="phototemplate"  class="col-md-4 col-sm-4 mix category_1 display-none">
+                                        <div class="mix-inner">
+                                            <div >
+                                                <h4>
+                                                    <span style="text-align: center;color: #0da3e2;margin: 0 auto;">
+                                                    </span>
+                                                </h4>
+
+                                            </div>
+                                            <a class=" fancybox-button" href="javascript:void(0)" title="" data-rel="fancybox-button">
+                                                <img class="img-responsive" src="" alt="">  </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="factorydetail_layers">
+                            <div class="filter-v1 margin-top-10">
+                                <div id="layers-grid-1" class="row mix-grid thumbnails">
+                                    <div  id="layerstemplate"  class="col-md-4 col-sm-4 mix category_1 display-none">
+                                        <div class="mix-inner">
+                                            <div >
+                                                <h4>
+                                                    <span style="text-align: center;color: #0da3e2;margin: 0 auto;">
+                                                    </span>
+                                                </h4>
+
+                                            </div>
+                                            <a class=" fancybox-button" href="javascript:void(0)" title="" data-rel="fancybox-button">
+                                                <img class="img-responsive" src="" alt="">  </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--    <fieldset>
+                        <legend>企业基本信息</legend>
+                    </fieldset>
+                    <ul class="list-group">
+                        <li class="list-group-item" id="location">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">生产经营地址<i class="glyphicon glyphicon-ok font-red"></i></label>
+
+                                <label class="col-md-2 control-label">主要产品规模<i class="glyphicon glyphicon-ok font-red"></i></label>
+
+                                <label class="col-md-2 control-label">主要原辅料用量<i class="glyphicon glyphicon-ok font-red"></i></label>
+
+                                <label class="col-md-2 control-label">安全管理机构<i class="glyphicon glyphicon-ok font-red"></i></label>
+
+                                <label class="col-md-2 control-label">安全管理体系<i class="glyphicon glyphicon-ok font-red"></i></label>
+
+                                <label class="col-md-2 control-label">员工人数<i class="glyphicon glyphicon-ok font-red"></i></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="holder">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">主要负责人</label>
+                                <label class="col-md-2 control-label">联系电话</label>
+                                <label class="col-md-2 control-label">手机</label>
+                                <label class="col-md-2 control-label">分管安全负责人<i class="glyphicon glyphicon-remove font-blue"></i></label>
+                                <label class="col-md-2 control-label">联系电话</label>
+                                <label class="col-md-2 control-label">手机</label>
+
+
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="handler">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">安全管理人员</label>
+                                <label class="col-md-2 control-label">联系电话</label>
+                                <label class="col-md-2 control-label">手机</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="category">
+                            <div class="form-group">
+
+
+                            </div>
+                        </li>
+                    </ul>
+-->
+    </div>
+</div>
+
+<!-- third-party javascript -->
+<!--<script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>-->
+<script type="text/javascript" src="app/currentsituation/js/tjx.data.currentsituation.detail.js"></script>
+<script type="text/javascript" src="app/currentsituation/js/tjx.app.currentsituation.home.js"></script>
+<script type="text/javascript" src="app/currentsituation/js/tjx.app.currentsituation.info.js"></script>
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.currentsituation.home.initModule( jQuery('body') );
+                tjx.app.currentsituation.info.initModule( jQuery('body') );
+            });
+</script>
+
+
+</body>
+</html>

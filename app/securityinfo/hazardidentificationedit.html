@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+   <!-- <script type="text/javascript" src="js/tjx.data.hazardidentification.js"></script>-->
+    <script type="text/javascript" src="app/securityinfo/js/tjx.app.securityinfo.hazardidentification.js"></script>
+    <script type="text/javascript">
+        // Start spa once DOM is ready
+        //
+        jQuery(document).ready(
+                function () {
+                    tjx.app.securityinfo.hazardidentification.initModule( jQuery('body'), false , false);
+                });
+    </script>
+</head>
+<body>
+
+    <div class="modal-header">
+        <div class="portlet-title">
+            <div class="caption font-green-haze">
+                <i class="icon-check font-green-haze"></i>
+                <span class="caption-subject bold uppercase">编辑危险辨识</span>
+
+                <button type="button"  class="close " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-body">
+        <div class="portlet-body   form ">
+            <form class="form-horizontal form-bordered form-row-stripped">
+                <div class="form-body">
+                    <div class="alert alert-danger display-hide" >
+                        <button class="close" data-close="alert"></button>
+                        您所提交的内容不符合要求，请检查后重新提交.
+                    </div>
+                    <div class="form-group  ">
+                        <label class="col-md-3 control-label">危险部位
+                            <span class="required">* </span>
+                        </label>
+                        <div class="col-md-9">
+                            <input name="DangerousSection" type="text"  tjx-data-field="DangerousSection" class="form-control" readonly  size="60"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">危险源辨识</label>
+                        <div class="col-md-9">
+                            <input name="textfield" type="text" tjx-data-field="DangerousSource" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">控制措施</label>
+                        <div class="col-md-9">
+                            <input name="textfield" type="text" tjx-data-field="ControlMeasure" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">可能引起的事故类型</label>
+                        <div class="col-md-9">
+                            <input name="textfield" type="text" tjx-data-field="AccidentPattern" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

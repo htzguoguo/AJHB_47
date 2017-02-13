@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+  <!--  <script type="text/javascript" src="js/tjx.data.equipment.js"></script>
+    <script type="text/javascript" src="js/tjx.data.safetyinspection.js"></script>-->
+    <script type="text/javascript" src="app/securityinfo/js/tjx.app.securityinfo.safetyinspection.js"></script>
+    <script type="text/javascript">
+        // Start spa once DOM is ready
+        //
+        jQuery(document).ready(
+                function () {
+                    tjx.app.securityinfo.safetyinspection.initModule( jQuery('.portlet'), false,false );
+                });
+    </script>
+</head>
+<body>
+
+<div class="modal-header">
+    <div class="portlet-title">
+        <div class="caption font-green-haze">
+            <i class="icon-check font-green-haze"></i>
+            <span class="caption-subject bold uppercase">编辑安全设施（设备）检测</span>
+            <button type="button"  class="close " data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+<div class="modal-body">
+    <div class="portlet-body   form ">
+        <form class="form-horizontal form-bordered form-row-stripped">
+            <div class="form-body">
+                <div class="alert alert-danger display-hide" >
+                    <button class="close" data-close="alert"></button>
+                    您所提交的内容不符合要求，请检查后重新提交.
+                </div>
+                <div class="form-group  display-hide">
+                    <label class="col-md-2 control-label">
+                        <span class="required">* </span>
+                    </label>
+                    <div class="col-md-4">
+                        <input class="form-control"  name="EquipmentName" tjx-data-field="QualifiedName">
+                        </input>
+                    </div>
+                </div>
+
+                <div class="form-group  ">
+                    <label class="col-md-3 control-label">设备设施名称
+                        <span class="required">* </span>
+                    </label>
+                    <div class="col-md-9">
+                        <input class="form-control"  name="EquipmentName" tjx-data-field="EquipmentName" readonly>
+                        </input>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">检测时间
+                        <span class="required">* </span>
+                    </label>
+                    <div class="col-md-9">
+                        <div class="input-group input-medium date date-picker"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="months">
+                            <input type="text" name="DetectionTime" tjx-data-field="DetectionTime" class="form-control input-large" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">有效期限
+                        <span class="required">* </span>
+                    </label>
+                    <div class="col-md-9">
+                        <div class="input-group input-medium date date-picker"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="months">
+                            <input type="text" name="ExpirationDate"  tjx-data-field="ExpirationDate" class="form-control input-large" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">检测机构</label>
+                    <div class="col-md-9">
+                        <input name="textfield" type="text" tjx-data-field="Organization" class="form-control"  size="60"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">备注</label>
+                    <div class="col-md-9">
+                        <textarea class="form-control" rows="3" tjx-data-field="Memo" ></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+            <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+  <!--  <script type="text/javascript" src="js/tjx.util.typehead.js"></script>
+    <script type="text/javascript" src="js/tjx.data.equipment.js"></script>-->
+    <script type="text/javascript" src="app/onsitecheck/js/tjx.data.onsitecheck.onsitecheck.js"></script>
+    <script type="text/javascript" src="app/onsitecheck/js/tjx.app.onsitecheck.onsitecheckadd.js"></script>
+    <script type="text/javascript">
+        // Start spa once DOM is ready
+        //
+        jQuery(document).ready(
+                function () {
+                    tjx.app.onsitecheck.onsitecheckadd.initModule( jQuery('body'), true );
+                    tjx.util.typehead.initModule( jQuery('#EnterpriseName') );
+                });
+    </script>
+</head>
+<body>
+
+<div class="modal-header">
+    <div class="portlet-title">
+        <div class="caption font-green-haze">
+            <i class="icon-check font-green-haze"></i>
+            <span class="caption-subject bold uppercase">添加</span>
+
+            <button type="button"  class="close " data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-body">
+    <div class="portlet-body   form ">
+        <form class="form-horizontal form-bordered form-row-stripped">
+            <div class="form-body">
+                <div class="alert alert-danger display-hide" >
+                    <button class="close" data-close="alert"></button>
+                    您所提交的内容不符合要求，请检查后重新提交.
+                </div>
+                <div class="form-group  ">
+                    <label class="col-md-2 control-label">单位名称
+                        <span class="required">* </span>
+                    </label>
+                    <div class="col-md-10">
+                        <input name="EnterpriseName" id="EnterpriseName" disabled="disabled"  type="text" tjx-data-field="EnterpriseName" class="form-control"  size="60"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">检查时间
+                        <span class="required">* </span>
+                    </label>
+                    <div class="col-md-10">
+                        <div class="input-group input-medium date date-picker"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="months">
+                            <input type="text" name="DetectionTime" tjx-data-field="DetectionTime" class="form-control input-large" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">要求完成时间
+                        <span class="required">* </span>
+                    </label>
+                    <div class="col-md-10">
+                        <div id="Deadline" class="input-group input-medium date date-picker"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="months">
+                            <input type="text" name="Deadline" tjx-data-field="Deadline" class="form-control input-large" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">检查人员</label>
+                    <div class="col-md-10">
+                        <input name="textfield" id="Inspector" type="text" tjx-data-field="Inspector" class="form-control"  size="60"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">部位</label>
+                    <div class="col-md-10">
+                        <input name="textfield" type="text" tjx-data-field="Position" class="form-control"  size="60"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">问题和隐患</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" rows="3" tjx-data-field="Problem" ></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">整改建议</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" rows="3" tjx-data-field="Recommendation" ></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">备注</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" rows="3" tjx-data-field="Memo" ></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">现场照片</label>
+                    <div id="photocontainer" class="col-md-10">
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+            <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

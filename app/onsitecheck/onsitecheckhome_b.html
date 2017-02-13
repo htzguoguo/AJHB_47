@@ -1,0 +1,739 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<div class="tjx-home">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="portlet light">
+                    <div class="portlet-body">
+                        <div>
+
+                            <h3 class="font-bold no-margins">
+                                企业案件检查/处置
+                            </h3>
+                        </div>
+
+                        <div>
+                            <canvas id="lineChart" height="70"></canvas>
+                        </div>
+
+                        <div class="m-t-md">
+                            <small class="pull-right">
+                                <i class="fa fa-clock-o"> </i>
+                               更新时间：
+                            </small>
+                            <small>
+
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-lg-3">
+                <div class="portlet light ">
+                    <div class="ibox-title">
+                        <span class="label label-primary pull-right">今天</span>
+                        <h5>上报</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">8</h1>
+                        <div class="stat-percent font-bold text-navy">20% <i class="fa fa-level-up"></i></div>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="portlet light ">
+                    <div class="ibox-title">
+                        <span class="label label-info pull-right">今天</span>
+                        <h5>处置</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">6</h1>
+                        <div class="stat-percent font-bold text-info">40% <i class="fa fa-level-up"></i></div>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="portlet light ">
+                    <div class="ibox-title">
+                        <span class="label label-danger pull-right">今天</span>
+                        <h5>即将超期</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">6</h1>
+                        <div class="stat-percent font-bold text-warning">16% <i class="fa fa-level-up"></i></div>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="portlet light ">
+                    <div class="ibox-title">
+                        <span class="label label-warning pull-right">今天</span>
+                        <h5>超期</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">5</h1>
+                        <div class="stat-percent font-bold text-warning">16% <i class="fa fa-level-up"></i></div>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font-color hide"></i>
+                            <span class="caption-subject theme-font-color bold uppercase">自查自报</span>
+                        </div>
+                        <!--  <ul class="nav nav-tabs">
+                              <li class="active">
+                                  <a href="#tab_1_21" data-toggle="tab">
+                                      企业自查 </a>
+                              </li>
+                          </ul>-->
+                    </div>
+                    <div class="portlet-body">
+                        <!--BEGIN TABS-->
+                        <div class="tab-content">
+                            <div class="tab-pane  active"  >
+                                <div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                    <ul class="feeds">
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            中轻腾发实业有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="label label-danger arrowed">
+                                                    最新
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="col1">
+                                                    <div class="cont">
+                                                        <div class="cont-col1">
+                                                            <div class="label label-sm label-success">
+                                                                <i class="fa fa-bolt"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cont-col2">
+                                                            <div class="desc">
+                                                                中进汽贸发展(天津)有限公司
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+                                                    <div class="label label-danger arrowed">
+                                                        20 分钟前
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-warning">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            扎努西电气机械天津压缩机有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    24 分钟前
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            永立建机（中国）有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="time">
+                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                    <span class="green">6 分钟前</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            沃德（天津）营养保健品有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    40 分钟前
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            上海美特斯邦威服饰股份有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    40 分钟前
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            日昌（天津）精密有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    40 分钟前
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            富来精工（天津）有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+                                                    40 分钟前
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END TABS-->
+                    </div>
+                </div>
+                <!-- END PORTLET-->
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font-color hide"></i>
+                            <span class="caption-subject theme-font-color bold uppercase">整改处置</span>
+                        </div>
+                        <!--  <ul class="nav nav-tabs">
+                              <li class="active">
+                                  <a href="#tab_1_21" data-toggle="tab">
+                                      企业自查 </a>
+                              </li>
+                          </ul>-->
+                    </div>
+                    <div class="portlet-body">
+                        <!--BEGIN TABS-->
+                        <div class="tab-content">
+                            <div class="tab-pane  active"  >
+                                <div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                    <ul class="feeds">
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            <span class="label label-success">
+										 天津博达集团有限公司 </span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="col1">
+                                                    <div class="cont">
+
+                                                        <div class="cont-col2">
+                                                            <div class="desc">
+                                                                天津滨海新区雪花啤酒有限公司
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                             <span class="label label-info">
+										  天津北药大通医药有限公司 </span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津保利佐川有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津百若克医药生物技术有限责任公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            唐钢华冶（天津）钢材营销有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END TABS-->
+                    </div>
+                </div>
+                <!-- END PORTLET-->
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font-color hide"></i>
+                            <span class="caption-subject theme-font-color bold uppercase">即将超期</span>
+                        </div>
+                        <!--  <ul class="nav nav-tabs">
+                              <li class="active">
+                                  <a href="#tab_1_21" data-toggle="tab">
+                                      企业自查 </a>
+                              </li>
+                          </ul>-->
+                    </div>
+                    <div class="portlet-body">
+                        <!--BEGIN TABS-->
+                        <div class="tab-content">
+                            <div class="tab-pane  active"  >
+                                <div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                    <ul class="feeds">
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+
+                                                             <span class="label label-danger">
+										 天津港保税区鑫宝丰国际化工贸易有限公司 </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="col1">
+                                                    <div class="cont">
+
+                                                        <div class="cont-col2">
+                                                            <div class="desc">
+                                                                天津港保税区三夏国际贸易有限公司
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津港保税区京港国际贸易公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                              <span class="label label-warning">
+										   永立建机（中国）有限公司 </span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津港保税区大来民族国际贸易有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津飞马鸿业织带有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END TABS-->
+                    </div>
+                </div>
+                <!-- END PORTLET-->
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font-color hide"></i>
+                            <span class="caption-subject theme-font-color bold uppercase">整改超期</span>
+                        </div>
+                        <!--  <ul class="nav nav-tabs">
+                              <li class="active">
+                                  <a href="#tab_1_21" data-toggle="tab">
+                                      企业自查 </a>
+                              </li>
+                          </ul>-->
+                    </div>
+                    <div class="portlet-body">
+                        <!--BEGIN TABS-->
+                        <div class="tab-content">
+                            <div class="tab-pane  active"  >
+                                <div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                    <ul class="feeds">
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+
+                                                             <span class="label label-info">
+										 天津方洲物流有限公司 </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="col1">
+                                                    <div class="cont">
+
+                                                        <div class="cont-col2">
+                                                            <div class="desc">
+                                                                天津东南钢结构有限公司
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津大无缝铜材有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津大进实业有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="time">
+                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                    <span class="green"> </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col1">
+                                                <div class="cont">
+
+                                                    <div class="cont-col2">
+                                                        <div class="desc">
+                                                            天津渤海供应链管理有限公司
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END TABS-->
+                    </div>
+                </div>
+                <!-- END PORTLET-->
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Flot -->
+<script src="css/glb/flot/jquery.flot.js"></script>
+<script src="css/glb/flot/jquery.flot.tooltip.min.js"></script>
+<script src="css/glb/flot/jquery.flot.spline.js"></script>
+<script src="css/glb/flot/jquery.flot.resize.js"></script>
+<script src="css/glb/flot/jquery.flot.pie.js"></script>
+<script src="css/glb/flot/jquery.flot.symbol.js"></script>
+<script src="css/glb/flot/curvedLines.js"></script>
+<!-- ChartJS-->
+<script src="css/glb/chartJs/Chart.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        var lineData = {
+            labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月" ],
+            datasets: [
+                {
+                    label: "Example dataset",
+                    fillColor: "rgba(220,220,220,0.5)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [35, 59, 50, 53, 56, 65, 60, 59, 50, 53, 56, 65, 60]
+                },
+                {
+                    label: "Example dataset",
+                    fillColor: "rgba(26,179,148,0.5)",
+                    strokeColor: "rgba(26,179,148,0.7)",
+                    pointColor: "rgba(26,179,148,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(26,179,148,1)",
+                    data: [28, 48, 40, 50, 55, 60, 55, 48, 40, 50, 55, 60, 55]
+                }
+            ]
+        };
+
+        var lineOptions = {
+            scaleShowGridLines: true,
+            scaleGridLineColor: "rgba(0,0,0,.05)",
+            scaleGridLineWidth: 1,
+            bezierCurve: true,
+            bezierCurveTension: 0.4,
+            pointDot: true,
+            pointDotRadius: 4,
+            pointDotStrokeWidth: 1,
+            pointHitDetectionRadius: 20,
+            datasetStroke: true,
+            datasetStrokeWidth: 2,
+            datasetFill: true,
+            responsive: true,
+        };
+
+
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        var myNewChart = new Chart(ctx).Line(lineData, lineOptions);
+
+    });
+</script>
+
+</body>
+</html>

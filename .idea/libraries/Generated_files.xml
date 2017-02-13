@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/jq/jquery.min.js" />
+        <item url="file://$PROJECT_DIR$/app/monitor/js/tjx.map.monitor.camera.min.js" />
+        <item url="file://$PROJECT_DIR$/js/lib/require.min.js" />
+        <item url="file://$PROJECT_DIR$/js/template.min.js" />
+        <item url="file://$PROJECT_DIR$/app/documents/js/tjx.app.document.init.min.js" />
+        <item url="file://$PROJECT_DIR$/app/documents/js/tjx.app.documents.list.min.js" />
+        <item url="file://$PROJECT_DIR$/app/documents/js/tjx.data.documents.min.js" />
+        <item url="file://$PROJECT_DIR$/js/tjx.util.min.js" />
+        <item url="file://$PROJECT_DIR$/js/tjx.index1.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/jq/jquery.min.js" />
+      <root url="file://$PROJECT_DIR$/app/monitor/js/tjx.map.monitor.camera.min.js" />
+      <root url="file://$PROJECT_DIR$/js/lib/require.min.js" />
+      <root url="file://$PROJECT_DIR$/js/template.min.js" />
+      <root url="file://$PROJECT_DIR$/app/documents/js/tjx.app.document.init.min.js" />
+      <root url="file://$PROJECT_DIR$/app/documents/js/tjx.app.documents.list.min.js" />
+      <root url="file://$PROJECT_DIR$/app/documents/js/tjx.data.documents.min.js" />
+      <root url="file://$PROJECT_DIR$/js/tjx.util.min.js" />
+      <root url="file://$PROJECT_DIR$/js/tjx.index1.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

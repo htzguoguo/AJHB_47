@@ -1,0 +1,166 @@
+@charset "gb2312";
+/* CSS Document */
+* { margin:0 auto; padding:0; font-family:Microsoft YaHei, Verdana; }
+html,body{height:100%; width:100%; overflow:hidden; margin:0 auto; padding:0;font-size:12px; font-family: Microsoft YaHei, Verdana; color:#333; }
+ul { margin:0; padding:0 }
+li { margin:0; padding:0; list-style:none }
+a { text-decoration:none; color:#333; }
+a:hover{ text-decoration:underline; color:#bbb; }
+img { border:0 }
+.clearboth { clear:both; width:0; height:0; line-height:0; font-size:0; visibility:hidden }
+.top{ height:150px; margin:0 auto;}
+.navbg{ background:#497cbe url(navbg.jpg) no-repeat; line-height:35px; font-size:15px; color:#FFF; text-align:left; padding-left:15px;}
+.txt15{ font-size:15px; color:#FFF; line-height:30px; text-align:center; width:145px;}
+.main{width:100%; height:100%; overflow:hidden; margin:0; padding:0;}
+.leftcol{ width:240px; background:#F7F8FA; float:left; border-right:1px solid #EFF1F5; height:100%;OVERFLOW-Y: auto; OVERFLOW-X:hidden;}
+.lan{ line-height:35px; background:#3BAEDA; text-align:center; color:#FFF; display:block; font-size:15px; border-bottom:#75D3EF 1px solid; font-weight:bold;}
+.pic1{ background:#50C1E9; color:#FFF; font-size:14px;}
+.rightcol{ width:100%;height:100%; color:#333; padding:10px;OVERFLOW-Y: auto; OVERFLOW-X:hidden; padding:20px;}
+
+.rightcol ul{padding:20px;}
+
+.rightcol  li{
+	float:left;
+	text-align:center;
+	width:180px;
+	padding:20px;
+}
+.rightcol li.noMargin{
+}
+.rightcol li a.pic1{
+	display:block;
+	background:url(01.jpg) 0 0 no-repeat;
+	width:145px;
+	height:120px;
+}
+.rightcol li a.pic1:hover{
+	background:url(001.jpg) 0 0 no-repeat;
+}
+.rightcol li a.pic2{
+	display:block;
+	background:url(02.jpg) 0 0 no-repeat;
+	width:145px;
+	height:120px;
+}
+.rightcol li a.pic2:hover{
+	background:url(002.jpg) 0 0 no-repeat;
+}
+
+.rightcol li a.pic3{
+	display:block;
+	background:url(03.jpg) 0 0 no-repeat;
+	width:145px;
+	height:120px;
+}
+.rightcol li a.pic3:hover{
+	background:url(003.jpg) 0 0 no-repeat;
+}
+.rightcol li.noMargin a.pic4{
+	display:block;
+	background:url(04.jpg) 0 0 no-repeat;
+	width:145px;
+	height:120px;
+}
+.rightcol li.noMargin a.pic4:hover{
+	background:url(004.jpg) 0 0 no-repeat;
+}
+.rightcol li a.pic5{
+	display:block;
+	background:url(05.jpg) 0 0 no-repeat;
+	width:145px;
+	height:120px;
+}
+.rightcol li a.pic5:hover{
+	background:url(005.jpg) 0 0 no-repeat;
+}
+
+.rightcol li a.pic6{
+	display:block;
+	background:url(06.jpg) 0 0 no-repeat;
+	width:145px;
+	height:120px;
+}
+.rightcol li a.pic6:hover{
+	background:url(006.jpg) 0 0 no-repeat;
+}.rightcol li a.pic7{
+	display:block;
+	background:url(07.jpg) 0 0 no-repeat;
+	width:145px;
+	height:120px;
+}
+.rightcol li a.pic7:hover{
+	background:url(007.jpg) 0 0 no-repeat;
+}.rightcol li a.pic8{
+	display:block;
+	background:url(08.jpg) 0 0 no-repeat;
+	width:145px;
+	height:120px;
+}
+.rightcol li a.pic8:hover{
+	background:url(008.jpg) 0 0 no-repeat;
+}
+
+.DDT ul li {
+	color: #333;
+	background:#EFEFEF;
+	height:35px;
+	line-height:35px;
+	border-bottom: 1px  dotted #C9C9C9;
+	text-align:center;display:block;
+}
+.DDT ul li a {color: #333;background:#EFEFEF; }
+
+.DDT ul li a:hover { background: #F7F8FA; color:#a6a6a6;}
+
+
+.tb1{ padding:10px;}
+
+
+.tblist{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	background:#FFF;
+	border:1px solid #BED6F6;	/* 表格边框 */
+	border-collapse:collapse;	/* 边框重叠 */	/* 表格背景色 */
+	font-size:14px;
+}
+.tblist th{
+	background-color:#DBEBFF;	/* 行名称背景色 */			/* 行名称颜色 */
+	font-weight:bold;
+	height:24px;
+	padding:6px;
+	border:1px solid #A3C0E8;
+
+}
+.tblist td{
+	border:1px solid #BED6F6;	/* 单元格边框 */
+	padding:5px;
+	height:20px;
+}
+ .tblist tr.altrow{
+	background-color:#F7FAFF;	/* 动态变色 */
+}
+.tblist tr:hover {background-color:#F9F9F9;	}
+
+
+.tblist1{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	background:#FFF;
+	border:1px solid #BED6F6;	/* 表格边框 */
+	border-collapse:collapse;	/* 边框重叠 */	/* 表格背景色 */
+	font-size:14px;
+}
+.tblist1 th{
+	background-color:#F7FAFF;	/* 行名称背景色 */			/* 行名称颜色 */
+	font-weight:bold;
+	height:18px;
+	padding:6px;
+	border:1px solid #A3C0E8;
+
+}
+.tblist1 td{
+	border:1px solid #BED6F6;	/* 单元格边框 */
+	padding:5px;
+	height:20px;
+}
+.rl{ float:right;  color:#666; width:40px;}
+.rl a:hover{ color:#F60;}

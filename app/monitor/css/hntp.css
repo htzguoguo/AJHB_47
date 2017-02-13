@@ -1,0 +1,86 @@
+/*
+ * tjx.css
+ * Root namespace styles
+*/
+
+/** Begin reset **/
+
+* {
+    margin:0 auto;
+    padding:0;
+    font-family:Microsoft YaHei, "宋体";
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+/** End reset **/
+
+/** Begin standard selectors **/
+
+html,body{
+    height:100%;
+    width:100%;
+    margin:0 auto;
+    padding:0;
+    font-size:12px;
+    font-family: Microsoft YaHei, "宋体";
+    color:#333
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dd,dt {
+    PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+EM {
+    FONT-WEIGHT: normal; FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+}
+
+a { text-decoration:none; color:#333; }
+a:hover{ text-decoration:underline; color:#bbb; }
+
+ul {
+    margin:0;
+    padding:0
+}
+li {
+    margin:0;
+    padding:0;
+    list-style:none
+}
+img {
+    border:0
+}
+form{
+    margin:0;
+    padding:0
+}
+
+p {
+    margin: 0px;
+}
+
+/** End standard selectors **/
+
+/** Begin utility selectors **/
+
+.clearboth { clear:both; width:0; height:0; line-height:0; font-size:0; visibility:hidden }
+
+.tjx-readonly  {
+    background-color: #eeeeee !important;
+}
+
+.tjx-border-bottom-none {
+    border-bottom: 0px !important;
+}
+
+.tjx-center {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** End utility selectors **/

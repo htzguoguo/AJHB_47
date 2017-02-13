@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .tjx-margin-bottom-small {
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <link href="app/currentsituation/css/tjx.app.currentsituation.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="portlet box blue-madison">
+
+    <div class="portlet-title">
+        <div id="title" class="caption">
+            <i class="fa fa-gift"></i>
+            综合查询
+        </div>
+        <div class="tools">
+        </div>
+    </div>
+
+    <div class="portlet-body   form ">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BEGIN Portlet PORTLET-->
+                <div class="portlet light">
+                 <!--   <div class="portlet-title">
+                        <div class="caption">
+                            <i class="icon-paper-plane font-yellow-casablanca"></i>
+								<span class="caption-subject bold font-yellow-casablanca uppercase">
+								综合查询 </span>
+                            <span class="caption-helper">...</span>
+                        </div>
+                    </div>-->
+                    <div class="portlet-body">
+                        <div id="search" class="alert alert-block alert-info  fade in">
+                            <div class="row " >
+                                <div class="col-md-1">
+                                    <button id="searchadd" class="btn green">
+                                        添加 <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-1">
+                                        <button id="btnsearchbtn" class="btn blue   ">查询 <i class="m-icon-swapright m-icon-white"></i></button>
+                                </div>
+                               <!-- <div class="dt-buttons btn-group">
+
+                                        <a class="btn btn-default buttons-excel buttons-html5 btn-sm" tabindex="0" aria-controls="table" href="#"><span>下载</span></a>
+
+
+
+                                        <a class="btn btn-default buttons-print btn-sm" tabindex="0" aria-controls="table" href="#"><span>打印</span></a>
+
+                                </div>-->
+
+                                <div  id="searchbuttons" class="pull-right" style="margin-right: 10px;">
+
+                                </div >
+                            </div>
+                            <div class="row">
+                                <div class="table-responsive col-md-11">
+                                    <table class="table      dataTable no-footer" id="datatable_ajax" aria-describedby="datatable_ajax_info" role="grid">
+                                        <thead>
+                                        <tr role="row" >
+                                            <th width="2%" class="sorting_disabled" rowspan="1" colspan="1">
+                                           <!-- <div class="checker"><span><input type="checkbox" class="group-checkable"></span></div>-->
+                                        </th>
+                                            <th width="25%" class="sorting" tabindex="0" aria-controls="datatable_ajax" rowspan="1" colspan="1">
+                                            字段名称
+                                        </th>
+                                            <th width="25%" class="sorting" tabindex="0" aria-controls="datatable_ajax" rowspan="1" colspan="1">
+                                            查询条件
+                                        </th>
+                                            <th width="25%" class="sorting" tabindex="0" aria-controls="datatable_ajax" rowspan="1" colspan="1">
+                                            值
+                                        </th>
+                                            <th width="25%" class="sorting" tabindex="0" aria-controls="datatable_ajax" rowspan="1" colspan="1">
+                                        </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="searchbody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="portlet-body">
+                        <div class="table-responsive">
+                            <table id="table" class="table table-hover p-table">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-4">企业名称</th>
+                                  <!--  <th class="col-md-2">法人及电话</th>-->
+                                    <th class="col-md-2">厂房名称</th>
+                                    <th  class="col-md-2">空置面积(平方米)</th>
+                                   <!-- <th class="col-md-1">办公楼名称</th>
+                                    <th class="col-md-2">空置面积</th>-->
+                                    <th class="col-md-2">主门高度</th>
+                                    <th class="col-md-2">其它</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END Portlet PORTLET-->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="factorydetail" tabindex="-1" role="basic" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title"><span aria-hidden="true" class="icon-check"></span>利用现状基础信息</h4>
+    </div>
+    <div class="modal-body">
+        <div class="tabbable-line">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#factorydetail_basicinfo" data-toggle="tab">
+                        基本信息 </a>
+                </li>
+                <li >
+                    <a href="#factorydetail_building" data-toggle="tab">
+                        厂房空置利用情况 </a>
+                </li>
+                <li>
+                    <a href="#factorydetail_rent" data-toggle="tab">
+                        现有租赁情况 </a>
+                </li>
+                <li>
+                    <a href="#factorydetail_office" data-toggle="tab">
+                        办公室空置利用情况 </a>
+                </li>
+                <li>
+                    <a href="#factorydetail_others" data-toggle="tab">
+                        照片 </a>
+                </li>
+                <li>
+                    <a href="#factorydetail_layers" data-toggle="tab">
+                        分层平面图 </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="factorydetail_basicinfo">
+                    <div class="table-responsive">
+                        <table id="tb_basicinfo"   class="table    table-bordered">
+                            <tr>
+                                <td class="tjx-current-info-table-category" colspan="7">
+                                    基本情况
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" style='vertical-align: middle;'>  项目基本情况</td>
+                                <td> 土地使用权人</td>
+                                <td> <span tjx-data-field="土地使用权人" > </span></td>
+                                <td> 土地使用权人组织机构代码</td>
+                                <td>  <span tjx-data-field="土地使用权人组织机构代码"  ></span></td>
+                                <td>  企业法人及联系电话</td>
+                                <td>  <span tjx-data-field="企业法人及联系电话"  ></span> </td>
+                            </tr>
+                            <tr>
+                                <td>  实际使用权人 </td>
+                                <td> <span tjx-data-field="实际使用权人"  > </span></td>
+                                <td>  实际使用权人组织机构代码 </td>
+                                <td>  <span tjx-data-field="实际使用权人组织机构代码"  ></span></td>
+                                <td>   企业法人及联系电话 </td>
+                                <td>  <span tjx-data-field="实际使用权人组织机构代码"  ></span> </td>
+                            </tr>
+                            <tr>
+                                <td>  企业运营状态 </td>
+                                <td> <span tjx-data-field="企业运营状态"  > </span></td>
+                                <td>  宗地位置（区位） </td>
+                                <td>  <span tjx-data-field="宗地位置"  ></span></td>
+                                <td>  地址（门牌号码） </td>
+                                <td>  <span tjx-data-field="地址"  ></span> </td>
+                            </tr>
+                            <tr>
+                                <td >  宗地情况</td>
+                                <td> 土地面积（平方米）</td>
+                                <td> <span tjx-data-field="土地面积" > </span></td>
+                                <td> 土地性质</td>
+                                <td>  <span tjx-data-field="土地性质" ></span></td>
+                                <td>  未利用土地面积（平方米）</td>
+                                <td>  <span tjx-data-field="未利用土地面积" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">  规划及建设情况
+                                </td>
+                                <td> 规划建设面积（平方米）</td>
+                                <td> <span tjx-data-field="规划建设面积" > </span></td>
+                                <td> 规划建设栋数（栋）</td>
+                                <td>  <span tjx-data-field="规划建设栋数" ></span></td>
+                                <td>  已建栋数（栋）</td>
+                                <td>  <span tjx-data-field="已建栋数" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td> 已建成房屋建筑面积（平方米）</td>
+                                <td> <span tjx-data-field="已建成房屋建筑面积" > </span></td>
+                                <td> 建成时间</td>
+                                <td>  <span tjx-data-field="建成时间" ></span></td>
+                                <td>  建成房屋验收情况</td>
+                                <td>  <span tjx-data-field="建成房屋验收情况" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td >  堆场利用情况</td>
+                                <td> 堆场总面积（平方米）</td>
+                                <td> <span tjx-data-field="堆场总面积" > </span></td>
+                                <td> 实际利用面积（平方米）</td>
+                                <td>  <span tjx-data-field="实际利用面积" ></span></td>
+                                <td>  闲置面积（平方米） </td>
+                                <td>  <span tjx-data-field="闲置面积" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="tjx-current-info-table-category">
+                                    基本设施设备
+                                </td>
+                            </tr>
+                            <tr>
+                                <td >  最大电容量（千伏安）</td>
+                                <td colspan="2"> <span  tjx-data-field="最大电容量"></span></td>
+                                <td> 最大热负荷（吨/时或兆瓦）</td>
+                                <td colspan="3">  <span tjx-data-field="最大热负荷"></span></td>
+                            </tr>
+                            <tr>
+                                <td >  最大供气量（立方米/时）</td>
+                                <td colspan="2"> <span  tjx-data-field="最大供气量"></span></td>
+                                <td> 最大供水量(吨/日)</td>
+                                <td colspan="3">  <span tjx-data-field="最大供水量"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="tjx-current-info-table-category">
+                                    公共服务设施情况（一公里内）
+                                </td>
+                            </tr>
+                            <tr>
+                                <td > 公共食堂</td>
+                                <td> <span tjx-data-field="公共食堂" > </span></td>
+                                <td> 银行</td>
+                                <td> <span tjx-data-field="银行" > </span></td>
+                                <td> 商务中心</td>
+                                <td colspan="2">  <span tjx-data-field="商务中心" ></span></td>
+                            </tr>
+                            <tr>
+                                <td > 办公室</td>
+                                <td> <span tjx-data-field="办公室" > </span></td>
+                                <td> 公交</td>
+                                <td> <span tjx-data-field="公交" > </span></td>
+                                <td> 员工宿舍</td>
+                                <td colspan="2">  <span tjx-data-field="员工宿舍" ></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="tjx-current-info-table-category">
+                                    现有租赁情况
+                                </td>
+                            </tr>
+                            <tr>
+                                <td >  </td>
+                                <td> 空置房屋预计租金（元/平方米）</td>
+                                <td> <span tjx-data-field="空置房屋预计租金" > </span></td>
+                                <td> 现有租客平均租金（元/平方米）</td>
+                                <td>  <span tjx-data-field="现有租客平均租金" ></span></td>
+                                <td> 租金内含物业费 </td>
+                                <td>  <span tjx-data-field="租金内含物业费" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="tjx-current-info-table-category">
+                                    空置房屋预期适用情况
+                                </td>
+                            </tr>
+                            <tr>
+                                <td > 预租企业产业方向</td>
+                                <td> <span tjx-data-field="预租企业产业方向" > </span></td>
+                                <td> 最小租赁面积（平方米）
+                                </td>
+                                <td> <span tjx-data-field="最小租赁面积" > </span></td>
+                                <td> 预租企业租赁期限</td>
+                                <td colspan="2">  <span tjx-data-field="预租企业租赁期限" ></span></td>
+                            </tr>
+                            <tr>
+                                <td > 对潜在客户的特殊要求：</td>
+                                <td colspan="6"> <span tjx-data-field="对潜在客户的特殊要求" > </span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="factorydetail_building">
+                    <div id="cn_building" class="table-responsive">
+                        <table id="tb_building"    class="table  table-hover table-bordered display-none">
+                            <tr>
+                                <td rowspan="7"  class="col-md-1" style='vertical-align: middle;'>  <span tjx-data-field="厂房名称" > </span>
+                                </td>
+                                <td class="col-md-2"> 厂房现状</td>
+                                <td class="col-md-2"> <span tjx-data-field="厂房现状" > </span></td>
+                                <td class="tjx-table-md-3"> 房屋结构</td>
+                                <td class="col-md-1">  <span tjx-data-field="房屋结构" ></span></td>
+                                <td class="tjx-table-md-3">  空置房屋名称及面积（平方米）</td>
+                                <td>  <span tjx-data-field="空置房屋名称及面积" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td> 房屋状况
+                                </td>
+                                <td><span tjx-data-field="房屋状况" ></span>  </td>
+                                <td> </td>
+                                <td>  </td>
+                                <td>  </td>
+                                <td>  </td>
+                            </tr>
+                            <tr>
+                                <td> 自用面积（平方米）</td>
+                                <td> <span tjx-data-field="自用面积" > </span></td>
+                                <td> 已出租面积（平方米）</td>
+                                <td>  <span tjx-data-field="已出租面积" ></span></td>
+                                <td>  柱间距（米）</td>
+                                <td>  <span tjx-data-field="柱间距" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td> 房屋层数</td>
+                                <td> <span tjx-data-field="房屋层数" > </span></td>
+                                <td> 房屋进深（米）</td>
+                                <td>  <span tjx-data-field="房屋进深" ></span></td>
+                                <td>  房屋跨度（米）</td>
+                                <td>  <span tjx-data-field="房屋跨度" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td>房屋一层层高（米）</td>
+                                <td> <span tjx-data-field="房屋一层层高" > </span></td>
+                                <td> 房屋二层及以上层高（米）</td>
+                                <td>  <span tjx-data-field="房屋二层及以上层高" ></span></td>
+                                <td>  二层及以上房屋承重（千克/平方米）</td>
+                                <td>  <span tjx-data-field="二层及以上房屋承重" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td> 空置房屋设施设备</td>
+                                <td> <span tjx-data-field="空置房屋设施设备" > </span></td>
+                                <td> 货梯数量（部）</td>
+                                <td>  <span tjx-data-field="货梯数量" ></span></td>
+                                <td>  货梯承重（吨）</td>
+                                <td>  <span tjx-data-field="货梯承重" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td> 厂房主门宽度（米）</td>
+                                <td> <span tjx-data-field="厂房主门宽度" > </span></td>
+                                <td> 厂房主门高度（米）</td>
+                                <td>  <span tjx-data-field="厂房主门高度" ></span></td>
+                                <td>  空置房屋装修情况</td>
+                                <td>  <span tjx-data-field="空置房屋装修情况" ></span> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="factorydetail_rent">
+                    <div  id="cn_rent" class="table-responsive">
+                        <table   id="tb_rent"  class="table  table-hover table-bordered display-none">
+                            <tr>
+                                <td rowspan="7" class="col-md-1" style='vertical-align: middle;'>  现有租赁情况
+                                </td>
+                                <td class="col-md-2"> 已出租房屋面积（平方米）</td>
+                                <td class="col-md-2"> <span tjx-data-field="已出租房屋面积" > </span></td>
+                                <td class="col-md-2"> 租赁位置
+                                </td>
+                                <td class="col-md-2">  <span tjx-data-field="租赁位置" ></span></td>
+                                <td class="col-md-2">  承租方人数</td>
+                                <td>  <span tjx-data-field="承租方人数" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td> 承租方企业名称</td>
+                                <td> <span tjx-data-field="承租方企业名称" > </span></td>
+                                <td> 承租方企业组织机构代码</td>
+                                <td>  <span tjx-data-field="承租方企业组织机构代码" ></span></td>
+                                <td>  承租方负责人及联系电话</td>
+                                <td>  <span tjx-data-field="承租方负责人及联系电话" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td> 租期（起止时间）</td>
+                                <td> <span tjx-data-field="租期" > </span></td>
+                                <td> 是否续租</td>
+                                <td>  <span tjx-data-field="是否续租" ></span></td>
+                                <td>  房屋情况说明：</td>
+                                <td>  <span tjx-data-field="房屋情况说明" ></span> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="factorydetail_office">
+                    <div  id="cn_office" class="table-responsive">
+                        <table   id="tb_office"  class="table  table-hover table-bordered display-none">
+                            <tr>
+                                <td rowspan="7" class="col-md-1" style='vertical-align: middle;'>
+                                    <span tjx-data-field="办公楼名称" > </span>
+                                </td>
+                                <td class="col-md-2"> 办公楼层数</td>
+                                <td class="col-md-2"> <span tjx-data-field="办公楼层数" > </span></td>
+                                <td class="col-md-2"> 办公楼面积（平方米）
+                                </td>
+                                <td class="col-md-2">  <span tjx-data-field="办公楼面积" ></span></td>
+                                <td class="col-md-2">  办公楼可容纳工位数（个）</td>
+                                <td>  <span tjx-data-field="办公楼可容纳工位数" ></span> </td>
+                            </tr>
+                            <tr>
+                                <td > 房屋状况</td>
+                                <td colspan="5"> <span tjx-data-field="房屋状况" > </span></td>
+                            </tr>
+                            <tr>
+                                <td> 空置房屋所在层数</td>
+                                <td> <span tjx-data-field="空置房屋所在层数" > </span></td>
+                                <td> 房屋空置面积(平方米）</td>
+                                <td>  <span tjx-data-field="房屋空置面积" ></span></td>
+                                <td>  空置房屋可容纳工位数（个）：</td>
+                                <td>  <span tjx-data-field="空置房屋可容纳工位数" ></span> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="factorydetail_others">
+                    <div class="filter-v1 margin-top-10">
+                        <div id="mix-grid-1" class="row mix-grid thumbnails">
+                            <div  id="phototemplate"  class="col-md-4 col-sm-4 mix category_1 display-none">
+                                <div class="mix-inner">
+                                    <div >
+                                        <h4><span style="text-align: center;color: #0da3e2;margin: 0 auto;"></span></h4>
+                                    </div>
+                                    <a class=" fancybox-button" href="javascript:void(0)" title="" data-rel="fancybox-button">
+                                        <img class="img-responsive" src="" alt="">  </i>
+                                    </a>
+                                    <!-- <div class="mix-details">
+                                         <h4><span></span></h4>
+                                     </div>-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="factorydetail_layers">
+                    <div class="filter-v1 margin-top-10">
+                        <div id="layers-grid-1" class="row mix-grid thumbnails">
+                            <div  id="layerstemplate"  class="col-md-4 col-sm-4 mix category_1 display-none">
+                                <div class="mix-inner">
+                                    <div >
+                                        <h4>
+                                                    <span style="text-align: center;color: #0da3e2;margin: 0 auto;">
+                                                    </span>
+                                        </h4>
+
+                                    </div>
+                                    <a class=" fancybox-button" href="javascript:void(0)" title="" data-rel="fancybox-button">
+                                        <img class="img-responsive" src="" alt="">  </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="searchdetail" tabindex="-1" role="basic" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title"><span aria-hidden="true" class="icon-check"></span>查询条件</h4>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal form-bordered form-row-stripped">
+            <div class="form-body">
+                <!--  <h3 class="form-section">一．危险化学品</h3>-->
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">字段名称
+                    </label>
+                    <div class="col-md-7">
+                        <select name="Danger-ChemicalCategory" id="sel-fields" type="text" tjx-data-field="Danger-ChemicalCategory" class="form-control "  >
+
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">查询条件
+                    </label>
+                    <div class="col-md-7">
+                        <select name="Danger-ChemicalSubCategory" id="sel-oper" type="text" tjx-data-field="Danger-ChemicalSubCategory" class="form-control"  >
+
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">值
+                    </label>
+                    <div class="col-md-7" id="sel-value">
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="searchok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+
+<script type="text/javascript" src="css/glb/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+
+<script type="text/javascript" language="javascript" src="css/glb/datatables/button/js/dataTables.buttons.js"></script>
+<script type="text/javascript" language="javascript" src="css/glb/datatables/button/js/buttons.bootstrap.js">
+</script>
+<script type="text/javascript" src="css/glb/datatables/button/js/jszip.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/button/js/pdfmake.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/button/js/vfs_fonts.js"></script>
+<script type="text/javascript" language="javascript" src=" css/glb/datatables/button/js/buttons.html5.min.js">    </script>
+<script type="text/javascript" language="javascript" src=" css/glb/datatables/button/js/buttons.print.min.js">  </script>
+<script type="text/javascript" language="javascript" src=" css/glb/datatables/button/js/buttons.colVis.min.js ">  </script>-->
+<script type="text/javascript" src="app/currentsituation/js/tjx.data.currentsituation.detail.js"></script>
+<script type="text/javascript" src="app/currentsituation/js/tjx.app.currentsituation.detail.js"></script>
+<script type="text/javascript" src="app/currentsituation/js/tjx.app.currentsituation.info.js"></script>
+<script type="text/javascript" src="app/currentsituation/js/tjx.app.currentsituation.search.js"></script>
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.currentsituation.detail.initModule( jQuery('body') );
+                tjx.app.currentsituation.info.initModule( jQuery('body') );
+                tjx.app.currentsituation.search.initModule( jQuery('body') );
+            });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link href="css/glb/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" rel="stylesheet"/>
+	<link href="css/glb/jquery-file-upload/css/jquery.fileupload.css" rel="stylesheet"/>
+	<link href="css/glb/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet"/>
+<!--	<script type="text/javascript" src="js/tjx.data.securityinfo.js"></script>-->
+	<script type="text/javascript" src="app/securityinfo/js/tjx.app.securityinfo.survery.js"></script>
+	<script type="text/javascript">
+		// Start spa once DOM is ready
+		//
+		jQuery(document).ready(
+				function () {
+					tjx.app.securityinfo.survery.initModule( jQuery('body'), false );
+				});
+	</script>
+</head>
+
+<body>
+
+	<div class="modal-header">
+		<div class="portlet-title">
+			<div class="caption font-green-haze">
+				<i class="icon-check font-green-haze"></i>
+				<span class="caption-subject bold uppercase">编辑 </span>
+
+				<button type="button"  class="close " data-dismiss="modal">取消</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal-body">
+		<div class="portlet-body   form ">
+			<form class="form-horizontal form-bordered form-row-stripped">
+				<div class="form-body">
+					<div class="alert alert-danger display-hide">
+						<button class="close" data-close="alert"></button>
+						您所提交的内容不符合要求，请检查后重新提交.
+					</div>
+					<div class="form-group display-hide">
+						<label class="col-md-3 control-label">
+							<span class="required">* </span>
+						</label>
+						<div class="col-md-9">
+							<input name="EnterpriseName" disabled="disabled"  type="text" tjx-data-field="EnterpriseNum" class="form-control"  size="60"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label">企业名称
+							<span class="required">* </span>
+						</label>
+						<div class="col-md-9">
+							<input name="EnterpriseName"   type="text" tjx-data-field="EnterpriseName" class="form-control"  size="60"/>
+						</div>
+					</div>
+					<!--<div class="form-group  ">
+                        <label class="col-md-2 control-label">企业法人</label>
+                        <div class="col-md-4">
+                            <input name="textfield" type="text" tjx-data-field="LegalRepresentative" class="form-control"  size="60"/>
+                        </div>
+                    </div>-->
+					<div class="form-group  ">
+						<label class="col-md-3 control-label">生产/经营地址</label>
+						<div class="col-md-9">
+							<input name="textfield" type="text" tjx-data-field="BusinessAddress" class="form-control"  size="60"/>
+						</div>
+					</div>
+					<div class="form-group  ">
+						<label class="col-md-3 control-label">年度营业额</label>
+						<div class="col-md-9">
+							<input name="textfield" type="text" tjx-data-field="AnnualRevenue" class="form-control"  size="60"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">主要产品</label>
+						<div class="col-md-9">
+							<input name="textfield" type="text" tjx-data-field="PrimeProducts" class="form-control"  size="60"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">生产规模</label>
+						<div class="col-md-9">
+							<input name="textfield" type="text" tjx-data-field="ProductScale" class="form-control"  size="60"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">主要原辅料及用量</label>
+						<div class="col-md-9">
+							<input name="textfield" type="text" tjx-data-field="MaterialDosage" class="form-control"  size="60"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">企业法人</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="LegalRepresentativeName" class="form-control input-small" placeholder="姓名"  size="60"/>
+								</div>
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="LegalRepresentativeTelephone" class="form-control input-small"  placeholder="联系电话"  size="60"/>
+								</div>
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="LegalRepresentativeCellPhone" class="form-control input-small"  placeholder="手机"  size="60"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label">主要负责人</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="PrincipalName" class="form-control input-small" placeholder="姓名"  size="60"/>
+								</div>
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="PrincipalTelephone" class="form-control input-small"  placeholder="联系电话"  size="60"/>
+								</div>
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="PrincipalCellPhone" class="form-control input-small"  placeholder="手机"  size="60"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-md-3 control-label">分管安全负责人</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-4">
+									<input name="textfield" type="text"  tjx-data-field="SafetyDirectorName" class="form-control input-small" placeholder="姓名"  size="60"/>
+								</div>
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="SafetyDirectorTelephone" class="form-control input-small"  placeholder="联系电话"  size="60"/>
+								</div>
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="SafetyDirectorCellPhone" class="form-control input-small"  placeholder="手机"  size="60"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group has-warning">
+						<label class="col-md-3 control-label">安全管理人员</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="SecurityAdministratorName" class="form-control input-small" placeholder="姓名"  size="60"/>
+								</div>
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="SecurityAdministratorTelephone" class="form-control input-small"  placeholder="联系电话"  size="60"/>
+								</div>
+								<div class="col-md-4">
+									<input name="textfield" type="text" tjx-data-field="SecurityAdministratorCellPhone" class="form-control input-small"  placeholder="手机"  size="60"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">电子邮箱</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-6">
+									<div class="input-icon">
+										<i class="fa fa-envelope"></i>
+										<input type="email" name="Email" class="form-control" tjx-data-field="Email" id="inputEmail12" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<input name="textfield" type="text" class="form-control input-small" tjx-data-field="Fax"  placeholder="传真"  size="60"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">企业安全管理 机构名称</label>
+						<div class="col-md-9">
+							<input name="textfield" type="text" tjx-data-field="SafetyDepartment" class="form-control"  size="60"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">安全管理 体系情况</label>
+						<div class="col-md-9">
+							<input name="textfield" type="text" class="form-control"  tjx-data-field="OHSM" id="textfield" size="60"/>
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label class="col-md-3 control-label">员工人数</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-4">
+
+									<input name="EmployeeNumber"  type="text" tjx-data-field="EmployeeNumber" class="form-control input-small" placeholder=""  size="60"/>
+								</div>
+								<div class="col-md-4">
+
+									<input name="SpecialOperationNumber" type="text" tjx-data-field="SpecialOperationNumber" class="form-control input-small"  placeholder="特种作业"  size="60"/>
+								</div>
+								<div class="col-md-4">
+
+									<input name="DangerousPositionNumber" type="text" tjx-data-field="DangerousPositionNumber" class="form-control input-small"  placeholder="职业危害岗位" size="60"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group ">
+						<label class="col-md-3 control-label">工伤事故统计</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-6">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox35" tjx-data-field="IndustrialAccident" class="md-check">
+										<label for="checkbox35">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											死亡1人以上(含1人)</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox36" tjx-data-field="SeriousAccident" class="md-check">
+										<label for="checkbox36">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											重伤事故 </label>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">主要建构筑物</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-6">
+									<input type="text" class="form-control" tjx-data-field="Building"  >
+								</div>
+								<div class="col-md-6">
+									<input name="textfield" type="text" class="form-control input-small" tjx-data-field="LandArea"  placeholder="占地面积"  size="60"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label">是否进行以下外部检测</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox37" tjx-data-field="FireControlAcceptance" class="md-check">
+										<label for="checkbox37" id="checkbox37lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											1、消防验收</label>
+									</div>
+									<div class="col-md-5">
+									  <span class="btn grey fileinput-button "  disabled="disabled">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="FireControlAcceptance" name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox38" tjx-data-field="LightningDetection" class="md-check">
+										<label for="checkbox38" id="checkbox38lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											2、防雷检测</label>
+									</div>
+									<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="LightningDetection" name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox39" tjx-data-field="SpecialEquipmentInspection" class="md-check">
+										<label for="checkbox39" id="checkbox39lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											3、特种设备检测</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox40" tjx-data-field="DetectionOfOccupationalHazard" class="md-check">
+										<label for="checkbox40" id="checkbox40lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											4、职业危害检测</label>
+									</div>
+									<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="DetectionOfOccupationalHazard" name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox41" tjx-data-field="SafetyAcceptance" class="md-check">
+										<label for="checkbox41" id="checkbox41lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											5、安全验收评价</label>
+									</div>
+									<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="SafetyAcceptance"  name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label">是否进行以下外部培训</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox42" tjx-data-field="HeadTraining" class="md-check">
+										<label for="checkbox42" id="checkbox42lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											1、主要负责人培训</label>
+									</div>
+									<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="HeadTraining" name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox43" tjx-data-field="ManagementTraining" class="md-check">
+										<label for="checkbox43" id="checkbox43lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											2、管理人员培训</label>
+									</div>
+									<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="ManagementTraining" name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox44" tjx-data-field="OperatingPersonnelTraining" class="md-check">
+										<label for="checkbox44" id="checkbox44lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											3、作业人员培训</label>
+									</div>
+									<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="OperatingPersonnelTraining" name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label class="col-md-3 control-label">滨海新区自查自报系统</label>
+						<div class="col-md-9">
+							<div class="md-radio-inline">
+								<div class="md-radio">
+									<input type="radio" id="radio53" name="radio2" tjx-data-field="SelfExaminationNever" class="md-radiobtn" checked="">
+									<label for="radio53">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										未登陆 </label>
+								</div>
+								<div class="md-radio ">
+									<input type="radio" id="radio54" name="radio2" tjx-data-field="SelfExaminationOccasionally" class="md-radiobtn" >
+									<label for="radio54">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										偶尔登陆 </label>
+								</div>
+								<div class="md-radio">
+									<input type="radio" id="radio55" name="radio2" tjx-data-field="SelfExaminationAlways" class="md-radiobtn">
+									<label for="radio55">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										按照要求进行登陆上传 </label>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label class="col-md-3 control-label" >安全文化示范企业称号</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-2">
+									<div class="md-checkbox col-md-2">
+										<input type="checkbox" id="checkbox56" tjx-data-field="SafetyCulture" class="md-check">
+										<label for="checkbox56" id="checkbox56lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+										</label>
+									</div>
+									<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="SafetyCulture" name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+
+
+								<div class="col-md-4">
+									<div class="md-checkbox col-md-6" >
+										<input type="checkbox" id="checkbox57" tjx-data-field="EmergencyPlan" class="md-check">
+										<label for="checkbox57" id="checkbox57lll">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											应急预案备案情况 </label>
+									</div>
+									<div class="col-md-6">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="EmergencyPlan" name="files[]" multiple="">
+										</span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label class="col-md-3 control-label">安全生产工作会议、教育培训</label>
+						<div class="col-md-9">
+							<div class="md-radio-inline">
+								<div class="md-radio">
+									<input type="radio" id="radio60" name="radio3" tjx-data-field="SafetyProductionTrainingNever" class="md-radiobtn" checked="">
+									<label for="radio60">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										从未参与 </label>
+								</div>
+								<div class="md-radio ">
+									<input type="radio" id="radio61" name="radio3" tjx-data-field="SafetyProductionTrainingOccasionally" class="md-radiobtn" >
+									<label for="radio61">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										偶尔参与 </label>
+								</div>
+								<div class="md-radio">
+									<input type="radio" id="radio62" name="radio3" tjx-data-field="SafetyProductionTrainingAlways" class="md-radiobtn">
+									<label for="radio62">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										积极参与 </label>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label class="col-md-3 control-label">向安委办报送工作列表和文件情况</label>
+						<div class="col-md-9">
+							<div class="md-radio-inline">
+								<div class="md-radio">
+									<input type="radio" id="radio63" name="radio4" tjx-data-field="FileSubmitNever" class="md-radiobtn" checked="">
+									<label for="radio63">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										从未报送 </label>
+								</div>
+								<div class="md-radio ">
+									<input type="radio" id="radio64" name="radio4" tjx-data-field="FileSubmitOccasionally" class="md-radiobtn" >
+									<label for="radio64">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										偶尔报送 </label>
+								</div>
+								<div class="md-radio">
+									<input type="radio" id="radio65" name="radio4" tjx-data-field="FileSubmitAlways" class="md-radiobtn">
+									<label for="radio65">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										按时按量报送 </label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label class="col-md-3 control-label">重大安全生产隐患</label>
+						<div class="col-md-9">
+							<div class="row" >
+								<div class="col-md-2">
+									<div class="md-checkbox">
+										<input type="checkbox" id="checkbox70" tjx-data-field="SafetyHazard" class="md-check">
+										<label for="checkbox70">
+											<span class="inc"></span>
+											<span class="check"></span>
+											<span class="box"></span>
+										</label>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+
+					<!--<div class="form-group">
+                        <label class="col-md-2 control-label">相关附件</label>
+                        <div id="photocontainer" class="col-md-10">
+
+                        </div>
+                        <div id="testInfo" class="popover right">
+                            <div class="arrow"></div>
+                            <div class="popover-content"></div>
+                        </div>
+                    </div>-->
+
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-10">
+				<button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+				<button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

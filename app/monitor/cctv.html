@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #mviewl{
+            width:642px;
+            height:500px;
+            margin:auto;
+        }
+        #obj{width:642px;height:650px;display:block;margin:auto;}
+    </style>
+    <script type="application/javascript" src="../../js/jq/jquery.min.js"></script>
+</head>
+<body >
+<button id="login" value="登陆" >登陆</button>
+<button id="btnloadgroup" value="加载组织结构" >加载组织结构</button>
+<button id="btngetgroup" value="获取组织结构" >获取组织结构</button>
+<input type="text" id="deviceid"  value="1000171$1$0$6">
+<button id="btnplay" value="获取组织结构" >播放</button>
+
+<div style="width: 90%;height: 30px;overflow: auto;" id="RetInfo"></div>
+<!--<div style="width: 100%;height: 100px;overflow: auto; float: left;" id="GroupInfo"></div>
+<div style="width: 50%;height: 150px;overflow: auto; float: left;" id="DGroupInfo"></div>-->
+<div id="mviewl">
+    <div id="obj">
+        <object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" style="width: 100%; height: 80%" codebase="DpsdkOcx.cab#version=1.0.0.0"></object>
+    </div>
+</div>
+<script type="text/javascript" src="../../js/tjx.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.io.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.ui.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.ui.photo.js"></script>
+<script type="text/javascript" src="../../js/tjx.shell.js"></script>
+<script type="text/javascript" src="js/tjx.map.monitor.camera.js"></script>
+<script type="text/javascript" src="js/tjx.app.monitor.map.js"></script>
+<script type="text/javascript" src="js/tjx.app.monitor.monitoring.js"></script>
+
+<script type="text/javascript">
+  /*  ready( onReady );*/
+
+    jQuery(document).ready(
+            function () {
+                tjx.app.monitor.camera.initModule(jQuery('body'));
+            });
+
+</script>
+
+
+
+
+</body>
+</html>

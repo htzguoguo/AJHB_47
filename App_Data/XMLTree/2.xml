@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root Text="天津市高速公路（一公司）日常养护系统">
+  <Group Text="养护流程管理 " Num="15" Expanded="True" ID="64" PicPath="">
+    <Command Text="路巡上报" NavigateUrl="right_2.aspx?FID=26d4f571-6136-4557-ae12-5c525a858f96" Target="frmright" ID="65" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="上报修改查询" NavigateUrl="right_2.aspx?FID=f769f823-b6a8-4a17-89c3-713eb06e50fd" Target="frmright" ID="187" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="病害受理" NavigateUrl="right_2.aspx?FID=d417d84e-5ab1-4464-bd1a-268383474e47" Target="frmright" ID="186" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="撤单备查" NavigateUrl="right_2.aspx?FID=99e8f381-42a7-4e58-bfe6-b89fb3cff138" Target="frmright" ID="185" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="集中维修" NavigateUrl="right_2.aspx?FID=1bf20779-fea2-438d-9390-6fdb7725b0c1" Target="frmright" ID="181" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="维修方案待定" NavigateUrl="right_2.aspx?FID=97380602-b721-4c7a-8c28-77ecb9e758bb" Target="frmright" ID="182" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="补填上报记录" NavigateUrl="AddCase4.aspx?FID=86e54379-0ed2-412e-aac8-64d0ebe0ca2c" Target="frmright" ID="188" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="补填上报记录" NavigateUrl="AddCase3.aspx?FID=16b00a01-3ee7-4450-9fd6-3c35b19b1698" Target="frmright" ID="347" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="维修任务" NavigateUrl="right_2.aspx?FID=69abe5d5-fb74-4522-85f1-3d7a611f5be6" Target="frmright" ID="67" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="维修反馈 验收派单" NavigateUrl="right_2.aspx?FID=497d9803-c857-4467-a743-602ad682b76b" Target="frmright" ID="68" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="验收任务" NavigateUrl="right_2.aspx?FID=f493dd2b-4084-4a30-bad0-1f6c4387c5e9" Target="frmright" ID="69" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="验收反馈 工程计量 结案归档 " NavigateUrl="right_2.aspx?FID=76ed82dc-68b4-45f2-8efc-58d55aa11117" Target="frmright" ID="70" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="日常维修养护成果" NavigateUrl="right_2.aspx?FID=ddfe81a7-1442-4c8b-b8b2-1aa38c8e3f27" Target="frmright" ID="72" PicPath="icon" ParentText="养护流程管理 " Level="4" />
+    <Command Text="桩号定位信息" NavigateUrl="right_2.aspx?FID=51648f3c-8d8a-4bb7-aacb-eb4fb95e4442" Target="frmright" ID="348" PicPath="" ParentText="养护流程管理 " Level="4" />
+    <Command Text="工程计量" NavigateUrl="MeasurementOfWorks/Table4.aspx?FID=4abb2ab1-d5ff-4ed8-8db0-ce3aeae4a171" Target="frmright" ID="349" PicPath="" ParentText="养护流程管理 " Level="4" />
+  </Group>
+  <Group Text="突发、应急事件处置" Num="4" Expanded="False" ID="350" PicPath="">
+    <Command Text="突发事件处置" NavigateUrl="EmergentEventReport.aspx?FID=4a529ffb-1406-47c1-8bba-280206457acd" Target="frmright" ID="351" PicPath="" ParentText="突发、应急事件处置" Level="4" />
+    <Command Text="验收确认 审核结案" NavigateUrl="right_2.aspx?FID=3f8e83fb-da71-41eb-9947-e36fab352761" Target="frmright" ID="352" PicPath="" ParentText="突发、应急事件处置" Level="4" />
+    <Command Text="结案归档" NavigateUrl="right_2.aspx?FID=31da5f19-2cce-465a-a9c2-e99076a945b7" Target="frmright" ID="353" PicPath="" ParentText="突发、应急事件处置" Level="4" />
+    <Command Text="工程计量" NavigateUrl="EmergentReport.aspx?FID=72c4c3fd-7e46-41a7-b048-ba217a0f8fb2" Target="frmright" ID="354" PicPath="" ParentText="突发、应急事件处置" Level="4" />
+  </Group>
+  <Group Text="统计汇总" Num="3" Expanded="False" ID="171" PicPath="">
+    <Command Text="统计汇总" NavigateUrl="DailyMaintenanceReport.aspx?FID=5d8dfd9d-fec4-456d-858b-d80134fbd891" Target="frmright" ID="176" PicPath="" ParentText="统计汇总" Level="4" />
+    <Command Text="施工日志" NavigateUrl="DailyConstructionReport.aspx?FID=9ecbaeaa-305f-4237-aa85-a89fe3535676" Target="frmright" ID="345" PicPath="" ParentText="统计汇总" Level="4" />
+    <Command Text="管理确认单" NavigateUrl="MaintenanceCheckReport.aspx?FID=063e56f5-a285-4506-893b-ac1616ba1c75" Target="frmright" ID="346" PicPath="" ParentText="统计汇总" Level="4" />
+  </Group>
+  <Group Text="监督管理" Num="1" Expanded="False" ID="172" PicPath="">
+    <Command Text="车辆监督" NavigateUrl="right_2.aspx?FID=eafcf590-eed2-455a-84b6-97c5df5e8fe4" Target="frmright" ID="177" PicPath="" ParentText="监督管理" Level="4" />
+  </Group>
+  <Group Text="质量评定" Num="1" Expanded="False" ID="173" PicPath="">
+    <Command Text="质量评定" NavigateUrl="right_2.aspx?FID=5101ce1f-3dc4-4469-8c48-7be73d77f4f9" Target="frmright" ID="178" PicPath="" ParentText="质量评定" Level="4" />
+  </Group>
+  <Group Text="巡查员列表" Num="1" Expanded="False" ID="174" PicPath="">
+    <Command Text="巡查员" NavigateUrl="right_2.aspx?FID=708adcc4-1bd8-4184-ad9c-cffb394242ef" Target="frmright" ID="179" PicPath="" ParentText="巡查员列表" Level="4" />
+  </Group>
+  <Group Text="地图浏览" Num="1" Expanded="False" ID="175" PicPath="">
+    <Command Text="地图浏览" NavigateUrl="right_2.aspx?FID=7f3796c3-2c10-445b-8857-c1ed9825c96f" Target="frmright" ID="180" PicPath="" ParentText="地图浏览" Level="4" />
+  </Group>
+</Root>

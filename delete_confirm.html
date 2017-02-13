@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+ <!--   <script type="text/javascript" src="js/tjx.data.delete_confirm.js"></script>
+    <script type="text/javascript" src="js/tjx.delete_confirm.js"></script>-->
+    <script type="text/javascript">
+        // Start once DOM is ready
+        //
+        jQuery(document).ready(
+                function () {
+                    tjx.delete_confirm.initModule( jQuery('#confirmDelete') );
+                });
+    </script>
+</head>
+<body>
+
+<div  id="confirmDelete">
+    <div class="modal-header">
+        <div class="portlet-title">
+            <div class="caption font-green-haze">
+                <i class="icon-check font-green-haze"></i>
+                <span class="caption-subject bold uppercase"></span>
+                <button type="button"  class="close " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div  class="portlet-body   form ">
+            <form class="form-horizontal form-bordered form-row-stripped">
+                <div class="form-body">
+                    <p>
+                        <h3>
+                    <span>
+                        <img src="images/ui/confirm.png" height="60px" width="60px">
+                          <span class="control-label">
+
+                    </span>
+                    </span>
+
+                        </h3>
+                    </p>
+
+
+                      <!--  <label class="control-label">
+                        <span class="required">* </span>
+                    </label>-->
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认</button>
+                <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div >
+
+</body>
+</html>

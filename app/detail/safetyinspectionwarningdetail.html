@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="table-responsive " tjx-data-source="SecurityInfoService/safetyinspection/">
+    <br>
+    <table id="tb_basicinfo"   class="table table-bordered ">
+        <tr>
+            <td class="col-md-2"> 设备设施名称</td>
+            <td class="col-md-2"> <span tjx-data-field="EquipmentName" > </span></td>
+            <td class="col-md-2"> 检测时间</td>
+            <td class="col-md-2">  <span tjx-data-field="DetectionTime"  ></span></td>
+            <td class="col-md-2">  有效期限</td>
+            <td class="col-md-2">  <span tjx-data-field="ExpirationDate"  ></span> </td>
+        </tr>
+        <tr>
+            <td>  检测机构 </td>
+            <td> <span tjx-data-field="Organization"  > </span></td>
+            <td>  是否合格 </td>
+            <td>  <span tjx-data-field="QualifiedName"  ></span></td>
+            <td>   备注 </td>
+            <td>  <span tjx-data-field="Memo"  ></span> </td>
+        </tr>
+    </table>
+</div>
+<!--<script type="text/javascript" src="js/tjx.data.safetysearch.js"></script>-->
+<script type="text/javascript" src="app/detail/js/tjx.app.detail.element.js"></script>
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.detail.element.initModule( jQuery('body') );
+                /* tjx.app.detail.photo.initModule( jQuery('#safetydetail') );*/
+            });
+</script>
+</body>
+</html>

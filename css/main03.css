@@ -1,0 +1,592 @@
+@charset "gb2312";
+/* CSS Document */
+* { margin:0 auto 0 0px; 
+padding:0; font-family:"宋体",Arial, Helvetica, sans-serif; }
+html,body{height:100%; width:100%; margin:0 auto; padding:0;font-size:12px; font-family:"宋体",Arial, Helvetica, sans-serif; color:#333; }
+ul { margin:0; padding:0 }
+li { margin:0; padding:0; list-style:none }
+a { text-decoration:none; color:#333; }
+a:hover{ text-decoration:underline; color:#bbb; }
+img { border:0 }
+.clearboth { clear:both; width:0; height:0; line-height:0; font-size:0; visibility:hidden }
+.top{ height:88px; margin:0 auto; background:url(../images_1/menubg.jpg) repeat-x;}
+.navbg{ background:#497cbe url(navbg.jpg) no-repeat; line-height:35px; font-size:15px; color:#FFF; text-align:left; padding-left:15px;}
+.txt15{ font-size:15px; color:#FFF;}
+.leftcol{ width:240px; background:#F7F8FA; float:left; border-right:1px solid #EFF1F5; height:100%;OVERFLOW-Y: auto; OVERFLOW-X:hidden;}
+.lan{ line-height:35px; background:#3BAEDA; text-align:center; color:#FFF; display:block; font-size:15px; border-bottom:#75D3EF 1px solid; font-weight:bold;}
+.pic1{ background:#50C1E9; color:#FFF; font-size:14px;}
+.rightcol{ width:85%; margin:0 auto ;height:100%; color:#333; padding:10px;}
+.DDT ul li {
+	color: #333;
+	background:#EFEFEF;
+	height:35px;
+	line-height:35px;
+	border-bottom: 1px  dotted #C9C9C9;
+	text-align:center;display:block;
+}
+.DDT ul li a {color: #333;background:#EFEFEF; }
+.DDT ul li a:hover { background: #F7F8FA; color:#a6a6a6;}
+.imglogo{ float:left; width:385px;}
+.menutt{ margin:0 auto; background:#EDF6FA; border-top:1px solid #FFF; border-bottom:1PX solid #D7E4EA; line-height:30PX; padding-left:20PX; height:30PX; color:#000;}
+.menutt a:link,a:visited {color: #4098CA;}
+.menutt a:hover {color: #BBB;}
+.main{width:99%; margin:0 auto; margin:10px; height:80%;}
+.setionz{ width:48%; float:left; margin-right:20px; border:1px solid #dedede; height:286px; overflow:hidden; margin-bottom:20px;}
+.ph1 { line-height:34px; height:34px; background:#F4F7F8; width:100%; padding-left:20px; font-size:14px; color:#000; border-bottom:1px solid #DEDEDE; font-weight:bold;}
+.more{ float:right;  width:40px; line-height:34px; height:34px; font-weight:normal; font-size:12px; padding-right:15px;}
+.more a:link,a:visited{color: #4098CA;}.more a:hover{color: #BBB;}
+.setion1{ width:47%; float:left; margin-right:20px; border:1px solid #dedede; height:286px; overflow:hidden; margin-bottom:20px;}
+.setion1 ul{ padding:10px 10px 10px 40px;}
+.setion1 li{ line-height:30px; height:30px; list-style:circle;}
+.setion2{ width:31%; float:left; margin-right:20px; border:1px solid #dedede; height:286px; overflow:hidden; margin-bottom:20px;}
+.setion2 ul{ padding:10px 10px 10px 30px;}
+.setion2 li{ line-height:30px; height:30px; list-style: disc;}
+
+
+
+.rightcol ul{padding:20px;}
+
+.rightcol  li{
+	float:left;
+	text-align:center;
+	width:180px;
+	padding:20px;
+}
+.rightcol li.noMargin{
+}
+.rightcol li a.pic1{
+	display:block;
+	background:url(../images_1/01.jpg) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.pic1:hover{
+	background:url(../images_1/001.jpg) 0 0 no-repeat;
+}
+.rightcol li a.pic2{
+	display:block;
+	background:url(../images_1/02.jpg) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.pic2:hover{
+	background:url(../images_1/002.jpg) 0 0 no-repeat;
+}
+
+.rightcol li a.pic3{
+	display:block;
+	background:url(../images_1/03.jpg) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.pic3:hover{
+	background:url(../images_1/003.jpg) 0 0 no-repeat;
+}
+.rightcol li.noMargin a.pic4{
+	display:block;
+	background:url(../images_1/04.jpg) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li.noMargin a.pic4:hover{
+	background:url(../images_1/004.jpg) 0 0 no-repeat;
+}
+.rightcol li a.pic5{
+	display:block;
+	background:url(../images_1/05.jpg) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.pic5:hover{
+	background:url(../images_1/005.jpg) 0 0 no-repeat;
+}
+
+.rightcol li a.pic6{
+	display:block;
+	background:url(../images_1/06.jpg) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.pic6:hover{
+	background:url(../images_1/006.jpg) 0 0 no-repeat;
+}.rightcol li a.pic7{
+	display:block;
+	background:url(07.jpg) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.pic7:hover{
+	background:url(007.jpg) 0 0 no-repeat;
+}.rightcol li a.pic8{
+	display:block;
+	background:url(08.jpg) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.pic8:hover{
+	background:url(008.jpg) 0 0 no-repeat;
+}
+/* 道路日常巡查记录 */
+.rightcol li a.roadpatrol{
+	display:block;
+	background:url(../images_3/roadpatrol.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.roadpatrol:hover{
+	background:url(../images_3/roadpatrol.png) 0 0 no-repeat;
+}
+/* 桥梁日常巡查记录 */
+.rightcol li a.bridgepatrol{
+	display:block;
+	background:url(../images_3/bridgepatrol.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.bridgepatrol:hover{
+	background:url(../images_3/bridgepatrol.png) 0 0 no-repeat;
+}
+/* 道路大中修挂起 */
+.rightcol li a.roadsuspend{
+	display:block;
+	background:url(../images_3/roadsuspend.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.roadsuspend:hover{
+	background:url(../images_3/roadsuspend.png) 0 0 no-repeat;
+}
+/* 巡查轨迹 */
+.rightcol li a.patroltrail{
+	display:block;
+	background:url(../images_3/patroltrail.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.patroltrail:hover{
+	background:url(../images_3/patroltrail.png) 0 0 no-repeat;
+}
+/* 结案归档 */
+.rightcol li a.caseover{
+	display:block;
+	background:url(../images_3/caseover.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.caseover:hover{
+	background:url(../images_3/caseover.png) 0 0 no-repeat;
+}
+/* 生产日志 */
+.rightcol li a.dailywork{
+	display:block;
+	background:url(../images_3/dailywork.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.dailywork:hover{
+	background:url(../images_3/dailywork.png) 0 0 no-repeat;
+}
+/* 作业任务 */
+.rightcol li a.manage1{
+	display:block;
+	background:url(../images_3/manage1.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.manage1:hover{
+	background:url(../images_3/manage1.png) 0 0 no-repeat;
+}
+/* 验收任务 */
+.rightcol li a.checktask1{
+	display:block;
+	background:url(../images_3/checktask1.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.checktask1:hover{
+	background:url(../images_3/checktask1.png) 0 0 no-repeat;
+}
+/* 计量支付 */
+.rightcol li a.paytask{
+	display:block;
+	background:url(../images_3/paytask.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.paytask:hover{
+	background:url(../images_3/paytask.png) 0 0 no-repeat;
+}
+/* 养护月报 */
+.rightcol li a.report1{
+	display:block;
+	background:url(../images_3/report1.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.report1:hover{
+	background:url(../images_3/report1.png) 0 0 no-repeat;
+}
+/* 桥梁月报 */
+.rightcol li a.report2{
+	display:block;
+	background:url(../images_3/report2.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.report2:hover{
+	background:url(../images_3/report2.png) 0 0 no-repeat;
+}
+/* 上报案件 */
+.rightcol li a.writetask{
+	display:block;
+	background:url(../images_3/writetask.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.writetask:hover{
+	background:url(../images_3/writetask.png) 0 0 no-repeat;
+}
+/* 应急处置报表 */
+.rightcol li a.Spreadsheet{
+	display:block;
+	background:url(../images_3/Spreadsheet.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.Spreadsheet:hover{
+	background:url(../images_3/Spreadsheet.png) 0 0 no-repeat;
+}
+/* 大中修挂起报表 */
+.rightcol li a.suspend{
+	display:block;
+	background:url(../images_3/suspend.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.suspend:hover{
+	background:url(../images_3/suspend.png) 0 0 no-repeat;
+}
+/* 上报路况信息 
+.rightcol li a.patroltrail{
+	display:block;
+	background:url(../images_3/dailywork.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.patroltrail:hover{
+	background:url(../images_3/dailywork.png) 0 0 no-repeat;
+} */
+/* 实时路况 */
+.rightcol li a.roadstatus{
+	display:block;
+	background:url(../images_3/roadstatus.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.roadstatus:hover{
+	background:url(../images_3/roadstatus.png) 0 0 no-repeat;
+}
+/* 进行县考核 */
+.rightcol li a.audit{
+	display:block;
+	background:url(../images_3/audit.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.audit:hover{
+	background:url(../images_3/audit.png) 0 0 no-repeat;
+}
+/* 县考核评分结果明细表 
+.rightcol li a.patroltrail{
+	display:block;
+	background:url(../images_3/report1.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.patroltrail:hover{
+	background:url(../images_3/report1.png) 0 0 no-repeat;
+}*/
+/* 进行市考核 
+.rightcol li a.patroltrail{
+	display:block;
+	background:url(../images_3/audit.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.patroltrail:hover{
+	background:url(../images_3/audit.png) 0 0 no-repeat;
+}*/
+/* 市考核评分结果明细表 
+.rightcol li a.patroltrail{
+	display:block;
+	background:url(../images_3/report2.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.patroltrail:hover{
+	background:url(../images_3/report2.png) 0 0 no-repeat;
+}*/
+/* 市考核结果评分汇总表 
+.rightcol li a.patroltrail{
+	display:block;
+	background:url(../images_3/Spreadsheet.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.patroltrail:hover{
+	background:url(../images_3/Spreadsheet.png) 0 0 no-repeat;
+}*/
+/* 路面病害分布统计 */
+.rightcol li a.crossroad-plain-icon{
+	display:block;
+	background:url(../images_3/crossroad-plain-icon.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.crossroad-plain-icon:hover{
+	background:url(../images_3/crossroad-plain-icon.png) 0 0 no-repeat;
+}
+/* 桥梁安全统计 */
+.rightcol li a.Bridge-icon{
+	display:block;
+	background:url(../images_3/Bridge-icon.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.Bridge-icon:hover{
+	background:url(../images_3/Bridge-icon.png) 0 0 no-repeat;
+}
+/* 资金使用统计 
+.rightcol li a.patroltrail{
+	display:block;
+	background:url(../images_3/paytask.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.patroltrail:hover{
+	background:url(../images_3/paytask.png) 0 0 no-repeat;
+}*/
+/* 巡查上报结案统计 */
+.rightcol li a.d3A{
+	display:block;
+	background:url(../images_3/d3A.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.d3A:hover{
+	background:url(../images_3/d3A.png) 0 0 no-repeat;
+}
+/* 养护工程管理 */
+.rightcol li a.emergence{
+	display:block;
+	background:url(../images_3/emergence.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.emergence:hover{
+	background:url(../images_3/emergence.png) 0 0 no-repeat;
+}
+/* 公文传送 */
+.rightcol li a.filetransfer2{
+	display:block;
+	background:url(../images_3/filetransfer2.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.filetransfer2:hover{
+	background:url(../images_3/filetransfer2.png) 0 0 no-repeat;
+}
+/* 人员管理 */
+.rightcol li a.user2{
+	display:block;
+	background:url(../images_3/user2.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.user2:hover{
+	background:url(../images_3/user2.png) 0 0 no-repeat;
+}
+/* 实时监控 */
+.rightcol li a.monitor{
+	display:block;
+	background:url(../images_3/monitor.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.monitor:hover{
+	background:url(../images_3/monitor.png) 0 0 no-repeat;
+}
+/* 修改密码 */
+.rightcol li a.edit{
+	display:block;
+	background:url(../images_3/edit.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.edit:hover{
+	background:url(../images_3/edit.png) 0 0 no-repeat;
+}
+/* 操作说明 */
+.rightcol li a.description{
+	display:block;
+	background:url(../images_3/description.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.description:hover{
+	background:url(../images_3/description.png) 0 0 no-repeat;
+}
+/* 权限说明 */
+.rightcol li a.authrity{
+	display:block;
+	background:url(../images_3/authrity.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.authrity:hover{
+	background:url(../images_3/authrity.png) 0 0 no-repeat;
+}
+/* 发送信息 */
+.rightcol li a.filetransfer{
+	display:block;
+	background:url(../images_3/filetransfer.png) 0 0 no-repeat;
+	width:149px;
+	height:140px;
+}
+.rightcol li a.filetransfer:hover{
+	background:url(../images_3/filetransfer.png) 0 0 no-repeat;
+}
+
+
+
+
+
+
+
+.tb1{ padding:10px;}
+
+
+.tblist{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	background:#FFF;
+	border:1px solid #BED6F6;	
+	border-collapse:collapse;	
+	font-size:14px;  
+
+}
+.tblist th{
+	background-color:#DBEBFF;	/* 行名称背景色 */			/* 行名称颜色 */
+	font-weight:bold;
+	height:24px;
+	padding:6px;
+	border:1px solid #A3C0E8;
+
+}
+.tblist td{
+	border:1px solid #BED6F6;	/* 单元格边框 */
+
+	height:29px;
+}
+ .tblist tr.altrow{
+	background-color:#F7FAFF;	/* 动态变色 */
+}
+.tblist tr:hover {background-color:#F9F9F9;	}
+
+.tbtraffic{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	background:#FFF;
+	border:1px solid #BED6F6;	
+	border-collapse:collapse;	
+	font-size:14px;  
+}
+
+.tbtraffic th{
+	background-color:#DBEBFF;	/* 行名称背景色 */			/* 行名称颜色 */
+	font-weight:bold;
+	height:30px;
+	padding:6px;
+	border:1px solid #A3C0E8;
+
+}
+
+ .tbtraffic tr.altrow{
+	background-color:#F7FAFF;	/* 动态变色 */
+}
+
+
+.tbtraffic td{
+	border:1px solid #BED6F6;	/* 单元格边框 */
+
+	height:39px;
+}
+
+
+.tblist1{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	background:#FFF;
+	border:1px solid #BED6F6;	/* 表格边框 */
+	border-collapse:collapse;	/* 边框重叠 */	/* 表格背景色 */
+	font-size:14px;
+
+}
+.tblist1 th{
+	background-color:#F7FAFF;	/* 行名称背景色 */			/* 行名称颜色 */
+	font-weight:bold;
+	height:18px;
+	padding:6px;
+	border:1px solid #A3C0E8;
+
+}
+.tblist1 td{
+	border:1px solid #BED6F6;	/* 单元格边框 */
+	padding:5px;
+	}
+
+
+.tblist2{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	background:#FFF;
+	border:1px solid #BED6F6;	/* 表格边框 */
+	border-collapse:collapse;	/* 边框重叠 */	/* 表格背景色 */
+	font-size:14px;
+}
+.tblist2 th{
+	background-color:#DBEBFF;	/* 行名称背景色 */			/* 行名称颜色 */
+	font-weight:bold;
+	padding:6px;
+	border:1px solid #A3C0E8;
+
+}
+.tblist2 td{
+	border:1px solid #BED6F6;	/* 单元格边框 */
+	padding:5px;
+
+}
+ .tblist2 tr.altrow{
+	background-color:#F7FAFF;	/* 动态变色 */
+}
+.tblist2 tr:hover {background-color:#F9F9F9;	}
+
+
+
+
+
+
+.rl{ float:right;  color:#666; width:40px;}
+.rl a:hover{ color:#F60;}
+
+
+.mexit{ float:right; padding-left:32px; width:50px; background:url(../images_1/logout256.png) no-repeat 0 4px  ; line-height:30px;}
+.mback{ float:right; padding-left:32px; width:50px; background:url(../images_1/back.jpg) no-repeat 0 4px  ; line-height:30px;}
+.mforward{ float:right; padding-left:32px; width:50px; background:url(../images_1/forward.jpg) no-repeat 0 4px  ; line-height:30px;}
+
+
+.setion3{ width:45%; float:left; margin:14px; border:1px solid #dedede; height:286px; overflow:hidden; margin-bottom:20px;}
+.setion3 ul{ padding:10px 10px 10px 30px;}
+.setion3 li{ line-height:30px; height:30px; list-style: disc;}
+
+.setion{ width:99.6%; margin:0 auto; border:1px solid #dedede;margin-bottom:20px; height:100%}
+.setion ul{ padding:10px 10px 10px 30px;}
+.setion li{ line-height:30px; height:30px; list-style:none; text-align:left; font-size:14px; padding-top:10px; }
+.setion h1{ height:50px; text-align:center; font-size:22px; line-height:50px;}
+ p.gg{ height:36px; line-height:36px; color:#F00; width:96%; font-size:16px; font-weight:bold;}

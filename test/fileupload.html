@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/glb/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/glb/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" rel="stylesheet"/>
+    <link href="../css/glb/jquery-file-upload/css/jquery.fileupload.css" rel="stylesheet"/>
+    <link href="../css/glb/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet"/>
+
+    <link href="../css/glb/css/components-rounded.css" rel="stylesheet" type="text/css">
+
+
+    <script src="../js/jq/jquery.min.js" type="text/javascript"></script>
+    <script src="../css/glb/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript" src="../js/tjx.js"></script>
+    <script type="text/javascript" src="../js/tjx.shell.js"></script>
+    <script type="text/javascript" src="../js/tjx.util.js"></script>
+    <script type="text/javascript" src="../js/tjx.util.io.js"></script>
+
+    <script type="text/javascript">
+
+      /*  function uploadBlobOrFile(blobOrFile) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '../FileService/file/cccvvvv', true);
+            xhr.setRequestHeader('Content-length', blobOrFile.size);
+            xhr.onload = function (e) {
+                progressBar.value = 0;
+                progressBar.textContent = progressBar.value;
+            };
+            // Listen to the upload progress.
+            var progressBar = document.querySelector('progress');
+            xhr.upload.onprogress = function(e) {
+                if (e.lengthComputable) {
+                    progressBar.value = (e.loaded / e.total) * 100;
+                    progressBar.textContent = progressBar.value; // Fallback.
+                }
+            };
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.responseText);
+                }
+            };
+            xhr.send(blobOrFile);
+        }*/
+
+        jQuery( document).ready(
+                function () {
+                    var $file = $( '#filePicker' );
+                    var $upload = $( '#upload' );
+                    var $filename = $( '#filename' );
+
+                    var success = function ( data ) {
+                        var fileName = $file.val();
+                        var name = fileName.split(/[\\\/]/g).pop();
+                        $filename.html( "文件上传成功" );
+                        $( '#filecancel').removeClass( 'hidden' );
+
+                    }
+
+                    var fail = function () {
+
+                    }
+
+                    var onprogress = function ( e ) {
+
+                    }
+
+                    $file.change( function (  ) {
+                        if ($file[0].files[0]) {
+                            $filename.html( "上传中..." );
+
+                            var fileName = $file.val();
+                            var name = fileName.split(/[\\\/]/g).pop();
+                            var url = '../FileService/file/' + name;
+                            var data =  $file[ 0 ].files[0] ;
+                            tjx.util.io.uploadBlobOrFile( url, data, null, onprogress, success, fail );
+                            /*  uploadBlobOrFile($upload[0].files[0]);*/
+                        }
+                    } );
+
+                    $upload.click( function () {
+                        if ($file[0].files[0]) {
+
+
+                            var fileName = $file.val();
+                            var name = fileName.split(/[\\\/]/g).pop();
+                            var url = '../FileService/file/' + name;
+                            var data =  $file[ 0 ].files[0] ;
+                            tjx.util.io.uploadBlobOrFile( url, data, null, null, success, fail );
+                          /*  uploadBlobOrFile($upload[0].files[0]);*/
+                        }
+                    } );
+
+        } );
+
+      /*  jQuery(document).ready(
+                function () {
+                    var ff = $('input[type=file]');
+                    ff.bootstrapFileInput();
+                    $( '#upload').click( function (  ) {
+                        var url = '../FileService/file/cccvvvv';
+                        var data = JSON.stringify( $('input[type=file]')[ 0 ].files[0] );
+
+                      /!*  tjx.util.io.addJsonData( url, data, null, null, function ( data ) {
+                           console.log( data );
+                        }, function (  ) {
+
+                        } );*!/
+                        $.ajax({
+                            url: url,
+                            type: "POST",
+                            contentType: "text/plain",
+                            cache: false,
+                            processData: false,
+                            data: data,
+                            success: function (res) {
+                                if (res.status) {
+                                    alert('注册成功！电子票已发送到你的手机/邮箱');
+                                    console.log(res);
+                                } else {
+                                    switch (res.message) {
+                                        case 'hasApplied':
+                                            $('#user_info').text('');
+                                            alert('您已报名过此次大会，无需重复报名');
+
+                                            break;
+                                        default :
+                                            console.log(res.message);
+                                            alert('啊哦~图片提交失败，请重启提交');
+                                            break;
+                                    }
+                                }
+                            }, error: function (res) {
+                                alert('啊哦~图片提交失败，请重启提交');
+
+                            }
+                        });
+                    } );
+
+                });
+*/
+
+    </script>
+</head>
+<body>
+
+<div class="row fileupload-buttonbar">
+    <div class="col-lg-7">
+        <!-- The fileinput-button span is used to style the file input field as button -->
+										<span class="btn green fileinput-button">
+										<i class="fa fa-plus"></i>
+										<span id="filename">
+										</span>
+										<input id="filePicker" type="file" name="files[]" multiple="">
+										</span>
+        <progress id="progress" min="0" max="100" value="0"  class="hidden">0% complete</progress>
+        <button type="button" id="filecancel" class="btn red delete hidden">
+            <i class="fa fa-trash"></i>
+										<span>
+										取消 </span>
+        </button>
+    </div>
+    <!-- The global progress information -->
+    <div class="col-lg-5 fileupload-progress fade">
+        <!-- The global progress bar -->
+        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-success" style="width:0%;">
+            </div>
+        </div>
+        <!-- The extended global progress information -->
+        <div class="progress-extended">
+            &nbsp;
+        </div>
+    </div>
+</div>
+
+<!--<div>
+    	<span class="btn green fileinput-button">
+										<i class="fa fa-plus"></i>
+										<span>
+										Add files... </span>
+										<input id="filePicker" type="file" name="files[]" multiple="">
+										</span>
+
+  &lt;!&ndash;  <input id="filePicker" type="file" name="Package" class="btn-primary" accept="image/*"/>
+    <br />&ndash;&gt;
+    <progress min="0" max="100" value="0">0% complete</progress>
+    <br />
+    <button id="upload" title="upload" class="btn blue default">
+        <span>Upload</span>
+    </button>
+</div>-->
+
+</body>
+</html>

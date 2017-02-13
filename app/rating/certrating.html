@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+    <!-- our stylesheets -->
+    <link rel="stylesheet" type="text/css" href="app/rating/css/profile-old.css"/>
+</head>
+<body>
+<div class="portlet box blue-madison">
+    <div class="portlet-title">
+        <div class="caption" id="caption">
+            <i class="fa fa-gift"></i>
+        </div>
+        <div class="tools">
+        </div>
+    </div>
+    <div class="portlet-body">
+
+                    <div class="portlet sale-summary">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="icon-pie-chart"></i>
+                                总计：
+
+                            </div>
+                        </div>
+
+                            <div class="col-md-11">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                     	<span class="sale-info">
+																企业 <i class="fa fa-img-up"></i>
+																</span>
+
+																<span id="enterprise" class="sale-num">
+																  </span>
+                                    </div>
+                                  <!--  <div class="col-md-2">
+                                        <span class="sale-info">
+																从业人员(人) <i class="fa fa-img-down"></i>
+																</span>
+																<span id="specialitem" class="sale-num">
+																  </span>
+                                    </div>-->
+                                </div>
+                            </div>
+
+                    </div>
+
+        <div class="portlet sale-summary">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-note"></i>
+                    排名：
+                </div>
+            </div>
+            <table class="table table-striped table-bordered table-advance table-hover">
+                <thead>
+                <tr>
+                    <th>
+                        <i class="icon-bar-chart"></i> 排名
+                    </th>
+                    <th class="hidden-xs">
+                        <i class="icon-home"></i> 企业名称
+                    </th>
+                    <th>
+                        <i class="icon-users"></i> 从业人员
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="app/rating/js/tjx.data.rating.enterpriserating.js"></script>
+<script type="text/javascript" src="app/rating/js/tjx.app.rating.itemrating.js"></script>
+<script type="text/javascript">
+    // Start tjx once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.rating.itemrating.initModule( jQuery('body') , 'PractitionerCertificationScore');
+            });
+</script>
+
+</body>
+</html>

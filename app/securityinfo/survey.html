@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link href="css/glb/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" rel="stylesheet"/>
+	<link href="css/glb/jquery-file-upload/css/jquery.fileupload.css" rel="stylesheet"/>
+	<link href="css/glb/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet"/>
+
+	<!--<link href="css/glb/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+	<link href="css/glb/css/plugins-md.css" rel="stylesheet" type="text/css">-->
+<!--	<script type="text/javascript" src="js/tjx.data.securityinfo.js"></script>-->
+	<script type="text/javascript" src="app/securityinfo/js/tjx.app.securityinfo.survery.js"></script>
+	<script type="text/javascript">
+		// Start spa once DOM is ready
+		//
+		jQuery(document).ready(
+				function () {
+					tjx.app.securityinfo.survery.initModule( jQuery('.portlet'), true );
+				});
+	</script>
+
+</head>
+
+<body>
+<div class="portlet box blue-madison">
+
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-gift"></i>
+
+		</div>
+		<div class="tools">
+			<!--<a href="javascript:;" class="collapse" data-original-title="" title="">
+			</a>
+			<a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title="">
+			</a>
+			<a href="javascript:;" class="reload" data-original-title="" title="">
+			</a>
+			<a href="javascript:;" class="remove" data-original-title="" title="">
+			</a>-->
+		</div>
+	</div>
+
+	<div class="portlet-body   form ">
+		<form class="form-horizontal form-bordered form-row-stripped">
+
+
+			<div class="form-body">
+				<div class="alert alert-danger display-hide">
+					<button class="close" data-close="alert"></button>
+					您所提交的内容不符合要求，请检查后重新提交.
+				</div>
+
+				<table class="table table-bordered" style="text-align: left;">
+					<tbody>
+
+					<tr>
+						<td style="width: 15%; vertical-align: middle" rowspan="38">基础信息</td>
+						<td style="width: 15%; vertical-align: middle" rowspan="8">基本信息</td>
+						<td style="width: 20%;">企业名称</td>
+						<td style="width: 50%;" >
+							<input name="EnterpriseName" disabled="disabled"  type="text" tjx-data-field="EnterpriseName" class="form-control"  size="60"/>
+
+						</td>
+					</tr>
+					<tr>
+						<td>工商注册号</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>注册资金</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>企业注册地址</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>经营范围</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>主要产品</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>主要原料</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>企业成立日期</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td rowspan="2" style="vertical-align: middle">企业类型</td>
+						<td>行业类别</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>经济类型</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>隶属关系</td>
+						<td>隶属关系</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td rowspan="5" style="vertical-align: middle">实际生产/经营地址</td>
+						<td>行政区划</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>所属区域</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>企业生产/经营地址</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>占地面积（平方米）</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>邮政编码</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td rowspan="4" style="vertical-align: middle">规模</td>
+						<td>固定资产总值</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>从业人员数量</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>上年销售收入</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>规模情况</td>
+						<td>
+							<label>
+								<input type="radio" name="1" id="1"
+									   value="option2">规模以上
+							</label>
+							<label>
+								<input type="radio" name="1" id="2"
+									   value="option2">规模以下
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="4" style="vertical-align: middle">法定代表人（或主要负责人）</td>
+						<td>法定代表人姓名</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>法定代表人固定电话</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>法定代表人手机号码</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>法定代表人邮箱</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>企业状态</td>
+						<td>企业经营状态</td>
+						<td>
+							<label>
+								<input type="radio" name="2" id="3"
+									   value="option2">在建
+							</label>
+							<label>
+								<input type="radio" name="2" id="4"
+									   value="option2">正常
+							</label>
+							<label>
+								<input type="radio" name="2" id="5"
+									   value="option2">停产
+							</label>
+							<label>
+								<input type="radio" name="2" id="6"
+									   value="option2">检修
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2" style="vertical-align: middle">应急值班</td>
+						<td>应急负责人电话</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>应急值班室电话</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td rowspan="6" style="vertical-align: middle">企业安全负责人</td>
+						<td>安全负责人姓名</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>职务</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>安全负责人固定电话</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>安全负责人手机号码</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>安全负责人电子邮箱</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>是否注册安全工程师</td>
+						<td>
+							<label>
+								<input type="radio" name="3" id="7"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="3" id="8"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>安全机构</td>
+						<td>安全机构设置情况</td>
+						<td>
+							<label>
+								<input type="radio" name="4" id="9"
+									   value="option2">是，安全机构名称为_______________________________
+							</label>
+							<label>
+								<input type="radio" name="4" id="10"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="4" style="vertical-align: middle">其他人员</td>
+						<td rowspan="2" style="vertical-align: middle">特种设备作业人员</td>
+						<td>类别_______________________________数量_______________</td>
+					</tr>
+					<tr>
+						<td>类别_______________________________数量_______________</td>
+					</tr>
+					<tr>
+						<td rowspan="2" style="vertical-align: middle">特种作业人员</td>
+						<td>作业名称_______________________________数量_______________</td>
+					</tr>
+					<tr>
+						<td>作业名称_______________________________数量_______________</td>
+					</tr>
+
+
+					<tr>
+						<td rowspan="5" style="vertical-align: middle">检验检测信息</td>
+						<td>防雷检测</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="5" id="11"
+									   value="option2">是，检测时间为_______________________________
+							</label>
+							<label>
+								<input type="radio" name="5" id="12"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>消防检测</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="6" id="13"
+									   value="option2">是，检测时间为_______________________________
+							</label>
+							<label>
+								<input type="radio" name="6" id="14"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>电气检测</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="7" id="15"
+									   value="option2">是，检测时间为_______________________________
+							</label>
+							<label>
+								<input type="radio" name="7" id="16"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>特种设备检验</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="8" id="17"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="8" id="18"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>安全附件（压力表，安全阀，可燃/有毒气体）检测</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="9" id="19"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="9" id="20"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td rowspan="2" style="vertical-align: middle">标准化信息</td>
+						<td>标准化等级</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="10" id="21"
+									   value="option2">未评定
+							</label>
+							<label>
+								<input type="radio" name="10" id="22"
+									   value="option2">一级
+							</label>
+							<label>
+								<input type="radio" name="10" id="23"
+									   value="option2">二级
+							</label>
+							<label>
+								<input type="radio" name="10" id="24"
+									   value="option2">三级
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>标准化达标/换证时间</td>
+						<td colspan="2"></td>
+					</tr>
+
+
+					<tr>
+						<td rowspan="18" style="vertical-align: middle">安全职业卫生评价信息</td>
+						<td rowspan="3" style="vertical-align: middle">安全预评价</td>
+						<td colspan="2">评价时间：</td>
+					</tr>
+					<tr>
+						<td colspan="2">备案：
+							<label>
+								<input type="radio" name="11" id="25"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="11" id="26"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">评价机构名称_______________________________</td>
+					</tr>
+					<tr>
+						<td rowspan="3" style="vertical-align: middle">安全验收评价</td>
+						<td colspan="2">评价时间：</td>
+					</tr>
+					<tr>
+						<td colspan="2">备案：
+							<label>
+								<input type="radio" name="12" id="27"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="12" id="28"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">评价机构名称_______________________________</td>
+					</tr>
+					<tr>
+						<td rowspan="3" style="vertical-align: middle">安全现状评价</td>
+						<td colspan="2">评价时间：</td>
+					</tr>
+					<tr>
+						<td colspan="2">备案：
+							<label>
+								<input type="radio" name="13" id="29"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="13" id="30"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">评价机构名称_______________________________</td>
+					</tr>
+					<tr>
+						<td rowspan="3" style="vertical-align: middle">职业卫生预评价</td>
+						<td colspan="2">评价时间：</td>
+					</tr>
+					<tr>
+						<td colspan="2">备案：
+							<label>
+								<input type="radio" name="14" id="31"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="14" id="32"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">评价机构名称_______________________________</td>
+					</tr>
+					<tr>
+						<td rowspan="3" style="vertical-align: middle">职业卫生控效评价</td>
+						<td colspan="2">评价时间：</td>
+					</tr>
+					<tr>
+						<td colspan="2">备案：
+							<label>
+								<input type="radio" name="15" id="33"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="15" id="34"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">评价机构名称_______________________________</td>
+					</tr>
+					<tr>
+						<td rowspan="3" style="vertical-align: middle">职业卫生现状评价</td>
+						<td colspan="2">评价时间：</td>
+					</tr>
+					<tr>
+						<td colspan="2">备案：
+							<label>
+								<input type="radio" name="16" id="35"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="16" id="36"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">评价机构名称_______________________________</td>
+					</tr>
+
+
+					<tr>
+						<td rowspan="8" style="vertical-align: middle">应急管理信息</td>
+						<td rowspan="2" style="vertical-align: middle">应急预案</td>
+						<td>是否备案</td>
+						<td>
+							<label>
+								<input type="radio" name="17" id="37"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="17" id="38"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>应急预案备案编号</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td rowspan="6" style="vertical-align: middle">应急救援设备物质</td>
+						<td>设备名称</td>
+						<td>数量</td>
+					</tr>
+					<tr>
+						<td>..</td>
+						<td>..</td>
+					</tr>
+					<tr>
+						<td>..</td>
+						<td>..</td>
+					</tr>
+					<tr>
+						<td>物资名称</td>
+						<td>数量</td>
+					</tr>
+					<tr>
+						<td>..</td>
+						<td>..</td>
+					</tr>
+					<tr>
+						<td>..</td>
+						<td>..</td>
+					</tr>
+
+
+					<tr>
+						<td rowspan="5" style="vertical-align: middle">职业健康信息</td>
+						<td>职业病危害项目申报备案</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="18" id="39"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="18" id="40"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>职业病危害严重程度</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="19" id="41"
+									   value="option2">无
+							</label>
+							<label>
+								<input type="radio" name="19" id="42"
+									   value="option2">一般
+							</label>
+							<label>
+								<input type="radio" name="19" id="43"
+									   value="option2">较重
+							</label>
+							<label>
+								<input type="radio" name="19" id="44"
+									   value="option2">严重
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>存在的职业病危害因素</td>
+						<td colspan="2">
+							<label>
+								<input type="checkbox" name="1"
+									   value="option2">粉尘
+							</label>
+							<label>
+								<input type="checkbox" name="2"
+									   value="option2">化学
+							</label>
+							<label>
+								<input type="checkbox" name="3"
+									   value="option2">物理
+							</label>
+							<label>
+								<input type="checkbox" name="4"
+									   value="option2">放射
+							</label>
+							<label>
+								<input type="checkbox" name="5"
+									   value="option2">生物
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2" style="vertical-align: middle">职业病危害因素检测</td>
+						<td>职业病危害因素检测</td>
+						<td>
+							<label>
+								<input type="radio" name="20" id="45"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="20" id="46"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>检测日期</td>
+						<td></td>
+					</tr>
+
+
+					<tr>
+						<td rowspan="17" style="vertical-align: middle">危险化学品信息</td>
+						<td rowspan="17" style="vertical-align: middle">1</td>
+						<td>是否涉及危险化学品</td>
+						<td>
+							<label>
+								<input type="radio" name="21" id="47"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="21" id="48"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>危险化学品企业类型</td>
+						<td>
+							<label>
+								<input type="radio" name="22" id="49"
+									   value="option2">生产
+							</label>
+							<label>
+								<input type="radio" name="22" id="50"
+									   value="option2">经营
+							</label>
+							<label>
+								<input type="radio" name="22" id="51"
+									   value="option2">使用
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>危险化学品企业证书编号</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>危险化学品许可范围</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>危险化学品许可期限</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>危险化学品名称</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>危险化学品环节</td>
+						<td>
+							<label>
+								<input type="radio" name="23" id="52"
+									   value="option2">生产
+							</label>
+							<label>
+								<input type="radio" name="23" id="53"
+									   value="option2">使用
+							</label>
+							<label>
+								<input type="radio" name="23" id="54"
+									   value="option2">储存
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>年生产量（t）</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>年使用量（t）</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>用途</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>使用场所</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>日常最大储量（t）</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>储存形式</td>
+						<td>
+							<label>
+								<input type="radio" name="24" id="55"
+									   value="option2">储罐
+							</label>
+							<label>
+								<input type="radio" name="24" id="56"
+									   value="option2">仓库
+							</label>
+							<label>
+								<input type="radio" name="24" id="57"
+									   value="option2">堆场
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>重点监管危险化学品</td>
+						<td>
+							<label>
+								<input type="radio" name="25" id="58"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="25" id="59"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>剧毒化学品</td>
+						<td>
+							<label>
+								<input type="radio" name="26" id="60"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="26" id="61"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>易制毒化学品</td>
+						<td>
+							<label>
+								<input type="radio" name="27" id="62"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="27" id="63"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>易制爆化学品</td>
+						<td>
+							<label>
+								<input type="radio" name="28" id="64"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="28" id="65"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td rowspan="4" style="vertical-align: middle">重大危险源信息</td>
+						<td>是否重大危险源</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="29" id="66"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="29" id="67"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>重大危险源名称</td>
+						<td colspan="2">
+					</tr>
+					<tr>
+						<td>等级</td>
+						<td colspan="2">
+					</tr>
+					<tr>
+						<td>备案时间</td>
+						<td colspan="2">
+					</tr>
+
+
+					<tr>
+						<td rowspan="5" style="vertical-align: middle">其他重风险监控</td>
+						<td>涉爆粉尘</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="30" id="68"
+									   value="option2">煤粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="69"
+									   value="option2">铝粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="70"
+									   value="option2">镁粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="71"
+									   value="option2">锌粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="72"
+									   value="option2">钛粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="73"
+									   value="option2">锆粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="74"
+									   value="option2">面粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="75"
+									   value="option2">淀粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="76"
+									   value="option2">糖粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="77"
+									   value="option2">奶粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="78"
+									   value="option2">血粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="79"
+									   value="option2">鱼骨粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="80"
+									   value="option2">纺织纤维粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="81"
+									   value="option2">木粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="82"
+									   value="option2">纸粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="83"
+									   value="option2">橡胶塑料粉
+							</label>
+							<label>
+								<input type="radio" name="30" id="84"
+									   value="option2">烟草粉
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>是否涉氨制冷装置企业</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="31" id="85"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="31" id="86"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>有限空间等危险作业</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="32" id="87"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="32" id="88"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>服务外包队伍</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="32" id="89"
+									   value="option2">有，且纳入企业综合监管（有安全协议）
+							</label>
+							<label>
+								<input type="radio" name="32" id="90"
+									   value="option2">有，未纳入企业综合监管（无安全协议）
+							</label>
+							<label>
+								<input type="radio" name="32" id="91"
+									   value="option2">无
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>租赁厂房情况（企业名称，人数）</td>
+						<td colspan="2"></td>
+					</tr>
+
+
+					<tr style="text-align: center;">
+						<td colspan="4">空港保税区安全工作推动情况调查</td>
+					</tr>
+
+
+					<tr>
+						<td colspan="2">自查自报系统</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="33" id="92"
+									   value="option2">未登录
+							</label>
+							<label>
+								<input type="radio" name="33" id="93"
+									   value="option2">偶尔登录
+							</label>
+							<label>
+								<input type="radio" name="33" id="94"
+									   value="option2">按照要求进行登录上传
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">安全文化示范企业称号</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="34" id="95"
+									   value="option2">无
+							</label>
+							<label>
+								<input type="radio" name="34" id="96"
+									   value="option2">有
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">安监局组织的各项活动参与</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="35" id="97"
+									   value="option2">从未参与
+							</label>
+							<label>
+								<input type="radio" name="35" id="98"
+									   value="option2">偶尔参与
+							</label>
+							<label>
+								<input type="radio" name="35" id="99"
+									   value="option2">积极参与
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">重大安全生产隐患上报</td>
+						<td colspan="2">
+							<label>
+								<input type="radio" name="36" id="100"
+									   value="option2">有
+							</label>
+							<label>
+								<input type="radio" name="36" id="101"
+									   value="option2">无
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">网上安全考试情况</td>
+						<td colspan="2">
+							主要负责人参加
+							<label>
+								<input type="radio" name="37" id="102"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="37" id="103"
+									   value="option2">否
+							</label>
+							<br>
+							安全管理人员参加
+							<label>
+								<input type="radio" name="38" id="104"
+									   value="option2">是
+							</label>
+							<label>
+								<input type="radio" name="38" id="105"
+									   value="option2">否
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">空港保税区2016年度考核自评分数</td>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td colspan="2">空港保税区2016年度考核考核分数</td>
+						<td colspan="2"></td>
+					</tr>
+
+					</tbody>
+				</table>
+
+			<!--	<div class="form-group">
+					<label class="col-md-2 control-label">企业名称
+					<span class="required">* </span>
+					</label>
+					<div class="col-md-4">
+						<input name="EnterpriseName" disabled="disabled"  type="text" tjx-data-field="EnterpriseName" class="form-control"  size="60"/>
+					</div>
+				</div>
+				<div class="form-group  ">
+					<label class="col-md-2 control-label">生产/经营地址</label>
+					<div class="col-md-4">
+						<input name="textfield" type="text" tjx-data-field="BusinessAddress" class="form-control"  size="60"/>
+					</div>
+				</div>
+				<div class="form-group  ">
+					<label class="col-md-2 control-label">年度营业额</label>
+					<div class="col-md-4">
+						<input name="textfield" type="text" tjx-data-field="AnnualRevenue" class="form-control"  size="60"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">主要产品</label>
+					<div class="col-md-4">
+						<input name="textfield" type="text" tjx-data-field="PrimeProducts" class="form-control"  size="60"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">生产规模</label>
+					<div class="col-md-4">
+						<input name="textfield" type="text" tjx-data-field="ProductScale" class="form-control"  size="60"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">主要原辅料及用量</label>
+					<div class="col-md-4">
+						<input name="textfield" type="text" tjx-data-field="MaterialDosage" class="form-control"  size="60"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">企业法人</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="LegalRepresentative-Name" class="form-control input-small" placeholder="姓名"  size="60"/>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="LegalRepresentative-Telephone" class="form-control input-small"  placeholder="联系电话"  size="60"/>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="LegalRepresentative-CellPhone" class="form-control input-small"  placeholder="手机"  size="60"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">主要负责人</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="Principal-Name" class="form-control input-small" placeholder="姓名"  size="60"/>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="Principal-Telephone" class="form-control input-small"  placeholder="联系电话"  size="60"/>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="Principal-CellPhone" class="form-control input-small"  placeholder="手机"  size="60"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">分管安全负责人</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<input name="textfield" type="text"  tjx-data-field="SafetyDirector-Name" class="form-control input-small" placeholder="姓名"  size="60"/>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="SafetyDirector-Telephone" class="form-control input-small"  placeholder="联系电话"  size="60"/>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="SafetyDirector-CellPhone" class="form-control input-small"  placeholder="手机"  size="60"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group has-warning">
+					<label class="col-md-2 control-label">安全管理人员</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="SecurityAdministrator-Name" class="form-control input-small" placeholder="姓名"  size="60"/>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="SecurityAdministrator-Telephone" class="form-control input-small"  placeholder="联系电话"  size="60"/>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" tjx-data-field="SecurityAdministrator-CellPhone" class="form-control input-small"  placeholder="手机"  size="60"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">电子邮箱</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-4">
+								<div class="input-icon">
+									<i class="fa fa-envelope"></i>
+									<input type="email" name="Email" class="form-control" tjx-data-field="Email" id="inputEmail12" placeholder="Email">
+								</div>
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" class="form-control input-small" tjx-data-field="Fax"  placeholder="传真"  size="60"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">企业安全管理 机构名称</label>
+					<div class="col-md-4">
+						<input name="textfield" type="text" tjx-data-field="SafetyDepartment" class="form-control"  size="60"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">安全管理 体系情况</label>
+					<div class="col-md-4">
+						<input name="textfield" type="text" class="form-control"  tjx-data-field="OHSM" id="textfield" size="60"/>
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-md-2 control-label">员工人数</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+
+								<input name="EmployeeNumber"  type="text" tjx-data-field="EmployeeNumber" class="form-control input-small" placeholder=""  size="60"/>
+							</div>
+							<div class="col-md-2">
+
+								<input name="SpecialOperationNumber" type="text" tjx-data-field="SpecialOperationNumber" class="form-control input-small"  placeholder="特种作业"  size="60"/>
+							</div>
+							<div class="col-md-2">
+
+								<input name="DangerousPositionNumber" type="text" tjx-data-field="DangerousPositionNumber" class="form-control input-small"  placeholder="职业危害岗位" size="60"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-md-2 control-label">工伤事故统计</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox35" tjx-data-field="IndustrialAccident" class="md-check">
+									<label for="checkbox35">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										死亡1人以上(含1人)</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox36" tjx-data-field="SeriousAccident" class="md-check">
+									<label for="checkbox36">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										重伤事故 </label>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">主要建构筑物</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-4">
+									<input type="text" class="form-control" tjx-data-field="Building"  >
+							</div>
+							<div class="col-md-2">
+								<input name="textfield" type="text" class="form-control input-small" tjx-data-field="LandArea"  placeholder="占地面积"  size="60"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">是否进行以下外部检测</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox37" tjx-data-field="FireControlAcceptance" class="md-check">
+									<label for="checkbox37" id="checkbox37lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										1、消防验收</label>
+								</div>
+								<div class="col-md-5">
+									  <span class="btn grey fileinput-button "  disabled="disabled">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="FireControlAcceptance" name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox38" tjx-data-field="LightningDetection" class="md-check">
+									<label for="checkbox38" id="checkbox38lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										2、防雷检测</label>
+								</div>
+								<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="LightningDetection" name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox39" tjx-data-field="SpecialEquipmentInspection" class="md-check">
+									<label for="checkbox39" id="checkbox39lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										3、特种设备检测</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox40" tjx-data-field="DetectionOfOccupationalHazard" class="md-check">
+									<label for="checkbox40" id="checkbox40lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										4、职业危害检测</label>
+								</div>
+								<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="DetectionOfOccupationalHazard" name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox41" tjx-data-field="SafetyAcceptance" class="md-check">
+									<label for="checkbox41" id="checkbox41lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										5、安全验收评价</label>
+								</div>
+								<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="SafetyAcceptance"  name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">是否进行以下外部培训</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox42" tjx-data-field="HeadTraining" class="md-check">
+									<label for="checkbox42" id="checkbox42lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										1、主要负责人培训</label>
+								</div>
+								<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="HeadTraining" name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox43" tjx-data-field="ManagementTraining" class="md-check">
+									<label for="checkbox43" id="checkbox43lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										2、管理人员培训</label>
+								</div>
+								<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="ManagementTraining" name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox44" tjx-data-field="OperatingPersonnelTraining" class="md-check">
+									<label for="checkbox44" id="checkbox44lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										3、作业人员培训</label>
+								</div>
+								<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="OperatingPersonnelTraining" name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-md-2 control-label">滨海新区自查自报系统</label>
+					<div class="col-md-10">
+						<div class="md-radio-inline">
+							<div class="md-radio">
+								<input type="radio" id="radio53" name="radio2" tjx-data-field="SelfExamination-Never" class="md-radiobtn" checked="">
+								<label for="radio53">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									未登陆 </label>
+							</div>
+							<div class="md-radio ">
+								<input type="radio" id="radio54" name="radio2" tjx-data-field="SelfExamination-Occasionally" class="md-radiobtn" >
+								<label for="radio54">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									偶尔登陆 </label>
+							</div>
+							<div class="md-radio">
+								<input type="radio" id="radio55" name="radio2" tjx-data-field="SelfExamination-Always" class="md-radiobtn">
+								<label for="radio55">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									按照要求进行登陆上传 </label>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-md-2 control-label" >安全文化示范企业称号</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<div class="md-checkbox col-md-2">
+									<input type="checkbox" id="checkbox56" tjx-data-field="SafetyCulture" class="md-check">
+									<label for="checkbox56" id="checkbox56lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+									</label>
+								</div>
+								<div class="col-md-5">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="SafetyCulture" name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+
+
+							<div class="col-md-4">
+								<div class="md-checkbox col-md-6" >
+									<input type="checkbox" id="checkbox57" tjx-data-field="EmergencyPlan" class="md-check">
+									<label for="checkbox57" id="checkbox57lll">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+										应急预案备案情况 </label>
+								</div>
+								<div class="col-md-6">
+									  <span class="btn grey fileinput-button">
+										<i class="fa icon-paper-clip"></i>
+										<span >
+										附件</span>
+										<input  type="file" tjx-file-field="EmergencyPlan" name="files[]" multiple="">
+										</span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-md-2 control-label">安全生产工作会议、教育培训</label>
+					<div class="col-md-10">
+						<div class="md-radio-inline">
+							<div class="md-radio">
+								<input type="radio" id="radio60" name="radio3" tjx-data-field="SafetyProductionTraining-Never" class="md-radiobtn" checked="">
+								<label for="radio60">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									从未参与 </label>
+							</div>
+							<div class="md-radio ">
+								<input type="radio" id="radio61" name="radio3" tjx-data-field="SafetyProductionTraining-Occasionally" class="md-radiobtn" >
+								<label for="radio61">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									偶尔参与 </label>
+							</div>
+							<div class="md-radio">
+								<input type="radio" id="radio62" name="radio3" tjx-data-field="SafetyProductionTraining-Always" class="md-radiobtn">
+								<label for="radio62">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									积极参与 </label>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-md-2 control-label">向安委办报送工作列表和文件情况</label>
+					<div class="col-md-10">
+						<div class="md-radio-inline">
+							<div class="md-radio">
+								<input type="radio" id="radio63" name="radio4" tjx-data-field="FileSubmit-Never" class="md-radiobtn" checked="">
+								<label for="radio63">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									从未报送 </label>
+							</div>
+							<div class="md-radio ">
+								<input type="radio" id="radio64" name="radio4" tjx-data-field="FileSubmit-Occasionally" class="md-radiobtn" >
+								<label for="radio64">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									偶尔报送 </label>
+							</div>
+							<div class="md-radio">
+								<input type="radio" id="radio65" name="radio4" tjx-data-field="FileSubmit-Always" class="md-radiobtn">
+								<label for="radio65">
+									<span class="inc"></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									按时按量报送 </label>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-md-2 control-label">重大安全生产隐患</label>
+					<div class="col-md-10">
+						<div class="row" >
+							<div class="col-md-2">
+								<div class="md-checkbox">
+									<input type="checkbox" id="checkbox70" tjx-data-field="SafetyHazard" class="md-check">
+									<label for="checkbox70">
+										<span class="inc"></span>
+										<span class="check"></span>
+										<span class="box"></span>
+									</label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>-->
+
+			</div>
+
+			<div class="form-actions">
+				<div class="row">
+					<div class="col-md-offset-2 col-md-10">
+						<button id="ok" type="button" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+						<button id="cancel" type="reset" class="btn">取消</button>
+					</div>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+</div>
+</body>
+</html>

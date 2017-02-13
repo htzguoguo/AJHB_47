@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin: 0px; padding: 0px; font-family:  "宋体",Arial, Helvetica, sans-serif; font-size: 12px; color:#231815; background:#519bca url(login_bg.jpg) top no-repeat;}
+div, h1, h2, h3, h4, p, form, label, input, textarea, img, span{
+	margin:0; padding:0;}
+ul{
+	margin:0; padding:0; list-style-type:none;font-size:0;line-height:0;}
+#container{
+	left:0;
+	top:0;
+	position:absolute;
+	width:100%;
+	margin:0 auto ;
+}
+
+#login{
+	width:425px;
+	height:167px;
+	margin-top:454px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:178px;
+	text-align:left;
+	text-decoration:none;
+	}

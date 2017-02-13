@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SupSystem.Web.GenericsDALC
+</name>
+</assembly>
+<members>
+<member name="M:SupSystem.Web.GenericsDALC.SupCrypto.EncryptDES(System.String,System.String)">
+	<summary>
+ DES加密字符串
+</summary>
+	<param name="encryptString">待加密的字符串</param>
+	<param name="encryptKey">加密密钥,要求为8位</param>
+	<returns>加密成功返回加密后的字符串，失败返回源串</returns>
+</member><member name="M:SupSystem.Web.GenericsDALC.SupCrypto.DecryptDES(System.String,System.String)">
+	<summary>
+ DES解密字符串
+ </summary>
+	<param name="decryptString">待解密的字符串</param>
+	<param name="decryptKey">解密密钥,要求为8位,和加密密钥相同</param>
+	<returns>解密成功返回解密后的字符串，失败返源串</returns>
+</member><member name="P:SupSystem.Web.GenericsDALC.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SupSystem.Web.GenericsDALC.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:SupSystem.Web.GenericsDALC.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:SupSystem.Web.GenericsDALC.clsTranslationOperator.GetTranslationOperator">
+	<summary>
+	</summary>
+	<returns></returns>
+	<remarks>添加Lock为线程安全考虑</remarks>
+</member><member name="M:SupSystem.Web.GenericsDALC.clsGenericsDALCHelper`1.GetSpecificEntitys(System.String[],System.String[])">
+	<summary>
+	</summary>
+	<param name="specificField"></param>
+	<param name="specificValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SupSystem.Web.GenericsDALC.clsGenericsDALCHelper`1.SqlMultiWhereBuilder2(SupSystem.Web.GenericsDALC.DBParameter@,System.String[],System.String[],System.Int32,System.Int32,System.String,System.String)">
+	<summary>
+ 此分页方法用于带查询条件
+ </summary>
+	<param name="pSql">Sql查询类</param>
+	<param name="specificField">构成查询条件的字段</param>
+	<param name="specificValue">构成查询条件的字段值</param>
+	<param name="pPageSpan">分页的记录数目</param>
+	<param name="pPageIndex">分页定位</param>
+	<param name="pOrderField">排序字段</param>
+	<param name="pOrderType">排序类型</param>
+	<remarks>注意：此方法用于设定排序字段的分页查询或者使用主键进行分页查询</remarks>
+</member><member name="M:SupSystem.Web.GenericsDALC.clsGenericsDALCHelper`1.SqlMultiWhereBuilder2(SupSystem.Web.GenericsDALC.DBParameter@,System.Int32,System.Int32,System.String,System.String)">
+	<summary>
+ 此方法用于不带查询条件
+ </summary>
+	<param name="pSql">Sql查询类</param>
+	<param name="pPageSpan">分页的记录数目</param>
+	<param name="pPageIndex">分页定位</param>
+	<param name="pOrderField">排序字段</param>
+	<param name="pOrderType">排序类型</param>
+	<remarks>注意：此方法用于设定排序字段的分页查询或者使用主键进行分页查询</remarks>
+</member><member name="M:SupSystem.Web.GenericsDALC.clsGenericsDALCHelper`1.GetNestedSpecificEntitys(System.String[],System.String[],System.String,System.String[],SupSystem.Web.GenericsDALC.IFieldTranslator)">
+	<summary>
+ 嵌套查询
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:SupSystem.Web.GenericsDALC.DBConnectionParameter">
+	<summary>
+ 数据库连接参数描述类。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SupSystem.Web.GenericsDALC.clsDALCHelper.BytesToFile(System.String,System.Byte[])">
+将二进制串变为文件
+
+</member><member name="T:SupSystem.Web.GenericsDALC.DBParameter">
+	<summary>
+ 用于执行的Sql语句的描述类。
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,24 @@
+.tjx-shell-survery-tblist1 tr.altrow{	background-color:#F7FAFF;}
+
+
+.tjx-shell-survery-tblist1{
+    font-family:"宋体",Arial, Helvetica, sans-serif;
+    background:#FFF;
+    border:1px solid #BED6F6;	/* 表格边框 */
+    border-collapse:collapse;	/* 边框重叠 */	/* 表格背景色 */
+    font-size:13px;
+    line-height:18px;
+}
+.tjx-shell-survery-tblist1 th{
+    background-color:#E1EDFF;	/* 行名称背景色 */			/* 行名称颜色 */
+    font-weight:bold;
+    height:18px;
+    padding:6px;
+    border:1px solid #A3C0E8;
+
+}
+.tjx-shell-survery-tblist1 td{
+    border:1px solid #BED6F6;	/* 单元格边框 */
+    padding:5px;
+    height:20px;
+}

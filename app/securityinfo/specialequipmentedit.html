@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+  <!--  <script type="text/javascript" src="js/tjx.data.specialequipment.js"></script>-->
+    <script type="text/javascript" src="app/securityinfo/js/tjx.app.securityinfo.specialequipment.js"></script>
+    <script type="text/javascript">
+        // Start spa once DOM is ready
+        //
+        jQuery(document).ready(
+                function () {
+                    tjx.app.securityinfo.specialequipment.initModule( jQuery('body') , false,false);
+                });
+    </script>
+</head>
+<body>
+
+<div>
+    <div class="modal-header">
+        <div class="portlet-title">
+            <div class="caption font-green-haze">
+                <i class="icon-check font-green-haze"></i>
+                <span class="caption-subject bold uppercase">编辑特种设备</span>
+
+                <button type="button"  class="close " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="portlet-body   form ">
+            <form class="form-horizontal form-bordered form-row-stripped">
+                <div class="form-body">
+                    <div class="alert alert-danger display-hide" >
+                        <button class="close" data-close="alert"></button>
+                        您所提交的内容不符合要求，请检查后重新提交.
+                    </div>
+
+                    <div class="form-group display-hide"  >
+                        <label class="col-md-3 control-label">种类</label>
+                        <div class="col-md-9">
+                            <!--  <input name="textfield" type="text" tjx-data-field="Category" class="form-control"  size="60"/>-->
+                            <input  id="Category" type="text" tjx-data-field="Category" class="form-control "    readonly >
+                            </input>
+                        </div>
+                    </div>
+
+                    <div class="form-group display-hide">
+                        <label class="col-md-3 control-label">类别</label>
+                        <div class="col-md-9">
+                            <!--  <input name="textfield" type="text" tjx-data-field="Category" class="form-control"  size="60"/>-->
+                            <input  id="SubCategory" type="text" tjx-data-field="SubCategory" class="form-control"    readonly>
+                            </input>
+                        </div>
+                    </div>
+
+                    <div class="form-group display-hide">
+                        <label class="col-md-3 control-label">品种</label>
+                        <div class="col-md-9">
+                            <!--  <input name="textfield" type="text" tjx-data-field="Category" class="form-control"  size="60"/>-->
+                            <input  id="Kind" type="text" tjx-data-field="Kind" class="form-control"  readonly>
+                            </input>
+                        </div>
+                    </div>
+
+                    <div class="form-group  ">
+                        <label class="col-md-3 control-label">设备名称
+                            <span class="required">* </span>
+                        </label>
+                        <div class="col-md-9">
+                            <input name="DeviceName" type="text"  tjx-data-field="DeviceName" class="form-control"  readonly size="60"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">型号</label>
+                        <div class="col-md-9">
+                            <input name="textfield" type="text" tjx-data-field="ModelName" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">使用登记编号</label>
+                        <div class="col-md-9">
+                            <input name="textfield" type="text" tjx-data-field="RegistrationNumber" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">有效期限</label>
+                        <div class="col-md-9">
+                            <!--  <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value=""/>-->
+                            <div class="input-group input-medium date date-picker"  data-date-format="yyyy/mm/dd" data-date-viewmode="years" data-date-minviewmode="months">
+                                <input type="text" tjx-data-field="ExpirationDate" class="form-control input-large" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                            </div>
+                            <!--  <input name="textfield" type="text" tjx-data-field="ExpirationDate" class="form-control"  size="60"/>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">检测机构</label>
+                        <div class="col-md-9">
+                            <input name="textfield" type="text" tjx-data-field="InspectionAgency" class="form-control"  size="60"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">备注</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" rows="3" tjx-data-field="Memo" ></textarea>
+                        </div>
+                    </div>
+
+                </div>
+<!--
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-10">
+                            <button id="ok" type="button" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                            <button id="cancel" type="reset" class="btn">取消</button>
+                        </div>
+                    </div>
+                </div>-->
+
+
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+
+   <!-- <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-gift"></i>
+
+        </div>
+        <div class="tools">
+
+        </div>
+    </div>-->
+
+
+</div>
+
+</body>
+</html>

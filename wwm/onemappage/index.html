@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%" xmlns:v-bind="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>一张网地图展示</title>
+    <link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap-slider.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap-switch.min.css" type="text/css">
+    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.15/3.15compact/esri/css/esri.css">
+    <link rel="stylesheet"
+          href="http://60.29.110.104/arcgis_js_api/library/3.15/3.15compact/dijit/themes/claro/claro.css">
+
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css" type="text/css">
+    <link rel="stylesheet" href="scripts/modules/infoWindow/InfoWindow.css" type="text/css">
+
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <style type="text/css">
+        #mapDiv {
+            min-height: 100px;
+            max-height: 2000px;
+        }
+
+        .bmenu {
+            /*visibility: hidden;*/
+        }
+    </style>
+    <script type="text/javascript">
+        function nofind() {
+            var img = event.srcElement;
+            img.src = "../onemappage/assets/images/location_icon/_oneerror.png";
+            img.onerror = null;
+            // 控制不要一直跳动
+        }
+    </script>
+</head>
+<body class="claro" style="height:100%;">
+<div id="pageloader" class="dark-div"
+     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999;  background: rgba(23, 155, 215 , .8);">
+    <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+    </div>
+    <div style="text-align:center;margin-top:10%;font-size:50px;color:#fff">安监环保地理信息系统</div>
+</div>
+
+
+<div id="outerwrap" style="height:100%" v-cloak>
+    <div id="mainwrap" style="height:100%" v-bind:class="{ 'sideexpanded': sideExpanded}">
+        <div id="mapPanel" style="position: relative;height:100%">
+            <div id="heatLayer"></div>
+            <div id="mapDiv" style="height:100%;width:100%"></div>
+            <!--bottom menu start-->
+            <div class="bmenu text-center" id="bottomBar">
+                <ul class="nav navbar-nav">
+                    <li v-for="menu in menus">
+                        <a href="#" data-modaltarget1="{{menu.modal}}" @click="openModal(menu)">
+                            <i class="fa {{menu.icon}}"></i>
+                            <p>{{menu.text}}</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-right" style="margin-right:0;line-height:65px;padding-right:15px;">
+                    <a href="#"><i class="fa fa-cog" style="font-size:24px"></i></a>
+                    <!--<i class="fa fa-cog" style="font-size:24px"></i>-->
+                </div>
+            </div>
+            <!--bottom menu end-->
+
+            <!--图例-->
+            <div id="toptools">
+                <div class="tool dropdown" id="maptype">
+                    <a data-toggle="dropdown" style="background:#fff">
+                        <i class="fa fa-map-marker"></i>
+                        地图类别
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div id="basemapGallery"></div>
+                    </div>
+
+                </div>
+                <div class="tool" @click="toggleSide">
+                    <a href="#"><i class="fa fa-indent"></i></a>
+                </div>
+            </div>
+            <!--<div id="BasemapToggle"></div>-->
+            <div id="XYinfo"
+                 style="background-color: transparent; font-weight: normal; font-size: smaller;color:#3C7AFF; position: absolute; padding: 2px; left: 10px; bottom: 65px; z-index: 99;"></div>
+        </div>
+        <div id="sidepanel">
+            <div class="sidepanel-item search"
+                 transition="sidepanelitem"
+                 v-show="showList">
+                <div class='sideheader'>
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true"
+                                    style="margin-right:-2px"
+                                    aria-expanded="false">
+                                {{currentQueryType.text}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li v-for="type in queryTypes" @click="currentQueryType = type">
+                                    <a>{{type.text}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control" id="searchText" v-model="keyword" placeholder="请输入查询内容"
+                               v-on:keyup.enter="search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="findBtn" @click="search | key 13">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <div style="padding-top:10px">
+                        <div v-show="sideLoading">查询数据中...</div>
+                        <div v-show="!sideLoading && result.length >0" @click="result=[];"><span style="color:#FAFAFA">返回</span>
+                        </div>
+                        <div v-show="!sideLoading && bareResult.length >0" @click="bareResult=[];"><span
+                                style="color:#FAFAFA">返回</span></div>
+                        <div v-show="!sideLoading && result.length>0" style="color:#FAFAFA">
+                            &nbsp;
+                            <span class="pull-right">{{result.length}}条结果</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidecontent mCustomScrollbar"
+                     data-mcs-theme="minimal-dark">
+                    <div class="list-group" style="margin:0">
+                        <a class='list-group-item'
+                           v-for="item in result"
+                           v-bind:class="{ 'active': item == currentSelectedCompany}"
+                           @click="showResultItem(item)">
+                            <!--此处的img src 加v-bind:src=... 之后图片就显示不出来，不加时，在页面初次加载时会出错，如何解决-->
+                            <template v-if="$index<10">
+                                <sapn><img :src="../onemappage/assets/images/location_icon/{{$index}}.PNG" alt="img"
+                                           onerror="nofind();"></sapn>
+                            </template>
+                            <template v-if="$index>=10">
+                                <sapn><img src="../onemappage/assets/images/location_icon/_oneerror.PNG" alt="img"
+                                           onerror="nofind();"></sapn>
+                            </template>
+                            {{item.feature.attributes.UNAME}}
+                        </a>
+                    </div>
+
+                    <div class="list-group" style="margin:0" v-show="bareResult.length != 0" transition="sidepanelitem">
+                        <table class="table table-responsive table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th colspan="2"><span style="font-size:18px;"><strong>裸露地块详细内容 </strong></span><span> (  1条结果)</span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="width: 30%;" align="right">编码:</td>
+                                <td>{{bareResult.store[0].feature.attributes.ID}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right">区域:</td>
+                                <td>{{bareResult.store[0].feature.attributes.zone}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right">点位地址:</td>
+                                <td>{{bareResult.store[0].feature.attributes.address}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right">问题描述:</td>
+                                <td>{{bareResult.store[0].feature.attributes.problemDescription}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right">来源:</td>
+                                <td>{{bareResult.store[0].feature.attributes.source==0?"市检查":""}}
+                                    {{bareResult.store[0].feature.attributes.source==1?"新区检查":""}}
+                                    {{bareResult.store[0].feature.attributes.source==2?"自查":""}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">问题描述:</td>
+                                <td>{{bareResult.store[0].feature.attributes.problemDescription}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right">测量面积:</td>
+                                <td>{{bareResult.store[0].feature.attributes.measureArea}} 平方米</td>
+                            </tr>
+                            <tr>
+                                <td align="right">重复苫盖面积:</td>
+                                <td>{{bareResult.store[0].feature.attributes.reUseArea}} 平方米</td>
+                            </tr>
+                            <tr>
+                                <td align="right">付费面积:</td>
+                                <td>{{bareResult.store[0].feature.attributes.payArea}} 平方米</td>
+                            </tr>
+                            <tr>
+                                <td align="right">派单时间:</td>
+                                <td>{{(new Date(bareResult.store[0].feature.attributes.sendTime)).getFullYear()}}年{{(new
+                                    Date(bareResult.store[0].feature.attributes.sendTime)).getMonth()+1}}月{{(new
+                                    Date(bareResult.store[0].feature.attributes.sendTime)).getDate()}}日
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">整改时间:</td>
+                                <td>{{(new Date(bareResult.store[0].feature.attributes.dealTime)).getFullYear()}}年{{(new
+                                    Date(bareResult.store[0].feature.attributes.dealTime)).getMonth()+1}}月{{(new
+                                    Date(bareResult.store[0].feature.attributes.dealTime)).getDate()}}日
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">验收时间:</td>
+                                <td>{{(new
+                                    Date(bareResult.store[0].feature.attributes.checkTime)).getFullYear()}}年{{(new
+                                    Date(bareResult.store[0].feature.attributes.checkTime)).getMonth()+1}}月{{(new
+                                    Date(bareResult.store[0].feature.attributes.checkTime)).getDate()}}日
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">作业单位:</td>
+                                <td>{{bareResult.store[0].feature.attributes.operationEnterprise}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right">管理单位:</td>
+                                <td>{{bareResult.store[0].feature.attributes.manageEnterprise}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right">验收人员:</td>
+                                <td>{{bareResult.store[0].feature.attributes.checker}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right">备注:</td>
+                                <td>{{bareResult.store[0].feature.attributes.memo}}</td>
+                            </tr>
+                            <tr v-for="c in bareResult.imageUrlList">
+                                <td colspan="2" style="border:0;text-align:center">
+                                    <div>
+                                        <a :href="{{c}}" target="_blank" title="点击查看原图">
+                                            <img class="img-responsive img-rounded" alt="image" :src="{{c}}">
+                                        </a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="list-group" style="margin:0" v-show="bareResults.length!=0" transition="sidepanelitem">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th colspan="{{bareResults.firstShowFields.length}}"><span
+                                        style="font-size:18px;"><strong>裸露地块查询列表 </strong></span><span> (  {{bareResults.store.length}}条结果)</span>
+                                </th>
+                                <th><a href="{{exportExcelUrl}}" type="button" role="button"
+                                       class="btn btn-default btn-sm">导出excel</a></th>
+                            </tr>
+                            <tr>
+                                <th style="width:20px"></th>
+                                <th v-for="filed in bareResults.columns | filterBy myCustomFilterFunctionBare">
+                                    {{filed.text}}
+                                </th>
+                            </tr>
+                            <template v-for="r in bareResults.store">
+                                <tr @click="bareResultsSelectedItem = (bareResultsSelectedItem == r ? null : r),bareSelectItem=bareResults.imageUrlList[$index],setExtent(bareResults.graphicList[$index])"
+                                >
+                                    <td>{{$index+1}}.</td>
+                                    <td v-for="f in bareResults.columns | filterBy myCustomFilterFunctionBare">
+                                        {{r[f.code]}}
+                                    </td>
+                                </tr>
+                                <tr v-show="bareResultsSelectedItem == r">
+                                    <td colspan="{{bareResults.firstShowFields.length+1}}" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="c in bareResults.columns">
+                                                <td style="border:0;width:120px;text-align:right">{{c.text}}:</td>
+                                                <td style="border:0">{{r[c.code]}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr v-show="bareResultsSelectedItem == r">
+                                    <td colspan="{{bareResults.firstShowFields.length+1}}" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr>
+                                                <td colspan="2" style="border:0;text-align:center">
+                                                    <div v-for="d in bareSelectItem">
+                                                        <!--一次性 直接加载完成,服务器压力很大,应该分流,点击的时候才去请求,会更好-->
+                                                        <a href="{{d}}" target="_blank" title="点击查看原图">
+                                                            <img class="img-responsive img-rounded" alt="image"
+                                                                 src="{{d}}">
+                                                        </a>
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div v-show="result.length == 0 && sideLoading == false  && bareResult.length==0 && bareResults.length==0">
+                        <div class="statistic-box-container" v-for="item in alarmSum">
+                            <h3 class="font-green-sharp">{{item.text}}</h3>
+                            <div class='row text-center'>
+                                <div class="col-md-4" @click="alarmSumSearch(item.value1)">
+                                    <a href="#" class='statistic-box red'>
+                                        <div>
+                                            <p>{{item.sum1}}</p>
+                                            <span>超期</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4" @click="alarmSumSearch(item.value2)">
+                                    <a href="#" class='statistic-box yellow'>
+                                        <div>
+                                            <p style="font-size:30px;margin:10px">{{item.sum2}}</p>
+                                            <span>即将超期</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4" @click="alarmSumSearch(item.value3)">
+                                    <a href="#" class='statistic-box green'>
+                                        <div>
+                                            <p style="font-size:30px;margin:10px">{{item.sum3}}</p>
+                                            <span>正常</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidepanel-item detail"
+                 transition="sidepanelitem"
+                 v-show="showDetail">
+                <div class='sideheader'>
+                    <div class="row">
+                        <div @click="backToList()" class="col-md-1" style="padding-right:0;width:42px !important;">
+                            <a class="btn-back">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-10"
+                             style="font-weight:bold;padding-left:10px;line-height:36px;font-size:18px;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;">
+                            {{currentSelectedCompany.value}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="sidecontent mCustomScrollbar"
+                     data-mcs-theme="minimal-dark">
+                    <div v-show="currentDetailMenu.code == 'info'"
+                         transition="detail">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <td style="width: 30%;">企业名称:</td>
+                                <td style="font-weight:bold;">{{companyBaseInfo.EnterpriseName}}</td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>生产/经营地址:</td>
+                                <td>{{companyBaseInfo.BusinessAddress}}</td>
+                            </tr>
+                            <tr>
+                                <td>主要产品及规模:</td>
+                                <td>{{companyBaseInfo.ProductScale}}</td>
+                            </tr>
+                            <tr>
+                                <td>主要原辅料及用量:</td>
+                                <td>{{companyBaseInfo.MaterialDosage}}</td>
+                            </tr>
+                            <tr>
+                                <td><span class="glyphicon glyphicon-user" aria-hidden="true"></span>主要负责人:</td>
+                                <td>{{companyBaseInfo.PrincipalName}} <span class="text-right"></span><span
+                                        class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>联系方式:{{companyBaseInfo.PrincipalTelephone}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="glyphicon glyphicon-user" aria-hidden="true"></span>分管安全负责人:</td>
+                                <td>{{companyBaseInfo.SafetyDirectorName}} <span class="text-right"></span> <span
+                                        class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>联系方式:{{companyBaseInfo.SafetyDirectorTelephone}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="glyphicon glyphicon-user" aria-hidden="true"></span>安全管理人员:</td>
+                                <td>{{companyBaseInfo.SecurityAdministratorName}} <span class="text-right"></span><span
+                                        class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>联系方式:{{companyBaseInfo.SecurityAdministratorTelephone}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>电子邮箱:</td>
+                                <td>{{companyBaseInfo.Email}} <span class="glyphicon glyphicon-print"
+                                                                    aria-hidden="true"><span class="text-right"></span></span>传真:{{companyBaseInfo.Fax}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div v-show="currentDetailMenu.code == 'danger'"
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:20px"></th>
+                                <th v-for="filed in companyDangerData.columns | filterBy myCustomFilterFunction">
+                                    {{filed.text}}
+                                </th>
+                            </tr>
+                            <template v-for="r in companyDangerData.store">
+                                <tr v-bind:class="{'info' : companyDangerSelectedItem == r}"
+                                    @click="companyDangerSelectedItem = (companyDangerSelectedItem == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}</td>
+                                    <td v-for="f in companyDangerData.columns | filterBy myCustomFilterFunction">
+                                        {{r[f.code]}}
+                                    </td>
+                                </tr>
+                                <tr v-show="companyDangerSelectedItem == r">
+                                    <td colspan="{{companyDangerData.firstShowFields.length+1}}" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="c in companyDangerData.columns">
+                                                <td style="border:0;width:120px;text-align:right">{{c.text}}:</td>
+                                                <td style="border:0">{{r[c.code]}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div class='discharge' v-show="currentDetailMenu.code == 'discharge'"
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tbody v-for="item in companyDischargeData">
+                            <tr>
+                                <td colspan="3" style="font-weight:bold;background:#ccc">
+                                    {{item.name}} ({{item.children.length}})
+                                </td>
+                            </tr>
+                            <tr style="cursor:pointer"
+                                data-toggle="tooltip" title="adfasdfsadfsadf"
+                                :class="{'info' : companyDischargeSelectedItem == child}"
+                                v-for="child in item.children"
+                                @click="showDischargeMap(child)">
+                                <td style="width:30px;text-align:center">{{child.sn}}</td>
+                                <td>{{child.pfk}} - {{child.name}}</td>
+                                <td>
+                                    <a @click="showDischargeChart(child)">数据</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class='discharge' v-show="currentDetailMenu.code == 'processing'"
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:20px"></th>
+                                <!--<th v-for="filed in processData">{{filed.type}}</th>-->
+                                <th></th>
+                            </tr>
+                            <template v-for="r in processData">
+                                <tr v-bind:class="{'info' : processData == r}"
+                                    @click1="processData = (processData == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}</td>
+                                    <td v-for="f in processData">
+                                        <a href="http://ajhb.tjxrs.cn/{{f}}" title="生产工艺" target="_blank">生产工艺流程图</a>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div v-show="currentDetailMenu.code == 'safe'"
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:20px"></th>
+                                <th v-for="filed in safeData.columns | filterBy myCustomFilterFunctionSafe">
+                                    {{filed.text}}
+                                </th>
+                            </tr>
+                            <template v-for="r in safeData.store">
+                                <tr v-bind:class="{'info' : safeDataDetailData == r}"
+                                    @click="safeDataDetailSelectedItem = (safeDataDetailSelectedItem == r ? null : r)">
+                                    <td>{{$index+1}}</td>
+                                    <td v-for="f in safeData.columns | filterBy myCustomFilterFunctionSafe">
+                                        {{r[f.code]}}
+                                    </td>
+                                </tr>
+                                <tr v-show="safeDataDetailSelectedItem == r">
+                                    <td colspan="{{safeData.firstShowFields.length+1}}" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="c in safeData.columns">
+                                                <td style="border:0;width:120px;text-align:right">{{c.text}}:</td>
+                                                <td style="border:0">{{r[c.code]}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div v-show="currentDetailMenu.code == 'report'"
+                         transition="detail">
+                        <table class="table">
+                            <thead>
+                            <td style="width: 30%;">企业名称:</td>
+                            <td style="font-weight:bold;">{{companyBaseInfo.EnterpriseName}}</td>
+                            </thead>
+                            <tr>
+                                <td>检查时间:</td>
+                                <td>{{reportData[0].checkTime}}</td>
+                            </tr>
+                            <!--<tr>-->
+                            <!--<td>要求完成时间:</td>-->
+                            <!--<td>{{reportData[0].deadLine}}</td>-->
+                            <!--</tr>-->
+                            <tr>
+                                <td>检查人员:</td>
+                                <td>{{reportData[0].checker}}</td>
+                            </tr>
+                            <tr>
+                                <td>部位:</td>
+                                <td>{{reportData[0].part}}</td>
+                            </tr>
+                            <tr>
+                                <td>问题及隐患:</td>
+                                <td>{{reportData[0].problem}}</td>
+                            </tr>
+                            <tr>
+                                <td>整改建议:</td>
+                                <td>{{reportData[0].suggest}}</td>
+                            </tr>
+                            <tr>
+                                <td>备注:</td>
+                                <td>{{reportData[0].memo}}</td>
+                            </tr>
+                            <tr>
+                                <td>现场照片:</td>
+                                <td><img src="assets/images/灭火器失效前.jpg" style="width: 250px;"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div v-show="currentDetailMenu.code == 'improve'"
+                         transition="detail">
+                        <table class="table">
+                            <thead>
+                            <td style="width: 30%;">企业名称:</td>
+                            <td style="font-weight:bold;">{{companyBaseInfo.EnterpriseName}}</td>
+                            </thead>
+                            <tr>
+                                <td>检查时间:</td>
+                                <td>{{improveData[0].checkTime}}</td>
+                            </tr>
+                            <tr>
+                                <td>要求完成时间:</td>
+                                <td>{{improveData[0].deadLine}}</td>
+                            </tr>
+                            <tr>
+                                <td>检查人员:</td>
+                                <td>{{improveData[0].checker}}</td>
+                            </tr>
+                            <tr>
+                                <td>部位:</td>
+                                <td>{{improveData[0].part}}</td>
+                            </tr>
+                            <tr>
+                                <td>问题及隐患:</td>
+                                <td>{{improveData[0].problem}}</td>
+                            </tr>
+                            <tr>
+                                <td>整改建议:</td>
+                                <td>{{improveData[0].suggest}}</td>
+                            </tr>
+                            <tr>
+                                <td>备注:</td>
+                                <td>{{improveData[0].memo}}</td>
+                            </tr>
+                            <tr>
+                                <td>现场照片:</td>
+                                <td><img src="assets/images/锅炉房.jpg" style="width: 250px;"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><img src="assets/images/锅炉房1.jpg" style="width: 250px;"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="sidefooter">
+                    <div class="row text-center" style="padding:10px 0px 0 10px;margin-left:0;margin-right:0">
+                        <div class="col-md-3" v-for="item in detailMenus" style="padding-left:0;padding-right: 10px;">
+                            <a @click='switchDetail(item)'
+                               :class="{'active' : currentDetailMenu == item , 'disabled' : item.disabled}">
+                                <i class="fa {{item.icon || 'fa-arrow-left'}}" style="font-size:22px"></i>
+                                <div>{{item.text}}</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--industry info-->
+            <div class="sidepanel-item detail"
+                 transition="sidepanelitem"
+                 v-show="showDetailIndustry">
+                <div class='sideheader'>
+                    <div class="row">
+                        <div @click="backToList()" class="col-md-1" style="padding-right:0;width:42px !important;">
+                            <a class="btn-back">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-10"
+                             style="font-weight:bold;padding-left:10px;line-height:36px;font-size:18px;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;">
+                            {{industryItem[0][0].value}}
+                        </div>
+                    </div>
+                </div>
+                <div class="sidecontent mCustomScrollbar"
+                     data-mcs-theme="minimal-dark">
+                    <div v-show="industryDetailMenu.code == 'BaseInfo'"
+                         transition="detail">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <td style="width: 45%;">企业名称:</td>
+                                <td style="font-weight:bold;">{{industryItem[0][0].value}}</td>
+                                <td   v-if="industryItem[0][0]">
+                                    <a id="changfangBase" tabindex="" class="btn btn-default btn-xs"
+                                       role="button" data-toggle="popover" data-trigger="click"
+                                       title="" data-content="此厂房没有照片" data-placement="left" data-html="true"
+                                       v-on:click.stop="showChangfangBasePic(industryItem[0],$event),changfangLouyuName=industryItem[0][0].value">
+                                        企业照片
+                                    </a>
+                                </td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <template v-for="item in industryItem[0]">
+                                <tr>
+                                    <td>{{$index+1}}. {{item.text}}</td>
+                                    <td colspan="2">{{item.value}}</td>
+                                </tr>
+                            </template>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div v-show="industryDetailMenu.code == 'ChangfangInfo'" class='discharge'
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:35%">厂房信息</th>
+                                <th>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <template v-for="r in ChangfangInfo">
+                                <tr @click="changfangSelectedItem = (changfangSelectedItem == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}. {{r[1].text}}:</td>
+                                    <td>
+                                        {{r[1].value}}
+                                    </td>
+                                    <td>
+                                        <a id="changfang{{$index}}" tabindex="{{$index}}" class="btn btn-default btn-xs"
+                                           role="button" data-toggle="popover" data-trigger="click"
+                                           title="" data-content="此厂房没有照片" data-placement="left" data-html="true"
+                                           v-on:click.stop="modalInfo.changfangName=r[1].value , showPicItem(modalInfo,$event)">
+                                            厂房照片
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr v-show="changfangSelectedItem == r || industryFeatureInfo.fwmc.trim()==r[1].value.trim()">
+                                    <td colspan="3" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="d in r">
+                                                <td style="border:0;width:40%;text-align:right">{{d.text}}:</td>
+                                                <td style="border:0">{{d.value}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div v-show="industryDetailMenu.code == 'BangongLouInfo'" class='discharge'
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:35%">办公楼信息</th>
+                                <th>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <template v-for="r in BangongLouInfo">
+                                <tr @click="bangonglouSelectedItem = (changfangSelectedItem == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}. {{r[1].text}}:</td>
+                                    <td>
+                                        {{r[1].value}}
+                                    </td>
+                                    <td>
+                                        <a id="BangongLouInfo{{$index}}" tabindex="{{$index}}" class="btn btn-default btn-xs"
+                                           role="button" data-toggle="popover" data-trigger="click"
+                                           title="" data-content="此厂(楼)房没有照片" data-placement="left" data-html="true"
+                                           v-on:click.stop="modalInfo.changfangName=r[1].value , showPicItem(modalInfo,$event)">
+                                            厂房照片
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr v-show="bangonglouSelectedItem == r || industryFeatureInfo.fwmc.trim()==r[1].value.trim()">
+                                    <td colspan="3" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="d in r">
+                                                <td style="border:0;width:40%;text-align:right">{{d.text}}:</td>
+                                                <td style="border:0">{{d.value}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div v-show="industryDetailMenu.code == 'ZulinInfo'" class='discharge'
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:35%">租赁信息</th>
+                                <th>
+                                </th>
+                            </tr>
+                            <template v-for="r in ZulinInfo">
+                                <tr @click="zulinInfoSelectedItem = (zulinInfoSelectedItem == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}. {{r[2].text}}: <B>{{r[2].value}}</B></td>
+                                    <td>
+                                        {{r[4].text}}: <B>{{r[4].value}}</B>
+                                    </td>
+                                </tr>
+                                <tr v-show="zulinInfoSelectedItem == r || industryFeatureInfo.fwmc.trim()==r[1].value.trim()">
+                                    <td colspan="2" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="d in r">
+                                                <td style="border:0;width:40%;text-align:right">{{d.text}}:</td>
+                                                <td style="border:0">{{d.value}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                </div>
+                <div class="sidefooter">
+                    <div class="row text-center" style="padding:10px 0px 0 10px;margin-left:0;margin-right:0">
+                        <div class="col-md-3" v-for="item in industryDetailMenus"
+                             style="padding-left:0;padding-right: 10px;">
+                            <a @click='switchIndustryDetail(item)'
+                               :class="{'active' : industryDetailMenu == item , 'disabled' : item.disabled}">
+                                <i class="fa {{item.icon || 'fa-arrow-left'}}" style="font-size:22px"></i>
+                                <div>{{item.text}}</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--louyu info-->
+            <div class="sidepanel-item detail"
+                 transition="sidepanelitem"
+                 v-show="showDetailLouyu">
+                <div class='sideheader'>
+                    <div class="row">
+                        <div @click="backToList()" class="col-md-1" style="padding-right:0;width:42px !important;">
+                            <a class="btn-back">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-10"
+                             style="font-weight:bold;padding-left:10px;line-height:36px;font-size:18px;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;">
+                            {{louYuFeatureInfo.UNAME}}
+                        </div>
+                    </div>
+                </div>
+                <div class="sidecontent mCustomScrollbar"
+                     data-mcs-theme="minimal-dark">
+                    <div v-show="louYuDetailMenu.code == 'LouYuBaseInfo'"
+                         transition="detail">
+                        <table class="table">
+                            <tr>
+                            <td></td>
+                            <td  align="right" v-if="louYuItem[0]" style="padding-right: 40px">
+                                <a id="louYuFreePic" tabindex="" class="btn btn-default btn-xs"
+                                   role="button" data-toggle="popover" data-trigger="click"
+                                   title="" data-content="此楼宇没有照片" data-placement="left" data-html="true"
+                                   v-on:click.stop="showChangfangBasePic(louYuItem[0],$event),changfangLouyuName=louYuFeatureInfo.UNAME">
+                                企业照片
+                            </a>
+                            </td>
+                            </tr>
+                            <tbody>
+                            <template v-for="item in louYuItem[0]">
+                                <tr>
+                                    <td>{{$index+1}}. {{item.text}}</td>
+                                    <td>{{item.value}}</td>
+                                </tr>
+                            </template>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div v-show="louYuDetailMenu.code == 'LouYuHireInfo'"
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:35%">出租情况</th>
+                                <th colspan="2">{{louYuFeatureInfo.fwmc==undefined?'[请选中建筑物]':('楼号:'+louYuFeatureInfo.fwmc)}}</th>
+                            </tr>
+                            <template v-for="r in louYuHireInfo">
+                                <tr @click="louYuSelectedItem = (louYuSelectedItem == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}. {{r[3].text}}:&nbsp;&nbsp;&nbsp;<b>{{r[3].value}}</b></td>
+
+                                    <td>
+                                        {{r[6].text}}: &nbsp;&nbsp;&nbsp;<b>{{r[6].value}}</b>
+                                    </td>
+                                    <td>
+                                        <a id="louYuChuZu{{$index}}" tabindex="{{$index}}" class="btn btn-default btn-xs"
+                                           role="button" data-toggle="popover" data-trigger="click"
+                                           title="" data-content="此层没有照片" data-placement="left" data-html="true"
+                                           v-on:click.stop="showLouYuPicItem(r,$event)">
+                                            照片
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr v-show="louYuSelectedItem == r">
+                                    <td colspan="3" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="d in r">
+                                                <td style="border:0;width:40%;text-align:right">{{d.text}}:</td>
+                                                <td style="border:0">{{d.value}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div v-show="louYuDetailMenu.code == 'LouYuFreeInfo'" class='discharge'
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:35%">空闲情况</th>
+                                <th>
+                                    <b>{{louYuFeatureInfo.fwmc==undefined?'[请选中建筑物]':('楼号:'+louYuFeatureInfo.fwmc)}}</b>
+                                </th>
+                                <th></th>
+
+                            </tr>
+                            <template v-for="r in louYuFreeInfo">
+                                <tr @click="louYuSelectedItem = (louYuSelectedItem == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}.{{r[3].text}}:&nbsp;&nbsp;&nbsp; <b>{{r[3].value}}</b></td>
+                                    <td>
+                                        {{r[4].text}}:&nbsp;&nbsp;&nbsp;<b>{{r[4].value}}</b>
+                                    </td>
+                                    <td>
+                                        <a id="louYuFreeInfo{{$index}}" tabindex="{{$index}}" class="btn btn-default btn-xs"
+                                           role="button" data-toggle="popover" data-trigger="click"
+                                           title="" data-content="此层没有照片" data-placement="left" data-html="true"
+                                           v-on:click.stop="showLouYuPicItem(r,$event)">
+                                            照片
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr v-show="louYuSelectedItem == r">
+                                    <td colspan="3" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="d in r">
+                                                <td style="border:0;width:40%;text-align:right">{{d.text}}:</td>
+                                                <td style="border:0">{{d.value}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div v-show="louYuDetailMenu.code == 'LouYuSellInfo'" class='discharge'
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:35%">已售情况</th>
+                                <th>
+                                    <b>{{louYuFeatureInfo.fwmc==undefined?'[请选中建筑物]':('楼号:'+louYuFeatureInfo.fwmc)}}</b>
+                                </th>
+                                <th>
+
+                                </th>
+                            </tr>
+                            <template v-for="r in louYuSellInfo">
+                                <tr @click="louYuSelectedItem = (louYuSelectedItem == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}. {{r[3].text}}:&nbsp;&nbsp;&nbsp; <B>{{r[3].value}}</B></td>
+                                    <td>
+                                        {{r[4].text}}: &nbsp;&nbsp;&nbsp; <B>{{r[4].value}}</B>
+                                    </td>
+                                    <td>
+                                        <a id="louYuSellInfo{{$index}}" tabindex="{{$index}}" class="btn btn-default btn-xs"
+                                           role="button" data-toggle="popover" data-trigger="click"
+                                           title="" data-content="此层没有照片" data-placement="left" data-html="true"
+                                           v-on:click.stop="showLouYuPicItem(r,$event)">
+                                            照片
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr v-show="louYuSelectedItem == r">
+                                    <td colspan="3" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="d in r">
+                                                <td style="border:0;width:40%;text-align:right">{{d.text}}:</td>
+                                                <td style="border:0">{{d.value}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                    <div v-show="louYuDetailMenu.code == 'LouYuSelfUseInfo'" class='discharge'
+                         transition="detail">
+                        <table class="table table-hover table-condensed">
+                            <tr>
+                                <th style="width:35%">自用情况</th>
+                                <th>
+                                    <b>{{louYuFeatureInfo.fwmc==undefined?'[请选中建筑物]':('楼号:'+louYuFeatureInfo.fwmc)}}</b>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <template v-for="r in louYuSelfUseInfo">
+                                <tr @click="louYuSelectedItem = (louYuSelectedItem == r ? null : r)"
+                                >
+                                    <td>{{$index+1}}. {{r[3].text}}: &nbsp;&nbsp;&nbsp;<B>{{r[3].value}}</B></td>
+                                    <td>
+                                        {{r[4].text}}: &nbsp;&nbsp;&nbsp;<B>{{r[4].value}}</B>
+                                    </td>
+                                    <td>
+                                        <a id="louYuSelfUseInfo{{$index}}" tabindex="{{$index}}" class="btn btn-default btn-xs"
+                                           role="button" data-toggle="popover" data-trigger="click"
+                                           title="" data-content="此层没有照片" data-placement="left" data-html="true"
+                                           v-on:click.stop="showLouYuPicItem(r,$event)">
+                                            照片
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr v-show="louYuSelectedItem == r">
+                                    <td colspan="3" style="padding:0">
+                                        <table class="table" style="margin:0;background-color:#f7f7f7">
+                                            <tr v-for="d in r">
+                                                <td style="border:0;width:40%;text-align:right">{{d.text}}:</td>
+                                                <td style="border:0">{{d.value}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </template>
+                        </table>
+                    </div>
+                </div>
+                <div class="sidefooter">
+                    <div class="row text-center" style="padding:10px 0px 0 10px;margin-left:0;margin-right:0">
+                        <div class="col-md-3" v-for="item in louYuDetailMenus"
+                             style="padding-left:0;padding-right: 10px;">
+                            <a @click='switchLouYuDetail(item)'
+                               :class="{'active' : louYuDetailMenu == item , 'disabled' : item.disabled}">
+                                <i class="fa {{item.icon || 'fa-arrow-left'}}" style="font-size:22px"></i>
+                                <div>{{item.text}}</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- discharge chart Modal -->
+    <div class="modal fade" id="dischargeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="dischargeChart" style="height:450px;width:100%">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 厂房图片 Modal -->
+    <div class="modal fade" id="changfangPicModal" tabindex="-1" role="dialog" aria-labelledby="changfangModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">{{changfangPic.folderName}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li v-for="a in changfangPic.files" data-target="#carousel-example-generic"
+                                data-slide-to="{{$index}}" :class.once="$index==0?'active':''">
+                            </li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <!--轮播图在创建完dom之后就开始自动切换图片,此时的图片还没有src值,故导致在尝试轮播时失败,应在js中停止轮播-->
+                        <div class="carousel-inner text-center" role="listbox">
+                            <div v-for="it in changfangPic.files" class="item" :class.once="$index==0?'active':''">
+                                <a :href="'../onemappage/assets/pic/'+it" target="_blank" title="查看原图">
+                                    <img :src="'../onemappage/assets/pic/'+it" alt="img" class="center-block">
+                                </a>
+                                <div class="carousel-caption">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                           data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                           data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 楼宇图片 Modal -->
+    <div class="modal fade" id="louYuPicModal" tabindex="-1" role="dialog" aria-labelledby="louYuModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">{{louYuPic.folderName+'号楼'}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{'第&nbsp;'+louYuPic.floor+'&nbsp;层'}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <!--<ol class="carousel-indicators">-->
+                        <!--<li v-for="a louYuPic.files" data-target="#carousel-example-generic2"-->
+                        <!--data-slide-to="{{$index}}" :class.once="$index==0?'active':''">-->
+                        <!--</li>-->
+                        <!--</ol>-->
+                        <!-- Wrapper for slides -->
+                        <!--轮播图在创建完dom之后就开始自动切换图片,此时的图片还没有src值,故导致在尝试轮播时失败,应在js中停止轮播-->
+                        <div class="carousel-inner text-center" role="listbox">
+                            <div v-for="it in louYuPic.files" class="item" :class.once="$index==0?'active':''">
+                                <a :href="'../onemappage/assets/pic/'+it" target="_blank" title="查看原图">
+                                    <img :src="'../onemappage/assets/pic/'+it" alt="img" class="center-block">
+                                </a>
+                                <div class="carousel-caption">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--&lt;!&ndash; Controls &ndash;&gt;-->
+                        <!--<a class="left carousel-control" href="#carousel-example-generic2" role="button"-->
+                        <!--data-slide="prev">-->
+                        <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                        <!--<span class="sr-only">Previous</span>-->
+                        <!--</a>-->
+                        <!--<a class="right carousel-control" href="#carousel-example-generic2" role="button"-->
+                        <!--data-slide="next">-->
+                        <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                        <!--<span class="sr-only">Next</span>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--厂房及楼宇基本图片-->
+    <div class="modal fade" id="changfangLouYuPicModal" tabindex="-1" role="dialog" aria-labelledby="changfangModalLabe2">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">{{changfangLouyuName}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li v-for="a in changfangPic.files" data-target="#carousel-example-generic3"
+                                data-slide-to="{{$index}}" :class.once="$index==0?'active':''">
+                            </li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <!--轮播图在创建完dom之后就开始自动切换图片,此时的图片还没有src值,故导致在尝试轮播时失败,应在js中停止轮播-->
+                        <div class="carousel-inner text-center" role="listbox">
+                            <div v-for="it in changfangPic.files" class="item" :class.once="$index==0?'active':''">
+                                <a :href="'../onemappage/assets/pic/'+it" target="_blank" title="查看原图">
+                                    <img :src="'../onemappage/assets/pic/'+it" alt="img" class="center-block">
+                                </a>
+                                <div class="carousel-caption">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic3" role="button"
+                           data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic3" role="button"
+                           data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dijitHidden" v-cloak>
+    <!-- dialog that gets its content via ajax, uses loading message -->
+    <div data-dojo-type="dijit/Dialog"
+         style="width:300px;height:300px;background:#Fff;"
+         data-modalhref="scripts/views/modal1.html"
+         data-dojo-props="title:'事件地点定位',href1:'scripts/views/modal1.html',loadingMessage:'Loading dialog content...'"
+         id="modal1"></div>
+
+    <div data-dojo-type="dijit/Dialog"
+         style="width:400px;height:300px;background:#Fff"
+         data-modalhref="scripts/views/modal2.html"
+         data-dojo-props="title:'范围确定',href1:'scripts/views/modal2.html',loadingMessage:'Loading dialog content...'"
+         id="modal2"></div>
+
+    <div data-dojo-type="dijit/Dialog"
+         style="width:400px;height:400px;background:#Fff"
+         data-modalhref="scripts/views/modal3.html"
+         data-dojo-props="title:'公共影响因素分析',href1:'scripts/views/modal3.html',loadingMessage:'Loading dialog content...'"
+         id="modal3"></div>
+
+    <div data-dojo-type="dijit/Dialog"
+         style="width:400px;height:400px;background:#Fff"
+         data-modalhref="scripts/views/modal4.html"
+         data-dojo-props="title:'社会资源分析',href1:'scripts/views/modal4.html',loadingMessage:'Loading dialog content...'"
+         id="modal4"></div>
+
+    <div data-dojo-type="dijit/Dialog"
+         style="width:400px;height:400px;background:#Fff"
+         data-modalhref="scripts/views/modal5.html"
+         data-dojo-props="title:'救援路径分析',href1:'scripts/views/modal5.html',loadingMessage:'Loading dialog content...'"
+         id="modal5"></div>
+
+    <div data-dojo-type="dijit/Dialog"
+         data-modalhref="scripts/views/modal6.html"
+         style="width:400px;height:400px;background:#Fff"
+         data-dojo-props="title:'态势标绘',href1:'scripts/views/modal6.html',loadingMessage:'Loading dialog content...'"
+         id="modal6"></div>
+    <div data-dojo-type="dijit/Dialog"
+         data-modalhref="scripts/views/modal7.html"
+         style="width:380px;height:410px;background:#Fff;"
+         data-dojo-props="title:'裸露地块',href1:'scripts/views/modal7.html',loadingMessage:'Loading dialog content...'"
+         id="modal7"></div>
+    <div data-dojo-type="dijit/Dialog"
+         data-modalhref="scripts/views/modal8.html"
+         style="width:380px;height:410px;background:#Fff;"
+         data-dojo-props="title:'工业厂房及办公楼',href1:'scripts/views/modal8.html',loadingMessage:'Loading dialog content...'"
+         id="modal8"></div>
+</div>
+<script>
+    var dojoConfig = {
+        parseOnLoad: true,
+        //配置多个自定义modules的方法
+        packages: [{
+            "name": "myModules",
+            "location": location.pathname.replace(/\/[^/]+$/, "") + "/scripts/modules"
+        }, {
+            "name": 'bism',
+            "location": location.pathname.replace(/\/[^/]+$/, "") + "/scripts/modules"
+        }, {
+            "name": 'myAppMeasure',
+            "location": location.pathname.replace(/\/[^/]+$/, "") + "/scripts/modules/myAppMeasure"
+        }]
+    };
+</script>
+<script type="text/javascript" src="assets/scripts/lodash.js"></script>
+<script type="text/javascript" src="assets/scripts/jscolor.js"></script>
+<script type="text/javascript" src="assets/scripts/vue.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.1.13/vue-resource.min.js"></script>-->
+<script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/scripts/owl.carousel.min.js"></script>
+<script type="text/javascript" src="assets/scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="assets/scripts/bootstrap-slider.js"></script>
+<script type="text/javascript" src="assets/scripts/bootstrap-switch.js"></script>
+<script type="text/javascript" src="assets/scripts/echarts.common.min.js"></script>
+
+<script type="text/javascript" src="scripts/golbal.js"></script>
+<!--正式发布用compact版-->
+<script type="text/javascript" src="http://60.29.110.104/arcgis_js_api/library/3.15/3.15compact/init.js"></script>
+<!--<script type="text/javascript" src="http://60.29.110.104/arcgis_js_api/library/3.15/3.15/init.js"></script>-->
+<script type="text/javascript" src="scripts/modules/heatmap.js"></script>
+
+<script type="text/javascript" src="../../js/tjx.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.io.js"></script>
+<script type="text/javascript" src="../../js/tjx.data.safetysearch.js"></script>
+
+<script type="text/javascript" src="scripts/vue/main.js"></script>
+
+<!--
+<script type="text/javascript" src="scripts/vue/side.js"></script>
+<script type="text/javascript" src="scripts/vue/bottomBar.js"></script>
+-->
+
+
+<script type="text/javascript" src="scripts/vue/modal1.js"></script>
+<script type="text/javascript" src="scripts/vue/modal2.js"></script>
+<script type="text/javascript" src="scripts/vue/modal3.js"></script>
+<script type="text/javascript" src="scripts/vue/modal4.js"></script>
+<script type="text/javascript" src="scripts/vue/modal5.js"></script>
+<script type="text/javascript" src="scripts/vue/modal6.js"></script>
+<script type="text/javascript" src="scripts/vue/modal7.js"></script>
+<script type="text/javascript" src="scripts/vue/modal8.js"></script>
+
+<script src="scripts/init.js"></script>
+
+<script type="text/javascript" src="scripts/requireDojo.js"></script>
+<script type="text/javascript" src="assets/scripts/InfoTip.js"></script>
+<script type="text/javascript" src="assets/scripts/pdfobject.js"></script>
+</body>

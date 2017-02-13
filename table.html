@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- third-party stylesheets -->
+  <!--  <link href="css/glb/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css"/>
+    <link href="css/glb/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>-->
+
+    <!--<link rel="stylesheet" type="text/css" href="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/glb/datatables/button/css/buttons.bootstrap.min.css">-->
+
+    <!-- our stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/tjx.table.css"/>
+    <!-- third-party javascript -->
+<!--    <script type="text/javascript" src="css/glb/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+    <script type="text/javascript" src="css/glb/bootstrap-modal/js/bootstrap-modal.js"></script>-->
+
+   <!-- <script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript" language="javascript" src="css/glb/datatables/button/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" language="javascript" src="css/glb/datatables/button/js/buttons.bootstrap.min.js">
+    </script>
+
+    <script type="text/javascript" src="css/glb/datatables/button/js/jszip.min.js"></script>
+    <script type="text/javascript" src="css/glb/datatables/button/js/pdfmake.min.js"></script>
+    <script type="text/javascript" src="css/glb/datatables/button/js/vfs_fonts.js"></script>
+
+    <script type="text/javascript" language="javascript" src=" css/glb/datatables/button/js/buttons.html5.min.js">    </script>
+    <script type="text/javascript" language="javascript" src=" css/glb/datatables/button/js/buttons.print.min.js">  </script>
+    <script type="text/javascript" language="javascript" src=" css/glb/datatables/button/js/buttons.colVis.min.js ">  </script>-->
+
+</head>
+<body>
+<div class="portlet box blue-madison">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-gift"></i>
+
+        </div>
+        <div class="tools">
+
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div class="table-toolbar" style="margin-bottom: 2px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="btn-group">
+                       <!-- <button id="sample_editable_1_new" class="btn green">
+                            Add New <i class="fa fa-plus"></i>
+                        </button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%;">
+            <table class="table table-striped table-bordered   dt-responsive" id="tjx_table1">
+
+            </table>
+
+        </div>
+
+    </div>
+    <div id="modalcontainer" class="portlet-body">
+      <!--  <div id="ajax-modal" class="modal  fade modal-scroll" tabindex="-1" data-replace="true">
+        </div>-->
+    </div>
+</div>
+
+<!-- our javascript -->
+<!--<script type="text/javascript" src="js/tjx.data.table.js"></script>
+<script type="text/javascript" src="js/tjx.table.js"></script>-->
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.table.initModule( jQuery('.portlet') );
+            });
+</script>
+
+</body>
+</html>

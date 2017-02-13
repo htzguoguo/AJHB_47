@@ -1,0 +1,115 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TJX.AJHB.MDA.Infrastructure
+</name>
+</assembly>
+<members>
+<member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase.#ctor">
+	<summary>
+ Default Constructor.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase.#ctor(System.String)">
+	<summary>
+ Overloaded constructor.
+ </summary>
+	<param name="key">
+ represents the primary identifier value for the class.
+ </param>
+	<remarks></remarks>
+</member><member name="P:TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase.Key">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase.Equals(System.Object)">
+	<summary>
+ Determines whether the specified entity is equal to the current instance.
+ </summary>
+	<param name="obj">that will be compared to the current instance.</param>
+	<returns> True if the passed in entity is equal to the current instance.</returns>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase.op_Equality(TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase,TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase)">
+	<summary>
+ Operator overload for determining equality.
+ </summary>
+	<param name="base1">
+ The first instance of an 
+ </param>
+	<param name="base2">
+ The second instance of an
+ </param>
+	<returns>True if equal.</returns>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase.op_Inequality(TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase,TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase)">
+	<summary>
+ Operator overload for determining inequality.
+ </summary>
+	<param name="base1"></param>
+	<param name="base2"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.EntityBase.GetHashCode">
+	<summary>
+ Serves as a hash function for this type.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:TJX.AJHB.MDA.Infrastructure.DomainBase.IAggregateRoot">
+	<summary>
+ This is a marker interface that indicates that an Entity is an Aggredate Root.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase.EqualOperator(TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase,TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase)">
+	<summary>
+ Helper function for implementing overloaded equality operator.
+ </summary>
+	<param name="left">Left-hand side object.</param>
+	<param name="right">Right-hand side object.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase.NotEqualOperator(TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase,TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase)">
+	<summary>
+ Helper function for implementing overloaded inequality operator.
+ </summary>
+	<param name="left">Left-hand side object.</param>
+	<param name="right">Right-hand side object.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase.GetAtomicValues">
+	<summary>
+ To be overridden in inheriting clesses for providing a collection of atomic values of this Value Object.
+ </summary>
+	<returns> Collection of atomic values.</returns>
+	<remarks></remarks>
+</member><member name="M:TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase.Equals(System.Object)">
+	<summary>
+ Compares two Value Objects according to atomic values returned by <see cref="M:TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase.GetAtomicValues"/>.
+ </summary>
+	<param name="obj">Object to compare to.</param>
+	<returns>True if objects are considered equal.</returns>
+	<remarks></remarks>
+</member><member name="T:TJX.AJHB.MDA.Infrastructure.DomainBase.ValueBase">
+	<summary>
+ Base Class for value object.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:TJX.AJHB.MDA.Infrastructure.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:TJX.AJHB.MDA.Infrastructure.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:TJX.AJHB.MDA.Infrastructure.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

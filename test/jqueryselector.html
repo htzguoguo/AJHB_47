@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jq/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="father">
+    <div id="first" tjx-data-field="address">I am first</div>
+    <div id="second" tjx-data-field="num" class="red">I am second</div>
+    <div id="third" tjx-data-field="id" style="display:none">
+        <div class="red">
+            I am third
+        </div>
+        <div>
+
+        </div>
+      </div>
+</div>
+<p class="red">I am forth</p>
+<h4></h4>
+
+<script>
+
+   /* #id：根据对象的id属性获取对象。*/
+    console.log($('#first').html());
+
+  /* element：匹配某一HTML标签的所有对象*/
+    console.log( $('div').length );
+
+   /*.class：根据对象的class属性获取对象*/
+    console.log( $( '.red' ).length );
+
+   /**：获取所有的对象*/
+    console.log( $( '*' ).length );
+
+  /* selector1, selector2, selectorN：获取多个选择符的合集，不剔出重复项。*/
+  console.log( $( '#father, .red, p' ).each( function () {
+      console.log($(this).html());
+  } ) );
+
+  /* 层级选择符：
+   ancestor descendant：这个选择符就是空格，表示先找到第一个选择符的所有对象，然后在他的子孙节点中找到所有符合第二个选择符的对象。*/
+    console.log( $( '#father .red' ).length );
+
+   /*parent > child：这个选择符就是大于号，表示先找到第一个选择符的所有对象，然后在他的子节点（不能是孙节点）中找到所有符合第二个选择符的对象。*/
+   console.log( $( '#father>.red' ).length );
+
+   /*prev + next：这个选择符就是加号，表示先找到第一个选择符的所有对象，然后找和他同级的紧跟着的下一个节点同时符合第二个选择符的对象。*/
+    console.log( $( '#father+.blue' ).html() );
+
+   /*prev ~ siblings：这个选择符就是~号，表示先找到第一个选择符的所有对象，然后找和他同级的以后所有节点里面同时符合第二个选择符的对象。*/
+    console.log( $( '#first~.red' ).html() );
+
+  /* :first：匹配多个对象中的第一个对象
+   :last：匹配多个对象中的最后一个对象*/
+    console.log( $( 'div:first' ).html() );
+    console.log( $( '.red:last' ).html() );
+
+   /*:not(selector)：匹配去除了not后面选择符中内容的项*/
+    console.log( $( '#father div:not(.red)' ).length );
+   console.log( $( '#father div' ).length );
+
+  /* :even：匹配所有对象中的第偶数个
+   :odd：匹配所有对象中的第奇数个*/
+    console.log( $( '#father div:not(.red):even' ).html() );
+   console.log( $( '#father div:not(.red):odd' ).html() );
+
+   /*:eq(index)：匹配某一下表的单独某元素*/
+    console.log( $( '#father div:not(.red):eq(0)' ).html() );
+
+  /* :gt(index)：匹配大于某一下标的所有元素
+   :lt(index)：匹配小于某一下标的所有元素*/
+    console.log( $( '#father div:gt(2)' ).length );
+    console.log( $( '#father div:lt(1)' ).length );
+
+   /*:header：匹配所有的header元素，例如h1,h2,h3,h4,h5,h6*/
+   console.log( $( ':header' ).length );
+
+   /*:animated：匹配所有有动画效果的元素*/
+    function animatedIt() {
+        $( '#second' ).slideToggle( 'slow', animatedIt );
+    }
+    animatedIt();
+    console.log( $( ':animated' ).length );
+
+   /*:contains(text)：匹配内部拥有该文本元素的对象，包含间接有用的情况*/
+    console.log( $( '#father div:contains(third)' ).html() );
+
+   /*:empty：匹配所有没有子元素的对象*/
+    console.log( $( ':header:empty' ).length );
+
+   /*:has(selector)：匹配所有至少含有一个子选择符的对象*/
+    console.log( $( '#father div:has(.red)' ).length );
+   console.log( $( '#father div.red' ).length );
+
+  /* :parent：匹配所有的父对象，父对象包含那些只含有文本的对象*/
+    console.log( $( 'div:parent' ).length );
+
+  /* :hidden：匹配所有隐藏对象，或者input中的hidden类型
+   :visible：匹配所有可见的对象*/
+    console.log( $( 'div:hidden' ).length );
+    console.log( $( 'div:visible' ).length );
+
+   /*属性过滤符：
+   [attribute]：匹配拥有某一属性的所有对象
+   [attribute=value]：匹配拥有某一属性和值的对象
+   [attribute!=value]：匹配拥有某一属性，且不是某一值的对象
+   [attribute^=value]：匹配拥有某一属性，且以某一值开头的对象
+   [attribute$=value]：匹配拥有某一属性，且以某一值结尾的对象
+   [attribute*=value]：匹配拥有某一属性，且包含某一值的对象*/
+    console.log( $( 'div[tjx-data-field]' ).length );
+    console.log( $( 'div[tjx-data-field=id]' ).length );
+    console.log( $( 'div[id!=first]' ).length );
+    console.log( $( 'div[id^=f]' ).length );
+    console.log( $( 'div[id$=d]' ).length );
+    console.log( $( 'div[id*=t]' ).length );
+
+  /* [selector1][selector2][selectorN]：匹配同时符合多个属性选择符的对象*/
+    console.log( $( 'div[id*=t][class^=r]' ).length );
+
+   /*子过滤符：
+   :nth-child(index/even/odd/equation)：匹配子元素中的某一下标/偶数/奇数/等式的对象，
+   :eq(index)只能匹配某单一对象的子元素特征，而这个方法可以匹配多个对象的某一子元素共同特征*/
+    console.log( $( 'div:nth-child(even)' ).length );
+
+  /* :first-child：匹配第一个子元素
+    :last-child：匹配最后一个子元素
+   这两个匹配符也可以对多个父对象的所有子元素进行匹配操作*/
+    console.log( $( '#father div:first-child' ).html() );
+    console.log( $( '#father div:last-child' ).html() );
+
+   /*:only-child：如果一个父元素只有一个子元素，就匹配这个子元素*/
+    console.log( $( '#father div:only-child' ).length );
+</script>
+</body>
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+   <!-- <link rel="stylesheet" type="text/css" href="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>-->
+</head>
+<body>
+<div id="safetydetail" class="row">
+    <div class="col-md-12">
+        <div class="tabbable tabbable-custom tabbable-noborder">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#overview_2" data-toggle="tab">
+                        危险化学品</a>
+                </li>
+                <li >
+                    <a href="#tab_1" data-toggle="tab">
+                        基础信息 </a>
+                </li>
+                <li >
+                    <a href="#overview_1" data-toggle="tab">
+                        安全设施 </a>
+                </li>
+                <li>
+                    <a href="#overview_3" data-toggle="tab">
+                        特种设备 </a>
+                </li>
+                <li>
+                    <a href="#overview_4" data-toggle="tab">
+                        危险辨识 </a>
+                </li>
+                <li>
+                    <a href="#overview_5" data-toggle="tab">
+                        设备检测 </a>
+                </li>
+                <li>
+                    <a href="#overview_6" data-toggle="tab">
+                        人员持证 </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="overview_2">
+                    <div class="col-md-12" tjx-data-source="SecurityInfoService/chemical/">
+                        <!-- Begin: life time stats -->
+                        <div class="portlet light">
+                            <div  class="portlet-body ">
+                                <div class="note note-info">
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            企业名称:
+                                        </div>
+                                        <div tjx-data-field="EnterpriseName" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            中文名称:
+                                        </div>
+                                        <div tjx-data-field="ChemicalName" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            CAS编号:
+                                        </div>
+                                        <div tjx-data-field="ChemicalNum" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            用途:
+                                        </div>
+                                        <div tjx-data-field="UsageName" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            危化品运输编号(IMDG):
+                                        </div>
+                                        <div tjx-data-field="ChemicalIMDGNum" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            危化品目录编号:
+                                        </div>
+                                        <div tjx-data-field="ChemicalCatalogNum" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            日常用量:
+                                        </div>
+                                        <div tjx-data-field="DailyDosage" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            最大储存量:
+                                        </div>
+                                        <div tjx-data-field="MaximumStockingCapacity" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End: life time stats -->
+                    </div>
+                </div>
+                <div class="tab-pane " id="tab_1">
+                    <!-- BEGIN FILTER -->
+                    <div class="col-md-12">
+                        <!-- Begin: life time stats -->
+                        <div class="portlet light">
+                            <div id="basicinfo" class="portlet-body ">
+                            <!--    <div class="note note-info">
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            企业名称:
+                                        </div>
+                                        <div tjx-data-field="EnterpriseName" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            生产/经营地址:
+                                        </div>
+                                        <div tjx-data-field="BusinessAddress" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            年度营业额:
+                                        </div>
+                                        <div tjx-data-field="AnnualRevenue" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            主要产品:
+                                        </div>
+                                        <div tjx-data-field="PrimeProducts" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            生产规模:
+                                        </div>
+                                        <div tjx-data-field="ProductScale" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            主要原辅料及用量:
+                                        </div>
+                                        <div tjx-data-field="MaterialDosage" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                           <span class="label label-warning">
+									  <i class="icon-user"> </i> 企业法人: </span>
+
+
+                                        </div>
+                                        <div tjx-data-field="LegalRepresentativeName" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-phone-square"> </i> 联系方式:
+
+                                        </div>
+                                        <div tjx-data-field="LegalRepresentativeTelephone" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                           <span class="label label-danger">
+									  <i class="icon-user"> </i> 主要负责人: </span>
+
+
+                                        </div>
+                                        <div tjx-data-field="PrincipalName" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-phone-square"> </i> 联系方式:
+
+                                        </div>
+                                        <div tjx-data-field="PrincipalTelephone" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            <i class="icon-user"> </i> 分管安全负责人:
+                                        </div>
+                                        <div tjx-data-field="SafetyDirectorName" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-phone-square"> </i> 联系方式:
+                                        </div>
+                                        <div tjx-data-field="SafetyDirectorTelephone" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+
+                                            <i class="icon-user"> </i> 安全管理人员:
+                                        </div>
+                                        <div tjx-data-field="SecurityAdministratorName" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-phone-square"> </i> 联系方式:
+                                        </div>
+                                        <div tjx-data-field="SecurityAdministratorTelephone" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-envelope-o"> </i> 电子邮箱:
+
+                                        </div>
+                                        <div tjx-data-field="Email" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-fax"> </i> 传真:
+                                        </div>
+                                        <div tjx-data-field="Fax" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="note note-info">
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            企业安全管理机构:
+                                        </div>
+                                        <div tjx-data-field="SafetyDepartment" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            安全管理体系:
+                                        </div>
+                                        <div tjx-data-field="OHSM" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-user">  </i> 员工人数:
+
+                                        </div>
+                                        <div tjx-data-field="EmployeeNumber" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+
+                                            <i class="fa fa-tag"> </i> 特种作业人数:
+                                        </div>
+                                        <div tjx-data-field="SpecialOperationNumber" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            <i class="fa fa-warning"> </i> 职业危险岗位人数:
+                                        </div>
+                                        <div tjx-data-field="DangerousPositionNumber" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            工伤事故统计:
+                                        </div>
+                                        <div tjx-data-field="IndustrialAccident" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            重伤事故:
+                                        </div>
+                                        <div tjx-data-field="SeriousAccident" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            主要建构筑物:
+                                        </div>
+                                        <div tjx-data-field="Building" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            建筑面积:
+                                        </div>
+                                        <div tjx-data-field="LandArea" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="note note-info">
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            <strong> 是否进行以下外部检测:</strong>
+                                        </div>
+                                        <div  class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            <strong> 是否进行以下外部培训:</strong>
+                                        </div>
+                                        <div  class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            1、消防验收
+                                        </div>
+                                        <div tjx-data-field="FireControlAcceptance" tjx-file-field="FireControlAcceptance" class="col-md-4 ">
+
+                                        </div>
+
+                                        <div class="col-md-2 name">
+                                            1、主要负责人培训
+                                        </div>
+                                        <div tjx-data-field="HeadTraining" tjx-file-field="HeadTraining" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            2、防雷检测
+                                        </div>
+                                        <div tjx-data-field="LightningDetection" tjx-file-field="LightningDetection" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            2、管理人员培训
+                                        </div>
+                                        <div tjx-data-field="ManagementTraining" tjx-file-field="ManagementTraining" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            3、特种设备检测
+                                        </div>
+                                        <div tjx-data-field="SpecialEquipmentInspection" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+                                            3、作业人员培训
+                                        </div>
+                                        <div tjx-data-field="OperatingPersonnelTraining" tjx-file-field="OperatingPersonnelTraining" class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            4、职业危害检测
+                                        </div>
+                                        <div tjx-data-field="DetectionOfOccupationalHazard" tjx-file-field="DetectionOfOccupationalHazard" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+
+                                        </div>
+                                        <div class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            5、安全验收评价
+                                        </div>
+                                        <div tjx-data-field="SafetyAcceptance" tjx-file-field="SafetyAcceptance" class="col-md-4 ">
+
+                                        </div>
+                                        <div class="col-md-2 name">
+
+                                        </div>
+                                        <div class="col-md-4 ">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="note note-info">
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            滨海新区自查自报系统
+                                        </div>
+                                        <div tjx-data-field="SelfExamination" class="col-md-4 ">
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            安全文化示范企业称号
+                                        </div>
+                                        <div tjx-data-field="SafetyCulture" tjx-file-field="SafetyCulture" class="col-md-4 ">
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            应急预案备案情况
+                                        </div>
+                                        <div tjx-data-field="EmergencyPlan" tjx-file-field="EmergencyPlan" class="col-md-4 ">
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            安全生产工作会议、教育培训
+                                        </div>
+                                        <div tjx-data-field="SafetyProductionTraining" class="col-md-4 ">
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            向安委办报送工作列表和文件情况
+                                        </div>
+                                        <div tjx-data-field="FileSubmit" class="col-md-4 ">
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row static-info">
+                                        <div class="col-md-2 name">
+                                            重大安全生产隐患
+                                        </div>
+                                        <div tjx-data-field="SafetyHazard" class="col-md-4 ">
+
+                                        </div>
+
+                                    </div>
+                                </div>-->
+                                <table class="table table-bordered" style="text-align: left;">
+                                    <tbody>
+                                    <tr>
+                                        <td>企业名称</td>
+                                        <td colspan="5" tjx-data-field="EnterpriseName"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>生产/经营地址</td>
+                                        <td colspan="5" tjx-data-field="BusinessAddress"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>主要产品及规模</td>
+                                        <td colspan="2" tjx-data-field="ProductScale"></td>
+                                        <td>主要原辅料及用量</td>
+                                        <td colspan="2" tjx-data-field="MaterialDosage"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 16.5%;">主要负责人</td>
+                                        <td style="width: 16.5%;" tjx-data-field="PrincipalName"></td>
+                                        <td  style="width: 16.5%; vertical-align: middle;" rowspan="3">电话</td>
+                                        <td style="width: 16.5%;" tjx-data-field="PrincipalTelephone"></td>
+                                        <td style="width: 16.5%; vertical-align: middle;" rowspan="3" >手机</td>
+                                        <td style="width: 16.5%;" tjx-data-field="PrincipalCellPhone"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>分管安全负责人</td>
+                                        <td tjx-data-field="SafetyDirectorName"></td>
+                                        <td tjx-data-field="SafetyDirectorTelephone"></td>
+                                        <td tjx-data-field="SafetyDirectorCellPhone"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>安全管理人员</td>
+                                        <td tjx-data-field="SecurityAdministratorName"></td>
+                                        <td tjx-data-field="SecurityAdministratorTelephone"></td>
+                                        <td tjx-data-field="SecurityAdministratorCellPhone"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>电子邮箱</td>
+                                        <td colspan="2" tjx-data-field="Email"></td>
+                                        <td>传真</td>
+                                        <td colspan="2" tjx-data-field="Fax"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>企业安全管理</td>
+                                        <td colspan="2" tjx-data-field="SafetyDepartment"></td>
+                                        <td>安全管理体系情况</td>
+                                        <td colspan="2" tjx-data-field="OHSM">
+                                            <!-- <div class="radio">
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios1" id="optionsRadios1"
+                                                            value="option1">OHSM18000
+                                                 </label>
+                                             </div>
+                                             <div class="radio">安全生产标准（
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios1" id="optionsRadios2"
+                                                            value="option2">三级
+                                                 </label>
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios1" id="optionsRadios3"
+                                                            value="option2">二级
+                                                 </label>
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios1" id="optionsRadios4"
+                                                            value="option2" checked>一级
+                                                 </label>）
+                                             </div>-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>员工人数</td>
+                                        <td tjx-data-field="EmployeeNumber" > </td>
+                                        <td>特种作业人数</td>
+                                        <td tjx-data-field="SpecialOperationNumber"></td>
+                                        <td>职业危害岗位人数</td>
+                                        <td tjx-data-field="DangerousPositionNumber"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>工伤事故统计</td>
+                                        <td colspan="2" tjx-data-field="IndustrialAccident">
+                                            <!--  <div class="radio">
+                                                  <label>
+                                                      <input type="radio" name="optionsRadios2" id="optionsRadios5"
+                                                             value="option1">死亡1人以上（含1人）
+                                                  </label>
+                                              </div>-->
+                                        </td>
+                                        <td colspan="2">
+                                            重伤事故
+                                            <!--<div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios2" id="optionsRadios6"
+                                                           value="option1">重伤事故
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="optionsRadios2" id="optionsRadios7"
+                                                           value="option1" checked>无
+                                                </label>
+                                            </div>-->
+                                        </td>
+                                        <td tjx-data-field="SeriousAccident">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>主要建构筑物</td>
+                                        <td colspan="3" tjx-data-field="Building"></td>
+                                        <td>占地面积</td>
+                                        <td tjx-data-field="LandArea"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="5" style=" vertical-align: middle;">
+                                            是否进行以下外部检测：
+                                        </td>
+                                        <td>
+                                            1.消防验收
+                                        </td>
+                                        <td tjx-data-field="FireControlAcceptance" tjx-file-field="FireControlAcceptance">
+
+                                        </td>
+                                        <td rowspan="5" style=" vertical-align: middle;">
+                                            是否进行以下外部培训：
+                                        </td>
+                                        <td>
+                                            1.安全主要负责人培训
+                                        </td>
+                                        <td tjx-data-field="HeadTraining" tjx-file-field="HeadTraining">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2.防雷检测
+                                        </td>
+                                        <td  tjx-data-field="LightningDetection" tjx-file-field="LightningDetection">
+
+                                        </td>
+                                        <td>
+                                            2.安全管理人员培训
+                                        </td>
+                                        <td tjx-data-field="ManagementTraining" tjx-file-field="ManagementTraining">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3.特种设备检测
+                                        </td>
+                                        <td  tjx-data-field="SpecialEquipmentInspection">
+
+                                        </td>
+                                        <td>
+                                            3.特种作业人员培训
+                                        </td>
+                                        <td tjx-data-field="OperatingPersonnelTraining" tjx-file-field="OperatingPersonnelTraining">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            4.职业危害检测及评价
+                                        </td>
+                                        <td tjx-data-field="DetectionOfOccupationalHazard" tjx-file-field="DetectionOfOccupationalHazard">
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            5.安全验收评价
+                                        </td>
+                                        <td tjx-data-field="SafetyAcceptance" tjx-file-field="SafetyAcceptance">
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">滨海新区自查自报系统</td>
+                                        <td colspan="3" tjx-data-field="SelfExamination">
+                                            <!--   <div class="radio">
+                                                   <label>
+                                                       <input type="radio" name="optionsRadios11" id="optionsRadios24"
+                                                              value="option1">未登录
+                                                   </label>
+                                               </div>-->
+                                        </td>
+                                        <!--    <td>
+                                              &lt;!&ndash;  <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadios11" id="optionsRadios25"
+                                                               value="option1">偶尔登录
+                                                    </label>
+                                                </div>&ndash;&gt;
+                                            </td>
+                                            <td>
+                                              &lt;!&ndash;  <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadios11" id="optionsRadios26"
+                                                               value="option1" checked>按照要求进行登录上传
+                                                    </label>
+                                                </div>&ndash;&gt;
+                                            </td>-->
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">安全文化示范企业称号</td>
+                                        <td tjx-data-field="SafetyCulture" tjx-file-field="SafetyCulture">
+                                            <!-- <div class="radio">
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios12" id="optionsRadios27"
+                                                            value="option1">无
+                                                 </label>
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios12" id="optionsRadios28"
+                                                            value="option1">有
+                                                 </label>
+                                             </div>-->
+                                        </td>
+                                        <td>应急预案备案情况</td>
+                                        <td tjx-data-field="EmergencyPlan" tjx-file-field="EmergencyPlan">
+                                            <!--  <div class="radio">
+                                                  <label>
+                                                      <input type="radio" name="optionsRadios13" id="optionsRadios29"
+                                                             value="option1" checked>无
+                                                  </label>
+                                                  <label>
+                                                      <input type="radio" name="optionsRadios13" id="optionsRadios30"
+                                                             value="option1">有
+                                                  </label>
+                                              </div>-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">安全生产工作会议，教育培训</td>
+                                        <td colspan="3" tjx-data-field="SafetyProductionTraining">
+                                            <!--   <div class="radio">
+                                                   <label>
+                                                       <input type="radio" name="optionsRadios14" id="optionsRadios31"
+                                                              value="option1">从未参与
+                                                   </label>
+                                               </div>-->
+                                        </td>
+                                        <!-- <td>
+                                             <div class="radio">
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios14" id="optionsRadios32"
+                                                            value="option1">偶尔参与
+                                                 </label>
+                                             </div>
+                                         </td>
+                                         <td>
+                                             <div class="radio">
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios14" id="optionsRadios33"
+                                                            value="option1" checked>积极参与
+                                                 </label>
+                                             </div>
+                                         </td>-->
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">向安委办报送工作列表和文件情况</td>
+                                        <td colspan="3" tjx-data-field="FileSubmit">
+                                            <!--  <div class="radio">
+                                                  <label>
+                                                      <input type="radio" name="optionsRadios15" id="optionsRadios34"
+                                                             value="option1">从未报送
+                                                  </label>
+                                              </div>-->
+                                        </td>
+                                        <!-- <td>
+                                             <div class="radio">
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios15" id="optionsRadios35"
+                                                            value="option1">偶尔报送
+                                                 </label>
+                                             </div>
+                                         </td>
+                                         <td>
+                                             <div class="radio">
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios15" id="optionsRadios36"
+                                                            value="option1" checked>按时按量报送
+                                                 </label>
+                                             </div>
+                                         </td>-->
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">重大安全生产隐患</td>
+                                        <td colspan="3" tjx-data-field="SafetyHazard">
+                                            <!-- <div class="radio">
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios16" id="optionsRadios37"
+                                                            value="option1">有
+                                                 </label>
+                                                 <label>
+                                                     <input type="radio" name="optionsRadios16" id="optionsRadios38"
+                                                            value="option1" checked>无
+                                                 </label>
+                                             </div>-->
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- End: life time stats -->
+                    </div>
+                    <!-- END FILTER -->
+                </div>
+                <div class="tab-pane" id="overview_1">
+                    <div class="table-responsive">
+                        <table id="tb_overview_2" tjx-data-source="FMService/equipment" tjx-data-field="EquipmentName,Specification,Location,EquipmentType,Amount,Memo" tjx-data-order="Id"  class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="overview_3">
+                    <div class="table-responsive">
+                        <table id="tb_overview_3" tjx-data-source="FMService/specialequipment" tjx-data-field="DeviceName,ModelName,Category,RegistrationNumber,ExpirationDate,InspectionAgency,Memo" tjx-data-order="Id" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_4">
+                    <div class="table-responsive">
+                        <table id="tb_overview_4" tjx-data-source="FMService/hazardidentification" tjx-data-field="DangerousSection,DangerousSource,ControlMeasure,AccidentPattern" tjx-data-order="Id" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_5">
+                    <div class="table-responsive">
+                        <table id="tb_overview_5" tjx-data-source="FMService/safetyinspection" tjx-data-field="EquipmentName,DetectionTime,ExpirationDate,Organization,Qualified,Memo" tjx-data-order="Id" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="overview_6">
+                    <div class="table-responsive">
+                        <table id="tb_overview_6" tjx-data-source="FMService/certification" tjx-data-field="DocumentCategory,Holder,Name,DocumentNumber,ExpirationDate,AuthorizingDept" tjx-data-order="Id" class="table table-striped table-hover table-bordered">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>-->
+<!--<script type="text/javascript" src="js/tjx.data.safetysearch.js"></script>-->
+<script type="text/javascript" src="app/detail/js/tjx.app.detail.element.js"></script>
+<script type="text/javascript">
+    // Start spa once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.detail.element.initModule( jQuery('#safetydetail') );
+                /* tjx.app.detail.photo.initModule( jQuery('#safetydetail') );*/
+            });
+</script>
+
+</body>
+</html>

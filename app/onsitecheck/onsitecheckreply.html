@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div  id="checkreply">
+    <div class="modal-header">
+        <div class="portlet-title">
+            <div class="caption font-green-haze">
+                <i class="icon-check font-green-haze"></i>
+                <span class="caption-subject bold uppercase"></span>
+                <button type="button"  class="close " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div  class="portlet-body   form ">
+            <form class="form-horizontal form-bordered form-row-stripped">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">负责人
+                                    <span class="required">* </span>
+                                </label>
+                                <div class="col-md-10">
+                                    <input name="ChemicalName" type="text" tjx-data-field="Inspector" class="form-control"  size="60"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">处理时间
+                                    <span class="required">* </span>
+                                </label>
+                                <div class="col-md-10">
+                                    <div class="input-group input-medium date date-picker"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="months">
+                                        <input type="text" name="DetectionTime" tjx-data-field="DetectionTime" class="form-control col-md-11" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">
+                                </label>
+                                <div class="col-md-10">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label id="replyfinished" class="btn btn-default blue active">
+                                            <input type="radio" tjx-data-field="Qualified-Never" name="Qualified" value="Qualified-Never" class="toggle" checked=""> 整改完成 </label>
+                                        <label id="replyprocess" class="btn btn-default">
+                                            <input type="radio" tjx-data-field="Qualified-Occasionally" name="Qualified" value="Qualified-Occasionally" class="toggle"> 整改中 </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">处理结果
+                                    <span class="required">* </span>
+                                </label>
+                                <div class="col-md-10">
+
+                                         <textarea class="form-control" rows="3" tjx-data-field="Recommendation" ></textarea>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">备注
+                                </label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" rows="3" tjx-data-field="Memo" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">处置照片</label>
+                        <div id="photocontainer" class="col-md-10">
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+
+</div >
+
+<script type="text/javascript" src="app/onsitecheck/js/tjx.data.onsitecheck.onsitecheck.js"></script>
+<script type="text/javascript" src="app/onsitecheck/js/tjx.app.onsitecheck.onsitecheckreply.js"></script>
+<script type="text/javascript">
+    // Start tjx once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.onsitecheck.onsitecheckreply.initModule( jQuery('#checkreply') );
+            });
+</script>
+
+</body>
+
+
+
+
+

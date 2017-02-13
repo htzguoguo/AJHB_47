@@ -1,0 +1,128 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <title>ArcGIS JavaScript API: kgmap</title>
+  <!--  <style type="text/css">
+        @import "http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/dojo/dijit/themes/tundra/tundra.css";
+    @import "http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/css/esri.css";
+    @import "/arcgis/rest/static/jsapi.css";
+    </style>-->
+    <!-- third-party stylesheets -->
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+    <link href="../css/glb/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/glb/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/glb/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/glb/css/components-rounded.css" rel="stylesheet" type="text/css">
+    <link href="../css/glb/css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="../css/glb/css/layout.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/dojo/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/dojo/dojox/layout/resources/FloatingPane.css" />
+    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/esri/css/esri.css" />
+
+    <!-- our stylesheets -->
+
+    <link href="../css/tjx.css" rel="stylesheet" type="text/css">
+    <link href="../css/tjx.shell.index3.css" rel="stylesheet" type="text/css" />
+    <link href="../css/tjx.home.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- third-party javascript -->
+    <script src="../js/jq/jquery.min.js" type="text/javascript"></script>
+    <script  type="text/javascript" src="../js/jq/jquery.cookie.js"></script>
+    <script src="../js/jq/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+    <script src="../css/glb/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--  <script src="http://60.29.110.104/arcgis_js_api/library/3.15/3.15compact/init.js"></script>-->
+
+    <script type="text/javascript">var djConfig = { parseOnLoad: true };</script>
+    <script src="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/init.js"></script>
+
+
+    <script type="text/javascript" src="../js/tjx.js"></script>
+    <script type="text/javascript" src="../js/tjx.maptest.js"></script>
+
+    <script type="text/javascript">
+
+        jQuery(document).ready(
+                function () {
+                    tjx.maptest.initModule( );
+                });
+    </script>
+</head>
+<body class="tundra">
+   <!-- <div id="mapDiv11" dojotype="dijit.layout.ContentPane" region="center"> </div>-->
+    <div class="row">
+        <div class="col-md-12  ">
+            <!-- BEGIN REGIONAL STATS PORTLET-->
+            <div class="portlet light ">
+                <div class="portlet-title">
+                    <div class="caption caption-md">
+                        <i class="icon-bar-chart theme-font-color hide"></i>
+                        <span class="caption-subject theme-font-color bold uppercase">地图</span>
+                    </div>
+                </div>
+                <div class="portlet-body">
+
+                      <!--<div id="region_statistics_loading">
+                          <img src="images/home/loading.gif" alt="loading"/>
+                      </div>-->
+                      <div id="region_statistics_content" >
+                          <div class="btn-toolbar margin-bottom-10">
+                              <div class="btn-group btn-group-circle" data-toggle="buttons">
+                                  <a href="" class="btn grey-salsa btn-sm active">
+                                      空港 </a>
+                                  <a href="" class="btn grey-salsa btn-sm">
+                                      海港 </a>
+                              </div>
+                              <div class="btn-group pull-right">
+                                  <a href="" class="btn btn-circle grey-salsa btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                      选择类型 <span class="fa fa-angle-down">
+                                          </span>
+                                  </a>
+                                  <ul class="dropdown-menu pull-right">
+                                      <li>
+                                          <a href="javascript:;" id="regional_stat_world">
+                                              安监 </a>
+                                      </li>
+                                      <li>
+                                          <a href="javascript:;" id="regional_stat_usa">
+                                              环保 </a>
+                                      </li>
+                                      <li>
+                                          <a href="javascript:;" id="regional_stat_europe">
+                                              质检 </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+
+                          <div id="mapDiv11"   dojotype="dijit.layout.ContentPane" region="center" style="height: 600px;"> </div>
+                          <!--<div id="vmap_world" class="vmaps display-none">
+                          </div>
+                          <div id="vmap_usa" class="vmaps display-none">
+                          </div>
+                          <div id="vmap_europe" class="vmaps display-none">
+                          </div>
+                          <div id="vmap_russia" class="vmaps display-none">
+                          </div>
+                          <div id="vmap_germany" class="vmaps display-none">
+                          </div>-->
+                      </div>
+
+                </div>
+            </div>
+
+
+            <!-- END REGIONAL STATS PORTLET-->
+        </div>
+    </div>
+
+
+</body>
+</html>

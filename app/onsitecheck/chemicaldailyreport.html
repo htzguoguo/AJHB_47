@@ -1,0 +1,139 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div  id="certifiation">
+    <div class="modal-header">
+        <div class="portlet-title">
+            <div class="caption font-green-haze">
+                <i class="icon-check font-green-haze"></i>
+                <span class="caption-subject bold uppercase"></span>
+                <button type="button"  class="close " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div  class="portlet-body   form ">
+            <form class="form-horizontal form-bordered form-row-stripped">
+
+                <div class="form-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">危化品类型
+                                    <span class="required">* </span>
+                                </label>
+                                <div class="col-md-9">
+                                    <select name="ChemicalCategory" id="ChemicalCategory" tjx-data-field="ChemicalCategory" type="text"  class="form-control"  >
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">危化品名称
+                                    <span class="required">* </span>
+                                </label>
+                                <div class="col-md-9">
+                                    <select name="ChemicalName" id="ChemicalName" type="text" tjx-data-field="ChemicalName" class="form-control"  >
+                                    </select>
+                                   <!-- <input name="ChemicalName" id="ChemicalName" type="text" tjx-data-field="ChemicalName" class="form-control"  size="60"/>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">危化品编号
+                                </label>
+                                <div class="col-md-9">
+                                    <input name="ChemicalNum" id="ChemicalNum" type="text" tjx-data-field="ChemicalNum" class="form-control"  size="60"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">日常用量
+                                    <span class="required">* </span>
+                                </label>
+                                <div class="col-md-9">
+                                    <div class="input-icon col-md-9">
+                                        <input name="EnterpriseName" type="number" tjx-data-field="DailyDosageAmount" class="form-control"  size="60"/>
+                                    </div>
+                                    <div class="input-icon col-md-3">
+                                        <input name="EnterpriseName" id="Daily_ChemicalUnit" tjx-data-field="DailyDosageUnit" type="text"  class="form-control"  size="60"/>
+                                    </div>
+                                   <!-- <input name="DailyDosage" type="text" tjx-data-field="DailyDosage" class="form-control"  size="60"/>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">存储量
+                                </label>
+                                <div class="col-md-9">
+                                    <div class="input-icon col-md-9">
+                                        <input name="EnterpriseName" type="number" tjx-data-field="MaximumStockingCapacityAmount" class="form-control"  size="60"/>
+                                    </div>
+                                    <div class="input-icon col-md-3">
+                                        <input name="EnterpriseName" id="Left_ChemicalUnit" tjx-data-field="MaximumStockingCapacityUnit" type="text"  class="form-control"  size="60"/>
+                                    </div>
+                                  <!--  <input name="StorageSite" type="text" tjx-data-field="StorageSite" class="form-control"  size="60"/>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="ok" type="button" data-dismiss="modal" class="btn blue default"><i class="fa fa-check"></i>确认保存</button>
+                <button type="button" id="cancel" class="btn " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+
+</div >
+
+<script type="text/javascript" src="app/onsitecheck/js/tjx.data.onsitecheck.chemicaldailyreport.js"></script>
+<script type="text/javascript" src="app/onsitecheck/js/tjx.app.onsitecheck.chemicaldailyreport.js"></script>
+<script type="text/javascript">
+    // Start tjx once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+                tjx.app.onsitecheck.chemicaldailyreport.initModule( jQuery('#certifiation') );
+            });
+</script>
+
+</body>
+
+
+
+
+

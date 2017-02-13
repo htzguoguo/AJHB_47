@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="modal-header">
+    <div class="portlet-title">
+        <div class="caption font-green-haze">
+            <i class="icon-check font-green-haze"></i>
+            <span class="caption-subject bold uppercase"></span>
+            <button type="button"  class="close " data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+<div class="modal-body">
+    <div  class="portlet-body   form ">
+        <div class="form-horizontal">
+            <div class="form-body">
+                <div class="tabbable-line">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#overview_1" data-toggle="tab">
+                                基本信息 </a>
+                        </li>
+                        <li >
+                            <a href="#overview_2" data-toggle="tab">
+                                厂房空置利用情况 </a>
+                        </li>
+                        <li>
+                            <a href="#overview_3" data-toggle="tab">
+                                办公室空置利用情况 </a>
+                        </li>
+                        <li>
+                            <a href="#overview_4" data-toggle="tab">
+                                其它 </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="overview_1">
+                            <div class="table-responsive">
+                                <table id="tb_overview_1"   class="table  table-hover table-bordered">
+                                    <tr>
+                                        <td>
+                                            <label tjx-data-source="BusinessAddress" class=" control-label">生产经营地址<i class="glyphicon glyphicon-ok font-red"></i></label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="ProductScale" class=" control-label">主要产品规模<i class="glyphicon glyphicon-ok font-red"></i></label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="MaterialDosage" class=" control-label">主要原辅料用量<i class="glyphicon glyphicon-ok font-red"></i></label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SafetyDepartment" class=" control-label">安全管理机构<i class="glyphicon glyphicon-ok font-red"></i></label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="OHSM" class=" control-label">安全管理体系<i class="glyphicon glyphicon-ok font-red"></i></label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="EmployeeNumber" class=" control-label">员工人数<i class="glyphicon glyphicon-ok font-red"></i></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>  <label tjx-data-source="PrincipalName" class=" control-label">主要负责人</label></td>
+                                        <td> <label tjx-data-source="PrincipalCellPhone" class=" control-label">联系电话</label></td>
+                                        <td> <label tjx-data-source="PrincipalTelephone" class=" control-label">手机</label></td>
+                                        <td> <label tjx-data-source="SafetyDirectorName" class=" control-label">分管安全负责人<i class="glyphicon glyphicon-remove font-blue"></i></label></td>
+                                        <td>  <label tjx-data-source="SafetyDirectorCellPhone" class=" control-label">联系电话</label></td>
+                                        <td>  <label tjx-data-source="SafetyDirectorTelephone" class=" control-label">手机</label> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>  <label tjx-data-source="SecurityAdministratorName" class=" control-label">安全管理人员</label></td>
+                                        <td>  <label tjx-data-source="SecurityAdministratorCellPhone" class=" control-label">联系电话</label></td>
+                                        <td>  <label tjx-data-source="SecurityAdministratorTelephone" class=" control-label">手机</label></td>
+                                        <td>  <label tjx-data-source="Email" class=" control-label">电子邮箱</label></td>
+                                        <td>  <label tjx-data-source="Fax" class=" control-label">传真</label></td>
+                                        <td>  <label tjx-data-source="SpecialOperationNumber" class=" control-label">特种作业人数</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>  <label tjx-data-source="IndustrialAccident" class=" control-label">工伤事故统计</label></td>
+                                        <td>  <label tjx-data-source="SeriousAccident" class=" control-label">重伤事故</label></td>
+                                        <td>  <label tjx-data-source="Building" class=" control-label">主要建构筑物</label></td>
+                                        <td>  <label tjx-data-source="LandArea" class=" control-label">占地面积</label></td>
+                                        <td>  <label tjx-data-source="FireControlAcceptance" class=" control-label">消防验收</label></td>
+                                        <td>  <label tjx-data-source="DangerousPositionNumber" class=" control-label">职业危险岗位</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>  <label tjx-data-source="LightningDetection" class=" control-label">防雷检测</label></td>
+                                        <td>  <label tjx-data-source="SpecialEquipmentInspection" class=" control-label">特种设备检测</label></td>
+                                        <td>  <label tjx-data-source="DetectionOfOccupationalHazard" class=" control-label">职业危害检测</label></td>
+                                        <td>  <label tjx-data-source="SafetyAcceptance" class=" control-label">安全验收评价</label></td>
+                                        <td>  <label tjx-data-source="HeadTraining" class=" control-label">主要负责人培训</label></td>
+                                        <td>  <label tjx-data-source="ManagementTraining" class=" control-label">管理人员培训</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>  <label tjx-data-source="OperatingPersonnelTraining" class=" control-label">作业人员培训</label></td>
+                                        <td>  <label tjx-data-source="SelfExamination" class=" control-label">自查自报系统</label></td>
+                                        <td>  <label tjx-data-source="SafetyCulture" class=" control-label">安全文化示范企业</label></td>
+                                        <td>  <label tjx-data-source="EmergencyPlan" class=" control-label">应急预案备案</label></td>
+                                        <td>  <label tjx-data-source="SafetyProductionTraining" class=" control-label">安全生产工作会议</label></td>
+                                        <td>  <label tjx-data-source="FileSubmit" class=" control-label">送工作列表</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>  <label tjx-data-source="SafetyHazard" class=" control-label">重大安全生产隐患</label></td>
+                                        <td>  <label   class=" control-label"></label></td>
+                                        <td>  <label class=" control-label"></label></td>
+                                        <td>  <label class=" control-label"></label></td>
+                                        <td>  <label class=" control-label"></label></td>
+                                        <td>  <label class=" control-label"></label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="overview_2">
+                            <div class="table-responsive">
+                                <div class="alert alert-block alert-info  fade in">
+                                    <p>
+                                        <span id="chemical_stat_all"    class="btn yellow">总分值(7)项</span>
+                                        <span id="chemical_stat_file"  class="btn red"> 填报()项</span>
+                                        <span id="chemical_stat_without"  class="btn blue"> 未填报()项</span>
+
+                                    </p>
+
+                                </div>
+                                <table id="tb_overview_2"    class="table  table-hover table-bordered">
+                                    <tr>
+                                        <td>
+                                            <label tjx-data-source="DangerousChemicalsChemicalName" class=" control-label">危化品名称</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="DangerousChemicalsChemicalNum" class=" control-label">危化品编号</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="DangerousChemicalsUsage" class=" control-label">用途</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="DangerousChemicalsDailyDosage" class=" control-label">日常用量</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="DangerousChemicalsMaximumStockingCapacity" class=" control-label">最大储存量</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="DangerousChemicalsStorageSite" class=" control-label">储存位置</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label tjx-data-source="DangerousChemicalsChemicalCategory" class=" control-label">危化品分类<i class="glyphicon glyphicon-ok font-red"></i></label>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="overview_3">
+                            <div class="table-responsive">
+                                <div class="alert alert-block alert-info  fade in">
+                                    <p>
+                                        <span id="safety_stat_all"    class="btn yellow">总分值(6)项</span>
+                                        <span id="safety_stat_file"  class="btn red"> 填报()项</span>
+                                        <span id="safety_stat_without"  class="btn blue"> 未填报()项</span>
+
+                                    </p>
+
+                                </div>
+                                <table id="tb_overview_3"  class="table  table-hover table-bordered">
+                                    <tr>
+                                        <td>
+                                            <label tjx-data-source="SafetyEquipmentPurpose" class=" control-label">事故措施</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SafetyEquipmentSpecification" class=" control-label">设施类别</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SafetyEquipmentEquipmentName" class=" control-label">安全设施名称</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SafetyEquipmentLocation" class=" control-label">位置</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SafetyEquipmentEquipmentType" class=" control-label">规格型号</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SafetyEquipmentAmount" class=" control-label">数量</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="overview_4">
+                            <div class="table-responsive">
+                                <div class="alert alert-block alert-info  fade in">
+                                    <p>
+                                        <span id="special_stat_all"    class="btn yellow">总分值(6)项</span>
+                                        <span id="special_stat_file"  class="btn red"> 填报()项</span>
+                                        <span id="special_stat_without"  class="btn blue"> 未填报()项</span>
+
+                                    </p>
+
+                                </div>
+                                <table id="tb_overview_4"  class="table  table-hover table-bordered">
+                                    <tr>
+                                        <td>
+                                            <label tjx-data-source="SpecialEquipmentDeviceName" class=" control-label">设备名称</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SpecialEquipmentModelName" class=" control-label">型号</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SpecialEquipmentCategory" class=" control-label">类别</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SpecialEquipmentRegistrationNumber" class=" control-label">使用登记编号</label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SpecialEquipmentExpirationDate" class=" control-label">有效期限
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label tjx-data-source="SpecialEquipmentInspectionAgency" class=" control-label">检测机构</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="button" id="cancel" class="btn " data-dismiss="modal">关闭</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

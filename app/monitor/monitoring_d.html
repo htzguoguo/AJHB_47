@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../css/glb/font-awesome/css/font-awesome.min.css"rel="stylesheet" type="text/css">
+    <link href="../../css/glb/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../css/glb/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../css/glb/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/glb/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+
+    <!-- third-party stylesheets -->
+    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/dojo/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/dojo/dojox/layout/resources/FloatingPane.css" />
+    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/esri/css/esri.css" />
+
+    <link href="../../css/glb/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/portfolio.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/glb/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
+    <link rel="../../stylesheet" type="text/css" href="css/glb/bootstrap-datepicker/css/datepicker3.css"/>
+    <link href="../../css/glb/css/components-rounded.css" rel="stylesheet" type="text/css">
+    <link href="../../css/glb/css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="../../css/glb/css/layout.css" rel="stylesheet" type="text/css">
+    <link href="../../css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="../../css/glb/css/custom.css" rel="stylesheet" type="text/css"/>
+
+    <link href="css/hntp.css" rel="stylesheet" type="text/css">
+    <link href="css/hntp.shell.index1.css" rel="stylesheet" type="text/css">
+
+</head>
+<body  style="width: 100%;height: 100%;">
+    <div class="sidebar">
+            <div class="sidebar-inner sidebar-collapse collapse">
+                <div  id="coor"></div>
+            <ul id="hntpmenu" class="sidebar-menu">
+
+            </ul>
+              <!--  <ul class="sidebar-menu">
+
+                    <li class="sidebar-header">
+                        Dashboards
+                    </li>
+
+                    <li class="">
+                        <a href="./index.html">
+                            <i class="fa fa-dashboard"></i>
+                            Analytics Dashboard
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="./dashboard-2.html">
+                            <i class="fa fa-dashboard"></i>
+                            Sidebar Dashboard
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="./dashboard-3.html">
+                            <i class="fa fa-dashboard"></i>
+                            Reports Dashboard
+                        </a>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li class="sidebar-header">
+                        Elements
+                    </li>
+
+                    <li class="dropdown has_sub ">
+
+                        <a href="http://jumpstartthemes.com/#" class="">
+                            <i class="fa fa-edit"></i>
+
+                            Forms
+
+            <span class="">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+                        </a>
+
+                        <ul class="list-unstyled" style="">
+                            <li>
+                                <a href="./form-basic.html">
+                                    Basic Inputs
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./form-pickers.html">
+                                    Pickers &amp; Choice
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./form-slider.html">
+                                    Sliders <span class="label label-secondary pull-right">New</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./form-wizard.html">
+                                    Wizard <span class="label label-secondary pull-right">New</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./form-validation.html">
+                                    Validation
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./form-wysiwyg.html">
+                                    WYSIWYG <span class="label label-secondary pull-right">New</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown has_sub active open">
+                        <a href="http://jumpstartthemes.com/#" class="">
+                            <i class="fa fa-table"></i>
+
+                            Tables
+
+            <span class="pull-right">
+              <i class="fa fa-angle-right"></i>
+            </span>
+                        </a>
+
+                        <ul class="list-unstyled" style="">
+                            <li>
+                                <a href="./components-tables.html">
+                                    Basic Tables
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./components-datatables.html">
+                                    Data Tables <small>(Advanced)</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="./components-tabs.html">
+                            <i class="fa fa-bars dropdown-icon "></i>
+                            Tabs &amp; Accordions
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="./components-popups.html">
+                            <i class="fa fa-calendar-o dropdown-icon "></i>
+                            Popups &amp; Alerts
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="./components-charts.html">
+                            <i class="fa fa-line-chart dropdown-icon "></i>
+                            Charts
+                        </a>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li class="sidebar-header">
+                        Example Pages
+                    </li>
+
+                    <li class="dropdown has_sub ">
+                        <a href="http://jumpstartthemes.com/#" class="">
+                            <i class="fa fa-file-text-o"></i>
+
+                            Demo Pages
+
+            <span class="pull-right">
+              <i class="fa fa-angle-right"></i>
+            </span>
+                        </a>
+
+                        <ul class="list-unstyled">
+
+                            <li>
+                                <a href="./page-profile.html">
+                                    Profile
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./page-settings.html">
+                                    Settings
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./page-faq.html">
+                                    FAQ
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./page-pricing-plans.html">
+                                    Plans &amp; Billing
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./page-pricing-table.html">
+                                    Pricing Table
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./pages-gallery.html">
+                                    Gallery
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown has_sub ">
+
+                        <a href="http://jumpstartthemes.com/#" class="">
+                            <i class="fa fa-file-text-o"></i>
+
+                            Utilities
+
+              <span class="pull-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                        </a>
+
+                        <ul class="list-unstyled">
+
+                            <li>
+                                <a href="./page-sitemap.html">
+                                    Sitemap
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./page-blank.html">
+                                    Blank Slate
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./page-404.html">
+                                    404 Error
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./page-500.html">
+                                    500 Error
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./page-maintenance.html" target="_blank">
+                                    Maintenance
+                                    &nbsp;
+                                    <small><i class="fa fa-external-link pull-right text-secondary" style="position: relative; top: 3px;"></i></small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown has_sub">
+                        <a href="http://jumpstartthemes.com/#" class="">
+
+                            <i class="fa fa-user"></i>
+
+                            Account Pages
+
+              <span class="pull-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="./account-login.html" target="_blank">
+                                    Login
+                                    <small><i class="fa fa-external-link pull-right text-secondary" style="position: relative; top: 3px;"></i></small>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./account-login-social.html" target="_blank">
+                                    Login Social
+                                    <small><i class="fa fa-external-link pull-right text-secondary" style="position: relative; top: 3px;"></i></small>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./account-signup.html" target="_blank">
+                                    Signup
+                                    <small><i class="fa fa-external-link pull-right text-secondary" style="position: relative; top: 3px;"></i></small>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./account-forgot.html" target="_blank">
+                                    Forgot Password
+                                    <small><i class="fa fa-external-link pull-right text-secondary" style="position: relative; top: 3px;"></i></small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li class="sidebar-header">Templates</li>
+
+                    <li>
+                        <a href="../admin-1/index.html" class="">
+                            <i class="fa fa-desktop"></i>
+                            Admin Layout #1
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../admin-2/index.html" class="">
+                            <i class="fa fa-desktop"></i>
+
+                            Admin Layout #2
+
+                            <span class="label label-secondary pull-right">Current</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../landing/index.html" class="">
+                            <i class="fa fa-desktop"></i>
+
+                            Frontend Template
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../launch/index.html" class="">
+                            <i class="fa fa-rocket"></i>
+
+                            Launch Template
+                        </a>
+                    </li>
+
+                    <li class="divider"></li>
+
+                </ul> -->
+
+
+
+            <div class="clearfix"></div>
+        </div><!-- /.sidebar-inner -->
+    </div> <!-- /.side-menu -->
+    <div  id="mapcontainer" class="tjx-map baidu-maps" >
+        <br>
+        <br>
+      <!--  <div  id="RetInfo"></div>-->
+        <div class="row" >
+            <div class="col-lg-12">
+                <table class="table mtable" >
+                    <tbody>
+                    <tr>
+                        <div id="mviewl">
+                            <div id="obj">
+                                <object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" style="width: 100%; height: 80%" codebase="DpsdkOcx.cab#version=1.0.0.0"></object>
+                            </div>
+                        </div>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-lg-12" style="text-align: center;">
+
+
+                <div class="actions">
+                    <div class="btn-group btn-group-devided" data-toggle="buttons">
+                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+                            <input type="radio" name="options" class="toggle" id="option1">播放</label>
+                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option2">快进</label>
+                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option3">快退</label>
+                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option4">放慢</label>
+                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option5">截屏</label>
+                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option6">日期</label>
+                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option7">公司简介</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+   <!-- <div id="mviewl">
+        <div id="obj">
+            <object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" style="width: 100%; height: 80%" codebase="DpsdkOcx.cab#version=1.0.0.0"></object>
+        </div>
+    </div>-->
+
+    <div class="modal fade" id="mondetail" tabindex="-1" role="basic" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title"><span aria-hidden="true" class="icon-check"></span>视频监控</h4>
+        </div>
+        <div class="modal-body">
+                    <!--    <div class="row">
+                            <div class="col-lg-12">
+                                <table class="table mtable" >
+                                    <tbody>
+                                    <tr>
+                                        <div id="mviewl">
+                                            <div id="obj">
+                                                <object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" style="width: 100%; height: 80%" codebase="DpsdkOcx.cab#version=1.0.0.0"></object>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-lg-12" style="text-align: center;">
+
+
+                                <div class="actions">
+                                    <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+                                            <input type="radio" name="options" class="toggle" id="option1">播放</label>
+                                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                                            <input type="radio" name="options" class="toggle" id="option2">快进</label>
+                                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                                            <input type="radio" name="options" class="toggle" id="option3">快退</label>
+                                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                                            <input type="radio" name="options" class="toggle" id="option4">放慢</label>
+                                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                                            <input type="radio" name="options" class="toggle" id="option5">截屏</label>
+                                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                                            <input type="radio" name="options" class="toggle" id="option6">日期</label>
+                                        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                                            <input type="radio" name="options" class="toggle" id="option7">公司简介</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>-->
+
+        </div>
+    </div>
+<!-- third-party javascript -->
+
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=D08ad77913117767b430eca7e1a1a0ed"></script>-->
+<script src="../../js/jq/jquery.min.js" type="text/javascript"></script>
+<script src="../../css/glb/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../css/glb/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+<script type="text/javascript" src="../../css/glb/bootstrap-modal/js/bootstrap-modal.js"></script>
+
+<script  type="text/javascript" src="../../js/jq/jquery.cookie.js"></script>
+<script src="../../js/jq/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="../../js/jq/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../css/glb/jquery-mixitup/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="../../css/glb/fancybox/source/jquery.fancybox.js"></script>
+
+<!--<script type="text/javascript">var djConfig = { parseOnLoad: true };</script>
+<script src="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/init.js"></script>-->
+
+<!-- our javascript -->
+<script type="text/javascript" src="../../js/urlparams.js"></script>
+<script type="text/javascript" src="../../js/tjx.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.io.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.ui.js"></script>
+<script type="text/javascript" src="../../js/tjx.util.ui.photo.js"></script>
+<script type="text/javascript" src="../../js/tjx.shell.js"></script>
+<script type="text/javascript" src="js/tjx.map.monitor.camera.js"></script>
+<!--<script type="text/javascript" src="js/tjx.app.monitor.map.js"></script>-->
+<script type="text/javascript" src="js/tjx.app.monitor.monitoring.js"></script>
+
+<!--<script src="js/hntp.datatables.helper.js"></script>-->
+<script src="js/hntp.core.js"></script>
+<!--<script src="js/hntp.helpers.js"></script>
+<script src="js/hntp.admin.js"></script>-->
+<script type="text/javascript">
+    // Start  once DOM is ready
+    //
+    jQuery(document).ready(
+            function () {
+
+                tjx.app.monitor.monitoring.initModule(jQuery('body'));
+            /*    tjx.app.monitor.map.initModule(jQuery('body'));*/
+                tjx.app.monitor.camera.initModule(jQuery('body'));
+
+                mvpready_core.initSidebarNav ()
+            });
+
+</script>
+
+</body>
+</html>

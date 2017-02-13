@@ -1,0 +1,63 @@
+/*
+ * tjx.shell.index1.menu.css
+ * first menu style
+*/
+/** Begin utility selectors **/
+
+.tjx-shell-index1-menu-nav01 ,.tjx-shell-index1-menu-nav01 a{display:block;background:url(../images/index1/menu/nav01.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav01 a:hover{	background:url(../images/index1/menu/nav001.png) no-repeat; }
+li.tjx-shell-index1-menu-nav01.active a{	background:url(../images/index1/menu/nav001.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav02 ,.tjx-shell-index1-menu-nav02 a{display:block;background:url(../images/index1/menu/nav02.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav02 a:hover{	background:url(../images/index1/menu/nav002.png) no-repeat; }
+li.tjx-shell-index1-menu-nav02.active a{	background:url(../images/index1/menu/nav002.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav03 ,.tjx-shell-index1-menu-nav03 a{display:block;background:url(../images/index1/menu/nav03.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav03 a:hover{	background:url(../images/index1/menu/nav003.png) no-repeat; }
+li.tjx-shell-index1-menu-nav03.active a{	background:url(../images/index1/menu/nav003.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav04 ,.tjx-shell-index1-menu-nav04 a{display:block;background:url(../images/index1/menu/nav04.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav04 a:hover{	background:url(../images/index1/menu/nav004.png) no-repeat; }
+li.tjx-shell-index1-menu-nav04.active a{	background:url(../images/index1/menu/nav004.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav05 ,.tjx-shell-index1-menu-nav05 a{display:block;background:url(../images/index1/menu/nav05.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav05 a:hover{	background:url(../images/index1/menu/nav005.png) no-repeat; }
+li.tjx-shell-index1-menu-nav05.active a{	background:url(../images/index1/menu/nav005.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav06 ,.tjx-shell-index1-menu-nav06 a{display:block;background:url(../images/index1/menu/nav06.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav06 a:hover{	background:url(../images/index1/menu/nav006.png) no-repeat; }
+li.tjx-shell-index1-menu-nav06.active a{	background:url(../images/index1/menu/nav006.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav07 ,.tjx-shell-index1-menu-nav07 a{display:block;background:url(../images/index1/menu/nav07.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav07 a:hover{	background:url(../images/index1/menu/nav007.png) no-repeat; }
+li.tjx-shell-index1-menu-nav07.active a{	background:url(../images/index1/menu/nav007.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav08 ,.tjx-shell-index1-menu-nav08 a{display:block;background:url(../images/index1/menu/nav08.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav08 a:hover{	background:url(../images/index1/menu/nav008.png) no-repeat; }
+li.tjx-shell-index1-menu-nav08.active a{	background:url(../images/index1/menu/nav008.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav09 ,.tjx-shell-index1-menu-nav09 a{display:block;background:url(../images/index1/menu/nav09.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav09 a:hover{	background:url(../images/index1/menu/nav009.png) no-repeat; }
+li.tjx-shell-index1-menu-nav09.active a{	background:url(../images/index1/menu/nav009.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav010 ,.tjx-shell-index1-menu-nav010 a{display:block;background:url(../images/index1/menu/nav010.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav010 a:hover{	background:url(../images/index1/menu/nav0010.png) no-repeat; }
+li.tjx-shell-index1-menu-nav010.active a{	background:url(../images/index1/menu/nav0010.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav011 ,.tjx-shell-index1-menu-nav011 a{display:block;background:url(../images/index1/menu/nav011.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav011 a:hover{	background:url(../images/index1/menu/nav0011.png) no-repeat; }
+li.tjx-shell-index1-menu-nav011.active a{	background:url(../images/index1/menu/nav0011.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav012 ,.tjx-shell-index1-menu-nav012 a{display:block;background:url(../images/index1/menu/gy0.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav012 a:hover{	background:url(../images/index1/menu/gy.png) no-repeat; }
+li.tjx-shell-index1-menu-nav012.active a{	background:url(../images/index1/menu/gy.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav013 ,.tjx-shell-index1-menu-nav013 a{display:block;background:url(../images/index1/menu/nav013.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav013 a:hover{	background:url(../images/index1/menu/nav0013.png) no-repeat; }
+li.tjx-shell-index1-menu-nav013.active a{	background:url(../images/index1/menu/nav0013.png) no-repeat;}
+
+.tjx-shell-index1-menu-nav014 ,.tjx-shell-index1-menu-nav014 a{display:block;background:url(../images/index1/menu/nav014.png) no-repeat;width:93px; height:88px; cursor:hand;}
+.tjx-shell-index1-menu-nav014 a:hover{	background:url(../images/index1/menu/nav0014.png) no-repeat; }
+li.tjx-shell-index1-menu-nav014.active a{	background:url(../images/index1/menu/nav0014.png) no-repeat;}
+
+/** End utility selectors **/

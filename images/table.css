@@ -1,0 +1,103 @@
+/* CSS Document */
+.td1{
+	padding:8px; 
+	background-color:#e9f4fa;
+	}
+.td2{
+	padding:8px; 
+	border:1px solid #C7E5FF;
+	background-color:#FFF;
+	}
+	.td9{
+	padding:8px; 
+	border-bottom:1px solid #C7E5FF;
+	background-color:#F7FBFD;
+    width: 54%;
+}
+	.td10{
+	padding:8px; 
+	border-bottom:1px solid #C7E5FF;
+	background-color:#FFF;
+	}
+.datalist{
+	border:1px solid #C7E5FF;	/* 表格边框 */
+	font-family:Arial;
+	border-collapse:collapse;	/* 边框重叠 */
+	background-color:#FFF;	/* 表格背景色 */
+	font-size:12px;
+	width:100%;
+}
+.datalist1{
+	border:1px solid #C7E5FF;	/* 表格边框 */
+	font-family:Arial;
+	border-collapse:collapse;	/* 边框重叠 */
+	background-color:#FFF;	/* 表格背景色 */
+	font-size:12px;
+	width:100%;
+}
+.datalist caption{
+	padding-bottom:5px;
+	font:bold 1.4em;
+	text-align:left;
+}
+.datalist th{
+	border:1px solid #C7E5FF;	/* 行名称边框 */
+	background-color:#4bacff;	/* 行名称背景色 */
+	color:#FFFFFF;				/* 行名称颜色 */
+	font-weight:bold;
+	padding:0;
+	text-align:center;
+}
+.datalist td{
+	border:1px solid #C7E5FF;	/* 单元格边框 */
+	padding:0;
+}
+.datalist tr.altrow{
+	background-color:#F7FBFD;	/* 隔行变色 */
+}
+.td{
+	border:none;	/* 表格边框 */
+	font-family:Arial;
+	border-collapse:collapse;	/* 边框重叠 */
+	background-color:none;	/* 表格背景色 */
+	font-size:12px;
+}
+.data_list1{
+	border:1px solid #C7E5FF;	/* 表格边框 */
+	font-family:Arial;
+	border-collapse:collapse;	/* 边框重叠 */
+	background-color:#FFF;	/* 表格背景色 */
+	font-size:12px;
+	width:100%;
+}
+.data_list1 td{
+	border:1px solid #C7E5FF;	/* 单元格边框 */
+	padding:0;
+}
+.data_list1 tr.altrow{
+	background-color:#F7FBFD;	/* 隔行变色 */
+}
+.topTd
+{
+    border-top:none;
+    border-collapse:collapse;
+    }
+.right_td
+{
+    border-right:1px solid #C7E5FF;
+    }
+.x_list
+{
+	border:1px solid #FFF;	/* 表格边框 */
+	font-family:Arial;
+	border-collapse:collapse;	/* 边框重叠 */
+	background-color:#FFF;	/* 表格背景色 */
+	font-size:15px;
+	width:100%;
+}
+.x_list td
+{
+    border:1px solid #C7E5FF;
+    padding:0;
+    height:26px;
+    }

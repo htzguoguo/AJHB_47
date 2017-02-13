@@ -1,0 +1,242 @@
+<div xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#topic" aria-controls="topic" role="tab" data-toggle="tab">专题</a>
+        </li>
+        <li role="presentation">
+            <a href="#search" aria-controls="search" role="tab" data-toggle="tab">查询</a>
+        </li>
+        <!--<li role="presentation">-->
+            <!--<a href="#result" aria-controls="result" role="tab" data-toggle="tab">结果</a>-->
+        <!--</li>-->
+        <li role="presentation">
+            <a href="#print" aria-controls="print" role="tab" data-toggle="tab">打印</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="topic" style="padding:5px">
+            <div class="text-center" style="padding:50px;">
+                <label class="label label-info" style="color: #000;font-size:16px;">选择下列图层，查看周边情况</label>
+            </div>
+
+            <div>
+                <div class="radio text-center">
+                    <label>
+                        <input type="radio" name="HeatMap" id="personHeatMap" value="option1"
+                               @click="personHeatMap">
+                        人口流动热度图
+                    </label>
+                </div>
+                <!--<div class="radio text-center">-->
+                    <!--<label>-->
+                        <!--<input type="radio" name="HeatMap" id="wealthHeatMap" value="option2" @click="wealthHeatMap">-->
+                        <!--财富分布热度图-->
+                    <!--</label>-->
+                <!--</div>-->
+                <div class="radio text-center">
+                    <label>
+                        <input type="radio" name="HeatMap" id="roadDiseaseHeatMap" value="option3" @click="roadDiseaseHeatMap">
+                        路面病害热度图
+                    </label>
+                </div>
+                <!--<div class="radio">-->
+                <!--<label>-->
+                <!--<input type="radio" name="HeatMap" id="trafficHeatMap" value="option3" @click="trafficHeatMap">-->
+                <!--实时交通流量图-->
+                <!--</label>-->
+                <!--</div>-->
+            </div>
+            <div class="text-center" style="margin-top: 30px">
+                <button class="btn btn-lg btn-warning" @click="clearHeatMap">
+                    清 除
+                </button>
+            </div>
+
+        </div>
+
+
+        <div role="tabpanel" class="tab-pane" id="search">
+            <div style='padding:15px 0'>
+                <div class='row'>
+                    <div class='col-md-5' style="margin-left:10px; margin-top: -10px">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="modal3-tab2-1" value="1" v-model="picked" @click='reset'>
+                                重点防护目标
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="modal3-tab2-2" value="2" v-model="picked" @click='reset'>
+                                公众聚集场所
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="modal3-tab2-3" value="3" v-model="picked" @click='reset'>
+                                学校
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="modal3-tab2-4" value="4" v-model="picked" @click='reset'>
+                                危险源
+                            </label>
+                        </div>
+                    </div>
+                    <div class='col-md-5'>
+                        <div v-show="picked == '1'">
+                            重点防护目标
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v1-1" value="党政机关" v-model="c1">党政机关</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v1-2" value="科研机构" v-model="c1">科研机构</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v1-3" value="银行机构" v-model="c1">银行机构</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v1-4" value="飞机场" v-model="c1">飞机场</label>
+                            </div>
+                        </div>
+
+                        <div v-show="picked == '2'">
+                            公众聚集场所
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v2-1" value="大型商场超市" v-model="c2">大型商场超市</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v2-2" value="星级宾馆饭店" v-model="c2">星级宾馆饭店</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v2-3" value="体育场所" v-model="c2">体育场所</label>
+                            </div>
+                        </div>
+
+                        <div v-show="picked == '3'">
+                            学校
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v3-1" value="幼儿园" v-model="c3">幼儿园</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v3-2" value="小学" v-model="c3">小学</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v3-3" value="中学" v-model="c3">中学</label>
+                            </div>
+                        </div>
+
+
+                        <div v-show="picked == '4'">
+                            危险源
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v4-1" value="化学品类" v-model="c4">化学品类</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v4-2" value="易制爆类" v-model="c4">易制爆类</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v4-3" value="油罐类" v-model="c4">油罐类</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="m3-tb2-v4-4" value="加油站" v-model="c4">加油站</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class='text-center' style="margin-top:15px">
+                    <button class="btn btn-primary" value="analysis" @click="analysis" style="margin-top: 5px">
+                        <i class="fa fa-question"></i><br>分析
+                    </button>
+                    <button class="btn btn-primary" id="rectangle" value="rectangle" @click="draw">
+                        <i class="fa fa-question"></i><br>矩形
+                    </button>
+                    <button class="btn btn-primary" id="circle" value="circle" @click="draw">
+                        <i class="fa fa-question"></i><br>圆形
+                    </button>
+                    <button class="btn btn-primary" id="polygon" value="polygon" @click="draw">
+                        <i class="fa fa-question"></i><br>多边形
+                    </button><br>
+
+                    <button class="btn btn-warning" id="freehandpolygon" value="freehandpolygon"
+                            @click="draw" style="margin-top: 5px">
+                        <i class="fa fa-phone"></i><br>手绘
+                    </button>
+                    <button class='btn btn-lg btn-danger' id="modal3delGraphic" @click="modal3delGraphic" style="margin-top:12px">删除</button>
+                </div>
+
+
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="result">
+
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="print" style="margin-top: 20px">
+            <form class="form-horizontal" style="padding: 20px;">
+                <div class="form-group">
+                    <label for="docName" class="col-sm-3 control-label" style="padding: 10px 0;">标　  　题</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control input-lg" id="docName" name="docName" style="padding: 10px 0;"
+                               placeholder="打印文件名称" value="公共影响因素分析结果" v-model="docName">
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <label for="printFormat" class="col-sm-3 control-label" style="padding: 10px 0;">打印格式</label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="printFormat" v-model="print.printFormat">
+                                <option value="JPG">JPG</option>
+                                <option value="PNG32">PNG</option>
+                                <option value="PDF">PDF</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printLayout" class="col-sm-3 control-label" style="padding: 10px 0;">打印大小</label>
+
+                        <div class="col-sm-8">
+                            <select class="form-control" id="printLayout" v-model="print.printLayout">
+                                <option value="A4 Landscape">A4 横向</option>
+                                <option value="A4 Portrait">A4 纵向</option>
+                                <option value="A3 Landscape">A3 横向</option>
+                                <option value="A3 Portrait">A3 纵向</option>
+                                <option value="Letter ANSI A Landscape">Letter ANSI A Landscape</option>
+                                <option value="Letter ANSI A Portrait">Letter ANSI A Portrait</option>
+                                <option value="Tabloid ANSI B Landscape">Tabloid ANSI B Landscape</option>
+                                <option value="Tabloid ANSI B Portrait">Tabloid ANSI B Portrait</option>
+                                <option value="MAP_ONLY">只输出地图</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+            </form>
+            <div class="text-center">
+                <button class="btn btn-lg btn-primary searchBtn" id="printDoc" @click="printDoc">
+                    <i class="glyphicon glyphicon-print"></i> 开 始 打 印
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

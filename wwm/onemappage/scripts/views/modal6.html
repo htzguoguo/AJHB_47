@@ -1,0 +1,95 @@
+<div xmlns:display="http://www.w3.org/1999/xhtml">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#modal6a" aria-controls="modal6a" role="tab" data-toggle="tab">形状选择</a>
+        </li>
+        <li role="presentation">
+            <a href="#modal6b" aria-controls="modal6b" role="tab" data-toggle="tab">文本输入</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style="padding-top: 10px;">
+        <div role="tabpanel" class="tab-pane active tab1" id="modal6a"  style="padding:5px">
+            <div class="text-center" style="padding:20px">
+                <label class="label label-info control-label" style="margin-left: -45px;">填充颜色</label>
+                <input class="jscolor" value="2C02AB" v-model="jsColorFill"><br><br>
+                <label class="label label-info" style="margin-left: -45px;">轮廓颜色</label>
+                <input class="jscolor" value="FF0303" v-model="jsColorOutline"><br><br>
+                <label class="label label-info">透明度</label>
+                <input class='bs-slider' data-slider-id='ex1Slider1' id="ex1Slider1" type="text" data-slider-min="0"
+                       data-slider-max="1"
+                       data-slider-step="0.01" data-slider-value="0.6" v-model="jsColorTransparency"  lazy>
+            </div>
+            <div style="padding-left: 60px;">
+                <button class="btn btn-sm btn-primary" value="ARROW" @click="plotting">
+                    <i class="fa fa-question"></i> 箭头
+                </button>
+                <button class="btn btn-sm btn-primary" value="tailedsquadcombat" @click="plotting">
+                    <i class="fa fa-question"></i> 燕尾箭头
+                </button>
+                <button class="btn btn-sm btn-primary" value="POLYLINE" @click="plotting">
+                    <i class="fa fa-question"></i> 折线
+                </button><br>
+                <button class="btn btn-sm btn-primary" value="FREEHANDPOLYLINE" @click="plotting" style="margin-top: 5px;">
+                    <i class="fa fa-question"></i> 自由线
+                </button>
+                <button class="btn btn-sm btn-primary" value="POLYGON" @click="plotting" style="margin-top: 5px;">
+                    <i class="fa fa-question"></i> 多边形
+                </button>
+                <button class="btn btn-sm btn-warning" value="FREEHANDPOLYGON" @click="plotting" style="margin-top: 5px;">
+                    <i class="fa fa-phone"></i> 手绘
+                </button>
+            </div>
+            <div  style="padding:10px; padding-left: 60px;">
+                <button class="btn btn-sm btn-warning " @click="clearGraphic">
+                    清除所有标绘图形
+                </button>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane tab2" id="modal6b" style="padding:20px">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <textarea class="form-control" rows="2" placeholder="输入文本" v-model="tab2.text"></textarea>
+                </div>
+                <div class="form-group" style="margin-left: -130px;">
+                    <label for="inputBufferNum" class="col-sm-4 control-label">字体</label>
+
+                    <div class="col-sm-5" style="margin-left: -10px;">
+                        <!--<input type="number" class="form-control" id="inputEmail3" placeholder="1">-->
+                        <select class="form-control" id="inputBufferNum" v-model="tab2.textFont">
+                            <option value="1">微软雅黑</option>
+                            <option value="2">华文</option>
+                            <option value="3">楷体</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-left: -130px;margin-top: -5px;">
+                    <label class="col-sm-4 control-label">颜色</label>
+                    <input class="col-sm-4 jscolor" value="FF2929" v-model="tab2.textColor" style="margin-left: 5px;">
+                </div>
+                <div class="form-group" style="margin-left: -130px;margin-top: -5px;">
+                    <label class="col-sm-4 control-label">大小</label>
+                    <input class='bs-slider' data-slider-id='ex1Slider2' id="ex1Slider2" type="text" data-slider-min="3"
+                           data-slider-max="50"
+                           data-slider-step="1" data-slider-value="20" v-model="tab2.textSize">
+                </div>
+                <div style="margin-left: -10px;margin-top: 25px;">
+                    <button class="btn btn-sm btn-primary" id="tab2addLabel" @click="addLabel">
+                        点此，再点击地图
+                    </button>
+                    <button class="btn btn-sm btn-primary" id="analysePoint" @click="clearLabelLayer">
+                        <i class="fa fa-question"></i> 删除标注
+                    </button>
+                    <button class="btn btn-sm btn-warning" id="saveLabelLayer">
+                        <i class="fa fa-phone"></i> 保存方案
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,45 @@
+/* CSS Document */
+.td1{
+	padding:0; 
+	/*background-color:#e9f4fa;*/
+	}
+.td2{
+	padding:0; 
+	border:none;
+/*	border:1px solid #C7E5FF;
+	background-color:#FFF;*/
+	}
+
+
+
+.datalist{
+	border:1px solid #000;	/* 表格边框 */
+	font-family:Arial;
+	border-collapse:collapse;	/* 边框重叠 */
+	background-color:#FFF;	/* 表格背景色 */
+	font-size:12px;
+	width:100%;
+}
+.datalist th{
+	border:1px solid #000;	/* 行名称边框 */
+	color:#FFFFFF;				/* 行名称颜色 */
+	font-weight:bold;
+	padding-top:1px; padding-bottom:1px;
+	padding-left:1px; padding-right:1px;
+	text-align:center;
+}
+.datalist td{
+	border:1px solid #000;	/* 单元格边框 */
+	padding-top:1px; padding-bottom:1px;
+	padding-left:1px; padding-right:1px;
+}
+.datalist tr.altrow{
+	background-color:#FFF;	/* 隔行变色 */
+}
+.td{
+	border:none;	/* 表格边框 */
+	font-family:Arial;
+	border-collapse:collapse;	/* 边框重叠 */
+	background-color:none;	/* 表格背景色 */
+	font-size:12px;
+}

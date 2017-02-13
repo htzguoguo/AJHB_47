@@ -1,0 +1,439 @@
+[
+  {
+    "name": "重点监控企业",
+    "url": "天津正达科技有限责任公司,中航国际物流（天津）有限公司,PPG航空材料（天津）有限公司,天津华宇航空股份有限公司",
+    "type" : "kg",
+    "icon": "",
+    "isActive": false,
+    "links": [
+      {
+        "name": "PPG航空材料（天津）有限公司",
+        "url": "PPG航空材料（天津）有限公司",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000333$1$0$98",
+        "links": [
+          {
+            "name": "厂区全景",
+            "url": "PPG航空材料（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$98"
+          },
+          {
+            "name": "厂区门口",
+            "url": "PPG航空材料（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$97"
+          },
+          {
+            "name": "库房通道",
+            "url": "PPG航空材料（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$99"
+          },
+          {
+            "name": "车间2",
+            "url": "PPG航空材料（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$100"
+          },
+          {
+            "name": "小仓库",
+            "url": "PPG航空材料（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$101"
+          } ,
+          {
+            "name": "保安室",
+            "url": "PPG航空材料（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$102"
+          }
+        ]
+      },
+      {
+        "name": "天津正达科技有限责任公司",
+        "url": "天津正达科技有限责任公司",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000009$1$0$219",
+        "links": [
+          {
+            "name": "厂区全景",
+            "url": "天津正达科技有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$219"
+          },
+          {
+            "name": "厂房正门",
+            "url": "天津正达科技有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$218"
+          },
+          {
+            "name": "聚合全景",
+            "url": "天津正达科技有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$220"
+          },
+          {
+            "name": "5号库",
+            "url": "天津正达科技有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$221"
+          } ,
+          {
+            "name": "监控室",
+            "url": "天津正达科技有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$222"
+          }
+        ]
+      },
+      {
+        "name": "中航国际物流（天津）有限公司",
+        "url": "中航国际物流（天津）有限公司",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000009$1$0$223",
+        "links": [
+          {
+            "name": "出入口",
+            "url": "中航国际物流（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$223"
+          },
+          {
+            "name": "重点部位",
+            "url": "中航国际物流（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$224"
+          },
+          {
+            "name": "值班室",
+            "url": "中航国际物流（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$225"
+          },
+          {
+            "name": "重点部位",
+            "url": "中航国际物流（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$226"
+          } ,
+          {
+            "name": "厂区全景",
+            "url": "中航国际物流（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$227"
+          }
+        ]
+      },
+      {
+        "name": "天津华宇股份有限公司",
+        "url": "天津华宇股份有限公司",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000333$1$0$342",
+        "links": [
+          {
+            "name": "卸货区",
+            "url": "天津华宇股份有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$342"
+          },
+          {
+            "name": "危品库2",
+            "url": "天津华宇股份有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$343"
+          },
+          {
+            "name": "北侧停车场",
+            "url": "天津华宇股份有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$344"
+          },
+          {
+            "name": "正门口岗亭",
+            "url": "天津华宇股份有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$345"
+          },
+          {
+            "name": "值班室",
+            "url": "天津华宇股份有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$346"
+          }
+        ]
+      },
+      {
+        "name": "滨海新区雪花啤酒有限公司",
+        "url": "滨海新区雪花啤酒有限公司",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000333$1$0$382",
+        "links": [
+          {
+            "name": "全景",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$382"
+          },
+          {
+            "name": "出入口",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$379"
+          },
+          {
+            "name": "氨气罐",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$380"
+          },
+          {
+            "name": "制冷车间",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$381"
+          },
+          {
+            "name": "值班室",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$383"
+          }
+        ]
+      },
+      {
+        "name": "振华加油站",
+        "url": "天津港保税区振华加油站",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000333$1$0$103",
+        "links": [
+          {
+            "name": "加油站全景",
+            "url": "天津港保税区振华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$103"
+          },
+          {
+            "name": "加油站灌区",
+            "url": "天津港保税区振华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$106"
+          },
+          {
+            "name": "加油站进口",
+            "url": "天津港保税区振华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$105"
+          },
+          {
+            "name": "加油区",
+            "url": "天津港保税区振华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$104"
+          }
+        ]
+      },
+      {
+        "name": "港湾加油站",
+        "url": "港湾加油服务有限责任公司",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000009$1$0$307",
+        "links": [
+          {
+            "name": "加油站出入口",
+            "url": "港湾加油服务有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$307"
+          },
+          {
+            "name": "加油站重点部位",
+            "url": "港湾加油服务有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$308"
+          },
+          {
+            "name": "加油站出入口",
+            "url": "港湾加油服务有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$309"
+          }
+        ]
+      },
+      {
+        "name": "博华加油站",
+        "url": "天津博乐达商贸有限公司博华加油站",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000333$1$0$107",
+        "links": [
+          {
+            "name": "危险源点",
+            "url": "天津博乐达商贸有限公司博华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$107"
+          },
+          {
+            "name": "出入口",
+            "url": "天津博乐达商贸有限公司博华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$108"
+          },
+          {
+            "name": "危险源点",
+            "url": "天津博乐达商贸有限公司博华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$109"
+          },
+          {
+            "name": "重点部位",
+            "url": "天津博乐达商贸有限公司博华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$110"
+          }
+        ]
+      },
+      {
+        "name": "益源钢板有限公司",
+        "url": "天津益源钢板有限公司",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000009$1$0$256",
+        "links": [
+          {
+            "name": "出入口",
+            "url": "天津益源钢板有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$256"
+          },
+          {
+            "name": "值班室",
+            "url": "天津益源钢板有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$252"
+          },
+          {
+            "name": "危险源",
+            "url": "天津益源钢板有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$253"
+          },
+          {
+            "name": "危险源",
+            "url": "天津益源钢板有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$254"
+          },
+          {
+            "name": "车间出入口",
+            "url": "天津益源钢板有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$255"
+          }
+        ]
+      }
+
+    ]
+  }
+
+]
